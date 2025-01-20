@@ -1,7 +1,7 @@
 +++
-pre = '<b>4. </b>'
+pre = '<b>3. </b>'
 title = 'Objets JS'
-weight = '04'
+weight = '03'
 draft = false
 +++
 

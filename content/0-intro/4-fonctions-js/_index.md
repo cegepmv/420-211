@@ -1,11 +1,11 @@
 +++
-pre = '<b>2. </b>'
+pre = '<b>4. </b>'
 title = 'Fonctions JS'
-weight = '02'
+weight = '04'
 draft = false
 +++
 
-Chaque fois que l'on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs types de syntaxes pour déclarer une fonction.
+Chaque fois que l'on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs syntaxes pour déclarer une fonction.
 
 ### Fonctions nommées
 
@@ -13,7 +13,7 @@ Une fonction nommée commence par le mot-clé `function`, suivi du nom de la fon
 
 ```js
 function logCompliment() {
-    console.log("Vous vous débrouilles très bien !") ;
+    console.log("Vous vous débrouillez très bien !") ;
 }
 ```
 Une fois la fonction déclarée, vous l'invoquez ou l'appelez pour la voir s'exécuter :
@@ -69,7 +69,7 @@ Une fonction peut prendre un ou plusieurs arguments en entrée :
 
 ```js
 const logCompliment = function(firstName) {
-    console.log(`Vous vous débrouilles très bien, ${firstName}`);
+    console.log(`Vous vous débrouillez très bien, ${firstName}`);
 };
 
 logCompliment("Molly");
@@ -86,7 +86,8 @@ logCompliment("Molly", "Tu es vraiment cool !");
 #### Retour de fonctions
 
 La fonction `logCompliment` affiche un compliment sur la console, mais le plus souvent, une fonction est utilisée pour **retourner** une valeur.
-Pour cela, on utilise le mot-clé **return**.
+
+Pour cela, on utilise le mot-clé `return`.
 
 ```js
 const createCompliment = function(firstName, message) {
@@ -125,9 +126,9 @@ function logActivity(person = defaultPerson) {
 
 ### Fonctions fléchées
 
-Une façon plus "moderne" de déclarer une fonction est d'utiliser la syntaxe des fonctions fléchées. Avec les fonctions fléchées, il est possible de créer des fonctions sans utiliser le mot-clé `function`. Souvent, il n'est pas non plus nécessaire d'utiliser le mot-clé `return`.
+Une façon plus "moderne" de déclarer une fonction est d'utiliser la syntaxe des **fonctions fléchées**. Avec les fonctions fléchées, il est possible de déclarer des fonctions sans utiliser le mot-clé `function`. Souvent, il n'est pas non plus nécessaire d'utiliser le mot-clé `return`.
 
-Fonction anonyme : 
+**Fonction anonyme :**
 ```js
 const lordify = function(firstName) {
     return `${firstName} de Canterbury`;
@@ -137,7 +138,7 @@ console.log(lordify("Dale")); // Seigneur Dale de Canterbury
 console.log(lordify("Gail")); // Seigneur Gail de Canterbury
 ```
 
-Fonction fléchées (syntaxe plus simple et épurée) :
+**Fonction fléchées :**
 
 ```js
 const lordify = firstName => `${firstName} de Canterbury`;
@@ -151,7 +152,7 @@ const lordify = function(firstName, land) {
     return `${firstName} de ${land}`;
 };
 
-// Fonction fléché
+// Fonction fléchée
 const lordify = (firstName, land) => `${firstName} of ${land}`;
 
 console.log(lordify("Don", "Piscataway")); // Don de Piscataway

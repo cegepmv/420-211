@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/0-intro/1-html-dom/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/2-fonctions-js/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/2-conditions-js/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/3-conditions-js/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/3-objets-js/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/5-es5-js/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/4-fonctions-js/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/6-prog-fonctionnelle/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/5-es5-js/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/7-git-github/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/0-intro/6-prog-fonctionnelle/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/0-intro/index.html</loc>
-    <lastmod>2025-01-19T16:14:10-05:00</lastmod>
+    <loc>https://cegepmv.github.io/420-211/0-intro/7-git-github/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/categories/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/index.html</loc>
+    <loc>https://cegepmv.github.io/420-211/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cegepmv.github.io/420-211/0-intro/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cegepmv.github.io/420-211/tags/index.html</loc>
   </url>
 </urlset>

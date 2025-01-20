@@ -27,7 +27,7 @@ L’exemple suivant correspond à un document HTML simple:
 
 Ce qui correspond au modèle suivant:
 
-![DOM](/images/010-dom.svg)
+![DOM](/420-211/images/010-dom.svg)
 
 
 ### Objet document
@@ -172,21 +172,23 @@ Une référence complète des propriétés CSS est disponible sur le site https:
 
 À partir du DOM suivant, faites le fichier HTML correspondant (Nommez votre fichier *exercice-dom-1.html*) :
 
-![DOM](/images/0-intro/011-ex1.png)
+![DOM](/420-211/images/0-intro/011-ex1.png)
 
 #### Exercice 2
-Dans le document *exercice-dom-2.html*, les éléments ont des attributs `id`. En utilisant des appels à la fonction `getElementById()`, remplacez les mots "apple", "pear" et "banana" par "pomme", "poire" et "banane". (vous devez créer le fichier *exercice-dom-2.js*)
+Dans le document [exercice-dom-2.html](/420-211/ressources/exercice-dom-2.html), les éléments ont des attributs `id`. En utilisant des appels à la fonction `getElementById()`, remplacez les mots "apple", "pear" et "banana" par "pomme", "poire" et "banane". (vous devez créer le fichier *exercice-dom-2.js*)
 
 #### Exercice 3
-Dans le document *exercice-dom-3.html*, certains éléments ont un attribut `class`. Créez le fichier exercice-dom-3.js et utilisez la fonction `getElementsByClass()`, pour modifier le style du texte afin que celui-ci utilise la fonte Arial et soit écrit en bleu.
+Dans le document [exercice-dom-3.html](/420-211/ressources/exercice-dom-3.html), certains éléments ont un attribut `class`. Créez le fichier exercice-dom-3.js et utilisez la fonction `getElementsByClass()`, pour modifier le style du texte afin que celui-ci utilise la fonte Arial et soit écrit en bleu.
 
 #### Exercice 4 
-À partir du document *exercice-dom-4.html*, définissez la fonction associée au bouton pour basculer en mode sombre en modifiant les styles des éléments HTML. 
+À partir du document [exercice-dom-4.html](/420-211/ressources/exercice-dom-4.html), définissez la fonction associée au bouton pour basculer en mode sombre en modifiant les styles des éléments HTML. 
 Vous pouvez utiliser le site suivant pour les références aux couleurs : https://htmlcolorcodes.com/. 
 
 Le résultat devrait ressembler à ceci (les titres sont en vert pâle et le texte en gris) :
 
-![DOM](/images/0-intro/012-ex4.jpg)
+![DOM](/420-211/images/0-intro/012-ex4.jpg)
 
 #### Exercice 5
-En utilisant un fichier css, définissez des classes de style pour obtenir la page suivante à partir du fichier *s2-exercice1.html* fourni : 
+En utilisant un fichier css, définissez des classes de style pour obtenir la page suivante à partir du fichier [exercice-css.html](/420-211/ressources/exercice-css.html) : 
+
+![Exercice 5](/420-211/images/0-intro/013-ex5.png)

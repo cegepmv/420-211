@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.133.1">
@@ -14,7 +14,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
     <meta name="twitter:description" content="Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.
 Déclaration de variable avec let et const Le mot-clé var est utilisé en JavaScript pour déclarer des variables.
 var i = 0; Cependant la notion de déclaration de variable est particulière en JavaScript par rapport à la plupart des autres langages de programmation proches.">
-    <meta property="og:url" content="http://localhost:1313/0-intro/5-es5-js/index.html">
+    <meta property="og:url" content="https://cegepmv.github.io/420-211/0-intro/5-es5-js/index.html">
     <meta property="og:site_name" content="App Web">
     <meta property="og:title" content="JS depuis ES5 :: App Web">
     <meta property="og:description" content="Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.
@@ -26,26 +26,26 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
     <meta itemprop="description" content="Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.
 Déclaration de variable avec let et const Le mot-clé var est utilisé en JavaScript pour déclarer des variables.
 var i = 0; Cependant la notion de déclaration de variable est particulière en JavaScript par rapport à la plupart des autres langages de programmation proches.">
-    <meta itemprop="wordCount" content="1431">
+    <meta itemprop="wordCount" content="1388">
     <title>JS depuis ES5 :: App Web</title>
-    <link href="/0-intro/5-es5-js/index.xml" rel="alternate" type="application/rss+xml" title="JS depuis ES5 :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
+    <link href="/420-211/0-intro/5-es5-js/index.xml" rel="alternate" type="application/rss+xml" title="JS depuis ES5 :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
 
 
-    <link href="/css/fontawesome-all.min.css?1737395390" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1737395390" rel="stylesheet"></noscript>
-    <link href="/css/auto-complete.css?1737395390" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1737395390" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1737395390" rel="stylesheet">
-    <link href="/css/theme.css?1737395390" rel="stylesheet">
-    <link href="/css/format-html.css?1737395390" rel="stylesheet" id="R-format-style">
+    <link href="/420-211/css/fontawesome-all.min.css?1737400751" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1737400751" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1737400751" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1737400751" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1737400751" rel="stylesheet">
+    <link href="/420-211/css/theme.min.css?1737400751" rel="stylesheet">
+    <link href="/420-211/css/format-html.min.css?1737400751" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.relearn.min = ``;
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cegepmv.github.io\/420-211';
+      window.relearn.min = `.min`;
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       // variant stuff
-      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'relearn-light', 'relearn-dark', 'relearn-bright', 'learn', 'blue', 'red', 'green', 'red' ];
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
@@ -84,7 +84,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/0-intro/5-es5-js/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/0-intro/5-es5-js/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -101,12 +101,11 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
     <li>
       <ul>
         <li><a href="#déclaration-de-variable-avec-let-et-const">Déclaration de variable avec let et const</a></li>
-        <li><a href="#la-structure-for--of">La structure for … of</a></li>
+        <li><a href="#structure-for--of">Structure for … of</a></li>
         <li><a href="#gabarit-de-chaîne-de-caractères">Gabarit de chaîne de caractères</a></li>
-        <li><a href="#valeur-par-défaut-des-paramètres">Valeur par défaut des paramètres</a></li>
-        <li><a href="#le-paramètre-de-reste-spread-operator">Le paramètre de reste (<em>Spread Operator</em>)</a></li>
-        <li><a href="#la-décomposition-de-tableaux">La décomposition de tableaux</a></li>
-        <li><a href="#laffectation-de-tableau-par-décomposition">L’affectation de tableau par décomposition</a></li>
+        <li><a href="#paramètre-de-reste-spread-operator">Paramètre de reste (<em>Spread Operator</em>)</a></li>
+        <li><a href="#décomposition-de-tableaux">Décomposition de tableaux</a></li>
+        <li><a href="#affectation-de-tableau-par-décomposition">Affectation de tableau par décomposition</a></li>
         <li><a href="#affectation-dobjet-par-décomposition">Affectation d’objet par décomposition</a></li>
         <li><a href="#exercices">Exercices</a></li>
       </ul>
@@ -118,13 +117,14 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/0-intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">JS depuis ES5</span><meta itemprop="position" content="2"></li>
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/0-intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">JS depuis ES5</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/0-intro/4-objets-js/index.html" title="Objets JS (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-intro/4-fonctions-js/index.html" title="Fonctions JS (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/0-intro/6-prog-fonctionnelle/index.html" title="Programmation fonctionnelle (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-intro/6-prog-fonctionnelle/index.html" title="Programmation fonctionnelle (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -186,7 +186,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
 </details>
 <p>Avec ES6, on dispose également du mot-clé <code>const</code> pour garantir que la déclaration est constante (une fois déclarée, sa valeur ne peut pas être modifiée) :</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1416</span>;</span></span></code></pre></div>
-<h3 id="la-structure-for--of">La structure for … of</h3>
+<h3 id="structure-for--of">Structure for … of</h3>
 <p>Une nouvelle structure de contrôle <code>for</code> a été ajoutée avec ES6 pour permettre de parcourir les objets itérables. Il s’agit de la structure <code>for ... of</code></p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">vowels</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">v</span>);
@@ -234,17 +234,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Ce message est sur plusieurs lignes.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Il sera affiché également sur plusieurs lignes.
 </span></span></span></code></pre></div>
-<h3 id="valeur-par-défaut-des-paramètres">Valeur par défaut des paramètres</h3>
-<p>Depuis ES6, il est possible de fournir des valeurs par défaut aux paramètres d’une fonction.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>(<span style="color:#a6e22e">person</span>, <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bonjour&#34;</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">person</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">saluer</span>(<span style="color:#e6db74">&#34;David&#34;</span>); <span style="color:#75715e">// Affiche Bonjour David
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">saluer</span>(<span style="color:#e6db74">&#34;David&#34;</span>, <span style="color:#e6db74">&#34;Bonsoir&#34;</span>); <span style="color:#75715e">// Affiche Bonsoir David
-</span></span></span></code></pre></div>
-<h3 id="le-paramètre-de-reste-spread-operator">Le paramètre de reste (<em>Spread Operator</em>)</h3>
+<h3 id="paramètre-de-reste-spread-operator">Paramètre de reste (<em>Spread Operator</em>)</h3>
 <p>Avec l’opérateur <code>...</code>, il est possible de déclarer une liste quelconque de paramètres correspondant au reste des paramètres. Cette liste sera vue comme un tableau à l’intérieur de la fonction</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">x2</span>, ...<span style="color:#a6e22e">others</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x2</span>;
@@ -258,7 +248,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// Affiche 7
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>)); <span style="color:#75715e">// Affiche 15
 </span></span></span></code></pre></div>
-<h3 id="la-décomposition-de-tableaux">La décomposition de tableaux</h3>
+<h3 id="décomposition-de-tableaux">Décomposition de tableaux</h3>
 <p>L’opérateur <code>...</code> sert également à la décomposition de tableau qui permet de passer les paramètres à l’appel d’une fonction sous la forme d’un tableau.</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
 </span></span><span style="display:flex;"><span>
@@ -268,7 +258,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">add</span>(...<span style="color:#a6e22e">args</span>); <span style="color:#75715e">// Affiche 5
 </span></span></span></code></pre></div>
-<h3 id="laffectation-de-tableau-par-décomposition">L’affectation de tableau par décomposition</h3>
+<h3 id="affectation-de-tableau-par-décomposition">Affectation de tableau par décomposition</h3>
 <p>L’affectation par décomposition (<em>destructuring assignment</em>) permet de réaliser des affectations multiples à partir d’un tableau.</p>
 <p>On peut déclarer un tableau de variables à gauche de l’affectation.</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
@@ -387,15 +377,15 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
       <div id="R-header-topbar" class="default-animation"></div>
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
-<a id="R-logo" href="/index.html">
-    <img style="vertical-align: middle;" src="/images/react-logo.png" width="15%" alt="logo">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
     <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
 </a>
         </div>
         <script>
-          window.index_js_url="/searchindex.en.js?1737395390";
+          window.index_js_url="/420-211/searchindex.en.js?1737400751";
         </script>
-        <search><form action="/search/index.html" method="get">
+        <search><form action="/420-211/search/index.html" method="get">
           <div class="searchbox default-animation">
             <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
             <label class="a11y-only" for="R-search-by">Search</label>
@@ -406,12 +396,12 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
         <script>
           var contentLangs=['fr'];
         </script>
-        <script src="/js/auto-complete.js?1737395390" defer></script>
-        <script src="/js/lunr/lunr.min.js?1737395390" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1737395390" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1737395390" defer></script>
-        <script src="/js/lunr/lunr.fr.min.js?1737395390" defer></script>
-        <script src="/js/search.js?1737395390" defer></script>
+        <script src="/420-211/js/auto-complete.js?1737400751" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1737400751" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1737400751" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1737400751" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1737400751" defer></script>
+        <script src="/420-211/js/search.js?1737400751" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -419,14 +409,14 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-shortcutmenu-home" class="R-sidebarmenu">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="parent " data-nav-id="/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c" checked><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
-            <li class="" data-nav-id="/0-intro/1-html-dom-css/index.html"><a class="padding" href="/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
-            <li class="" data-nav-id="/0-intro/2-fonctions-js/index.html"><a class="padding" href="/0-intro/2-fonctions-js/index.html"><b>2. </b>Fonctions JS</a></li>
-            <li class="" data-nav-id="/0-intro/3-conditions-js/index.html"><a class="padding" href="/0-intro/3-conditions-js/index.html"><b>3. </b>Conditions JS</a></li>
-            <li class="" data-nav-id="/0-intro/4-objets-js/index.html"><a class="padding" href="/0-intro/4-objets-js/index.html"><b>4. </b>Objets JS</a></li>
-            <li class="active " data-nav-id="/0-intro/5-es5-js/index.html"><a class="padding" href="/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
-            <li class="" data-nav-id="/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
-            <li class="" data-nav-id="/0-intro/7-git-github/index.html"><a class="padding" href="/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a></li></ul></li>
+            <li class="parent " data-nav-id="/420-211/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c" checked><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/2-conditions-js/index.html"><a class="padding" href="/420-211/0-intro/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/3-objets-js/index.html"><a class="padding" href="/420-211/0-intro/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/4-fonctions-js/index.html"><a class="padding" href="/420-211/0-intro/4-fonctions-js/index.html"><b>4. </b>Fonctions JS</a></li>
+            <li class="active " data-nav-id="/420-211/0-intro/5-es5-js/index.html"><a class="padding" href="/420-211/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a></li></ul></li>
           </ul>
         </div>
     
@@ -442,7 +432,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/0-intro/5-es5-js/index.html" lang="fr-fr" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/0-intro/5-es5-js/index.html" lang="fr-fr" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -458,14 +448,7 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
                       <option id="R-select-variant-auto" value="auto" selected>Auto</option>
                       <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
                       <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
-                      <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
-                      <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
-                      <option id="R-select-variant-relearn-bright" value="relearn-bright">Relearn Bright</option>
-                      <option id="R-select-variant-learn" value="learn">Learn</option>
                       <option id="R-select-variant-blue" value="blue">Blue</option>
-                      <option id="R-select-variant-red" value="red">Red</option>
-                      <option id="R-select-variant-green" value="green">Green</option>
-                      <option id="R-select-variant-red" value="red">Red</option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -489,8 +472,8 @@ var i = 0; Cependant la notion de déclaration de variable est particulière en 
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1737395390" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1737395390" defer></script>
-    <script src="/js/theme.js?1737395390" defer></script>
+    <script src="/420-211/js/clipboard.min.js?1737400751" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1737400751" defer></script>
+    <script src="/420-211/js/theme.js?1737400751" defer></script>
   </body>
 </html>

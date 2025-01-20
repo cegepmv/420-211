@@ -1,7 +1,7 @@
 +++
-pre = '<b>3. </b>'
+pre = '<b>2. </b>'
 title = 'Conditions JS'
-weight = '03'
+weight = '02'
 draft = false
 +++
 

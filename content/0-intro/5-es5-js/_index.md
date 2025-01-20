@@ -58,7 +58,7 @@ Avec ES6, on dispose également du mot-clé `const` pour garantir que la déclar
 const pi = 3.1416;
 ```
 
-### La structure for … of
+### Structure for … of
 Une nouvelle structure de contrôle `for` a été ajoutée avec ES6 pour permettre de parcourir les objets itérables. Il s’agit de la structure `for ... of`
 
 ```js
@@ -125,20 +125,7 @@ console.log(message);
 // Il sera affiché également sur plusieurs lignes.
 ```
 
-### Valeur par défaut des paramètres
-Depuis ES6, il est possible de fournir des valeurs par défaut aux paramètres d’une fonction.
-
-```js
-function sayHi(person, message = "Bonjour") {
-    console.log(message, person);
-}
-
-
-saluer("David"); // Affiche Bonjour David
-saluer("David", "Bonsoir"); // Affiche Bonsoir David
-```
-
-### Le paramètre de reste (*Spread Operator*)
+### Paramètre de reste (*Spread Operator*)
 Avec l’opérateur `...`, il est possible de déclarer une liste quelconque de paramètres correspondant au reste des paramètres. Cette liste sera vue comme un tableau à l’intérieur de la fonction
 
 ```js
@@ -155,7 +142,7 @@ console.log(add(1, 2, 4)); // Affiche 7
 console.log(add(1, 2, 4, 8)); // Affiche 15
 ```
 
-### La décomposition de tableaux
+### Décomposition de tableaux
 L’opérateur `...` sert également à la décomposition de tableau qui permet de passer les paramètres à l’appel d’une fonction sous la forme d’un tableau.
 
 ```js
@@ -169,7 +156,7 @@ add(...args); // Affiche 5
 ```
 
 
-### L’affectation de tableau par décomposition
+### Affectation de tableau par décomposition
 L’affectation par décomposition (*destructuring assignment*) permet de réaliser des affectations multiples à partir d’un tableau.
 
 On peut déclarer un tableau de variables à gauche de l’affectation.

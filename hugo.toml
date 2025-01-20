@@ -1,5 +1,5 @@
 theme = 'hugo-theme-relearn'
-baseURL = 'https://example.org/'
+baseURL = 'https://cegepmv.github.io/420-211'
 languageCode = 'fr-fr'
 title = 'App Web'
 
@@ -7,4 +7,5 @@ title = 'App Web'
     linkTitle = 'Applications Web'
     collapsibleMenu = true
     disableLandingPageButton = true
-    themeVariant = ['auto', 'zen-light', 'zen-dark', 'relearn-light', 'relearn-dark', 'relearn-bright', 'learn', 'blue', 'red', 'green', 'red']
+    themeVariant = ['auto', 'zen-light', 'zen-dark', 'blue']
+    disableInlineCopyToClipBoard = true
