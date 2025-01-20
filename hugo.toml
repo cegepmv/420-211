@@ -1,0 +1,10 @@
+theme = 'hugo-theme-relearn'
+baseURL = 'https://example.org/'
+languageCode = 'fr-fr'
+title = 'App Web'
+
+[params]
+    linkTitle = 'Applications Web'
+    collapsibleMenu = true
+    disableLandingPageButton = true
+    themeVariant = ['auto', 'zen-light', 'zen-dark', 'relearn-light', 'relearn-dark', 'relearn-bright', 'learn', 'blue', 'red', 'green', 'red']
