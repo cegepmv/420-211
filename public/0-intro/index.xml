@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Préalables :: App Web</title>
-    <link>https://cegepmv.github.io/420-211/0-intro/index.html</link>
-    <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5.</description>
+    <link>http://localhost:1313/420-211/0-intro/index.html</link>
+    <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5. JS depuis ES5 Introduction aux syntaxes modernes de javascript introduites depuis la version 5</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="https://cegepmv.github.io/420-211/0-intro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-211/0-intro/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML, DOM et CSS</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/1-html-dom-css/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/index.html</guid>
-      <description>Structure d’un document HTML Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud document, au sommet de la hiérarchie) n’a pas de parent.&#xA;L’exemple suivant correspond à un document HTML simple:&#xA;&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script src=&#34;lib.</description>
+      <guid>http://localhost:1313/420-211/0-intro/1-html-dom-css/index.html</guid>
+      <description>Structure d’un document HTML Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud document, au sommet de la hiérarchie) n’a pas de parent.&#xA;L’exemple suivant correspond à un document HTML simple:&#xA;&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script src=&#34;lib.js&#34;&gt;&lt;/script&gt; &lt;title&gt;Page perso&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Bienvenue&lt;/h1&gt; &lt;div&gt;Voici du texte&lt;/div&gt; &lt;a href=&#34;https://www.google.com&#34;&gt;Voici un lien&lt;/a&gt; &lt;/body&gt; &lt;/html&gt; Ce qui correspond au modèle suivant:</description>
     </item>
     <item>
       <title>Conditions JS</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/2-conditions-js/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/2-conditions-js/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/2-conditions-js/index.html</guid>
+      <guid>http://localhost:1313/420-211/0-intro/2-conditions-js/index.html</guid>
       <description>Javascript dispose de manières alternatives pour exprimer les conditions. Celles-ci sont plus utilisées que la syntaxe if/else traditionnelle.&#xA;Opérateur ternaire Les conditions qui définissent deux alternatives utilisent l’opérateur ternaire, ainsi nommé pare qu’il prend trois opérandes : un pour la condition à évaluer, un pour la cas vrai et un pour le cas faux.&#xA;La syntaxe est CONDITION ? Cas vrai : Cas faux. Par exemple, les deux structures suivantes sont équivalentes:</description>
     </item>
     <item>
       <title>Objets JS</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/3-objets-js/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/3-objets-js/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/3-objets-js/index.html</guid>
-      <description>Avec JavaScript, on utilise souvent des objets.&#xA;Un objet est une manière de regrouper sous un même nom une structure de données qui contient plusieurs valeurs. Par exemple, une variable nommée car peut contenir différentes informations reliées à une voiture, comme le nom de la marque, le modèle et l’année:&#xA;const car = { brand: &#34;Hyundai&#34;, model: &#34;Ioniq 5&#34;, year: 2022 } Chacune de ces informations est une propriété de l’objet.</description>
+      <guid>http://localhost:1313/420-211/0-intro/3-objets-js/index.html</guid>
+      <description>Avec JavaScript, on utilise souvent des objets.&#xA;Un objet est une manière de regrouper sous un même nom une structure de données qui contient plusieurs valeurs. Par exemple, une variable nommée car peut contenir différentes informations reliées à une voiture, comme le nom de la marque, le modèle et l’année:&#xA;const car = { brand: &#34;Hyundai&#34;, model: &#34;Ioniq 5&#34;, year: 2022 } Chacune de ces informations est une propriété de l’objet.&#xA;Pour référer aux valeurs des propriétés d’un objet, on utilise un point (par exemple car.model):</description>
     </item>
     <item>
       <title>Fonctions JS</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/4-fonctions-js/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/4-fonctions-js/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/4-fonctions-js/index.html</guid>
-      <description>Chaque fois que l’on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs syntaxes pour déclarer une fonction.&#xA;Fonctions nommées Une fonction nommée commence par le mot-clé function, suivi du nom de la fonction (dans l’exemple ci-dessous : logCompliment). Le corps de la fonction et ses instructions (i.e. son bloc d’instruction) sont définis entre des accolades :&#xA;function logCompliment() { console.log(&#34;Vous vous débrouillez très bien !</description>
+      <guid>http://localhost:1313/420-211/0-intro/4-fonctions-js/index.html</guid>
+      <description>Chaque fois que l’on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs syntaxes pour déclarer une fonction.&#xA;Fonctions nommées Une fonction nommée commence par le mot-clé function, suivi du nom de la fonction (dans l’exemple ci-dessous : logCompliment). Le corps de la fonction et ses instructions (i.e. son bloc d’instruction) sont définis entre des accolades :&#xA;function logCompliment() { console.log(&#34;Vous vous débrouillez très bien !&#34;) ; } Une fois la fonction déclarée, vous l’invoquez ou l’appelez pour la voir s’exécuter :</description>
     </item>
     <item>
       <title>JS depuis ES5</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/5-es5-js/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/5-es5-js/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/5-es5-js/index.html</guid>
-      <description>Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.&#xA;Déclaration de variable avec let et const Le mot-clé var est utilisé en JavaScript pour déclarer des variables.&#xA;var i = 0; Cependant la notion de déclaration de variable est particulière en JavaScript par rapport à la plupart des autres langages de programmation proches.</description>
+      <guid>http://localhost:1313/420-211/0-intro/5-es5-js/index.html</guid>
+      <description>Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.&#xA;Déclaration de variable avec let et const Le mot-clé var est utilisé en JavaScript pour déclarer des variables.&#xA;var i = 0; Cependant la notion de déclaration de variable est particulière en JavaScript par rapport à la plupart des autres langages de programmation proches. var n’empêche pas de déclarer à nouveau une variable avec le même nom et la portée des variables est particulière à JavaScript. Si la variable est déclarée au plus haut niveau, il s’agit d’une variable globale mais si elle déclarée ailleurs, sa portée correspond à la fonction dans laquelle elle est déclarée. Cela peut entraîner des effets de bord difficiles à comprendre :</description>
     </item>
     <item>
       <title>Programmation fonctionnelle</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/6-prog-fonctionnelle/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/6-prog-fonctionnelle/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/6-prog-fonctionnelle/index.html</guid>
+      <guid>http://localhost:1313/420-211/0-intro/6-prog-fonctionnelle/index.html</guid>
       <description>Définition La programmation fonctionnelle est un paradigme de programmation qui insiste sur l’évaluation d’appel de fonctions plutôt que sur l’utilisation de variables et de blocs imbriqués (for, if…).&#xA;Les fonctions ont toujours été des objets de plein droit en JavaScript. Il est par exemple possible de créer des fonctions anonymes et de les affecter à des variables ou de les passer en paramètre d’autres fonctions.&#xA;Impératif vs déclaratif La programmation fonctionnelle fait partie d’un paradigme de programmation plus large : la programmation déclarative.</description>
     </item>
     <item>
       <title>Git/GitHub</title>
-      <link>https://cegepmv.github.io/420-211/0-intro/7-git-github/index.html</link>
+      <link>http://localhost:1313/420-211/0-intro/7-git-github/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cegepmv.github.io/420-211/0-intro/7-git-github/index.html</guid>
-      <description></description>
+      <guid>http://localhost:1313/420-211/0-intro/7-git-github/index.html</guid>
+      <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin. La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications. ** image sur la fonctionnalité ** image sur les branchements + explication</description>
     </item>
   </channel>
 </rss>

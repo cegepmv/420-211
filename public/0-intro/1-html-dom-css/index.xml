@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTML, DOM et CSS :: App Web</title>
-    <link>https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/index.html</link>
-    <description>Structure d’un document HTML Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud document, au sommet de la hiérarchie) n’a pas de parent.&#xA;L’exemple suivant correspond à un document HTML simple:&#xA;&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script src=&#34;lib.</description>
+    <link>http://localhost:1313/420-211/0-intro/1-html-dom-css/index.html</link>
+    <description>Structure d’un document HTML Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud document, au sommet de la hiérarchie) n’a pas de parent.&#xA;L’exemple suivant correspond à un document HTML simple:&#xA;&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script src=&#34;lib.js&#34;&gt;&lt;/script&gt; &lt;title&gt;Page perso&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Bienvenue&lt;/h1&gt; &lt;div&gt;Voici du texte&lt;/div&gt; &lt;a href=&#34;https://www.google.com&#34;&gt;Voici un lien&lt;/a&gt; &lt;/body&gt; &lt;/html&gt; Ce qui correspond au modèle suivant:</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-211/0-intro/1-html-dom-css/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
