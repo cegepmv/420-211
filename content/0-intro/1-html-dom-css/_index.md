@@ -166,6 +166,8 @@ Pour que le navigateur puisse retrouver le fichier CSS où le style est défini,
 Une référence complète des propriétés CSS est disponible sur le site https://www.w3schools.com/cssref/index.php.
 {{% /notice %}}
 
+---
+
 ### Exercices
 
 #### Exercice 1

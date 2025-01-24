@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript :: App Web</title>
+    <link>http://localhost:1313/420-211/annexe/0-intro/index.html</link>
+    <description>Exercices préalables en JavaScript Cette section propose une série d’exercices pour pratiquer les bases de JavaScript ainsi que la manipulation du DOM. Ces exercices vous permettront de développer vos compétences en programmation et en manipulation d’éléments web.&#xA;Exercices Généraux Exercice 1: Boucles et Tableaux Objectif : Utiliser les boucles pour parcourir un tableau.&#xA;Créez un tableau contenant les nombres suivants : [10, 20, 30, 40, 50]. Écrivez un script qui affiche chaque élément du tableau dans la console à l’aide d’une boucle for. Modifiez le script pour calculer et afficher la somme des éléments du tableau. const numbers = [10, 20, 30, 40, 50]; // Code ici Exercice 2: Conditions Objectif : Manipuler des structures conditionnelles.</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:1313/420-211/annexe/0-intro/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

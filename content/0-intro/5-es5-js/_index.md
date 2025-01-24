@@ -237,6 +237,8 @@ let {height, ...fullName} = personne; // height vaut 174
                                       // fullName vaut {firstName: "David", lastName: "Gayerie"}
 ```
 
+---
+
 ### Exercices
 
 #### Exercice 1

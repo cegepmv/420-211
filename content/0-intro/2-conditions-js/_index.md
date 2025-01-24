@@ -47,6 +47,8 @@ if (i % 2 == 0) {
 i % 2 == 0 && console.log("i est pair") 
 ```
 
+---
+
 ### Exercice
 
 Réécrivez les conditions suivantes avec l'opérateur && ou ternaire, selon le cas : 

@@ -74,6 +74,8 @@ console.log(min_farenheit); // Affiche 48.8
 
 Le code ci-dessous parcourt un tableau de températures en degré Celsius, élimine les températures négatives ou égales à zéro, transforme les températures en degré Fahrenheit, puis conserve la température minimale par réduction.
 
+---
+
 ### Exercices
 
 #### Exercice 1

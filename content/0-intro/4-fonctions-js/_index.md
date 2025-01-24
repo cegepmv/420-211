@@ -178,6 +178,8 @@ console.log(lordify("Kelly", "Sonoma")); // Kelly de Sonoma
 console.log(lordify("Dave")); // ! JAVASCRIPT ERROR
 ```
 
+---
+
 ### Exercices
 
 #### Exercice 1 
