@@ -2,7 +2,7 @@
 pre = '<b>7.1 </b>'
 title = 'Guide Git Bash'
 weight = '01'
-draft = false
+draft = true
 +++
 
 
