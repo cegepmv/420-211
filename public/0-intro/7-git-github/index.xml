@@ -8,6 +8,13 @@
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/0-intro/7-git-github/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Guide Git Bash</title>
+      <link>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</guid>
+      <description>Git Bash : Guide pratique Git Bash est un terminal puissant qui permet d’utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande. Voici un guide étape par étape pour tirer le meilleur parti de Git Bash.</description>
+    </item>
+    <item>
       <title>Guide GitHub Desktop</title>
       <link>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
