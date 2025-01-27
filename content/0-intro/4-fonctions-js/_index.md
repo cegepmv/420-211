@@ -1,7 +1,7 @@
 +++
 pre = '<b>4. </b>'
 title = 'Fonctions JS'
-weight = '04'
+weight = '14'
 draft = false
 +++
 

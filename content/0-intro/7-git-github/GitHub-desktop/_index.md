@@ -1,8 +1,8 @@
 +++
 pre = '<b>7.2 </b>'
 title = 'Guide GitHub Desktop'
-weight = '02'
-draft = true
+weight = '172'
+draft = false
 +++
 
 ### GitHub Desktop : Guide Pratique

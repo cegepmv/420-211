@@ -1,10 +1,9 @@
 +++
 pre = '<b>7.1 </b>'
 title = 'Guide Git Bash'
-weight = '01'
-draft = true
+weight = '171'
+draft = false
 +++
-
 
 ---
 ### Git Bash : Guide pratique

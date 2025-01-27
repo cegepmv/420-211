@@ -1,7 +1,7 @@
 +++
 pre = '<b>0. </b>'
 title = "Préalables"
-weight = '00'
+weight = '10'
 +++
 
 ### [1. HTML, DOM et CSS]({{% ref "1-html-dom-css" %}} "HTML, DOM et CSS")

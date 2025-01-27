@@ -1,7 +1,7 @@
 +++
 pre = '<b>6. </b>'
 title = 'Programmation fonctionnelle'
-weight = '06'
+weight = '16'
 draft = false
 +++
 

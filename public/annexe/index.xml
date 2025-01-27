@@ -8,11 +8,11 @@
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/annexe/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Javascript</title>
+      <title>JS - Exercices préalables</title>
       <link>http://localhost:1313/420-211/annexe/0-intro/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-211/annexe/0-intro/index.html</guid>
-      <description>Exercices préalables en JavaScript Cette section propose une série d’exercices pour pratiquer les bases de JavaScript ainsi que la manipulation du DOM. Ces exercices vous permettront de développer vos compétences en programmation et en manipulation d’éléments web.&#xA;Exercices Généraux Exercice 1: Boucles et Tableaux Objectif : Utiliser les boucles pour parcourir un tableau.&#xA;Créez un tableau contenant les nombres suivants : [10, 20, 30, 40, 50]. Écrivez un script qui affiche chaque élément du tableau dans la console à l’aide d’une boucle for. Modifiez le script pour calculer et afficher la somme des éléments du tableau. const numbers = [10, 20, 30, 40, 50]; // Code ici Exercice 2: Conditions Objectif : Manipuler des structures conditionnelles.</description>
+      <description>Cette section propose une série d’exercices pour pratiquer les bases de JavaScript ainsi que la manipulation du DOM.&#xA;1. Manipulation des variables et types de données Objectif : Comprendre comment manipuler les variables, les types de données et les structures de contrôle.&#xA;Exercice&#xA;Créez une variable nom contenant votre prénom. Créez une constante age contenant votre âge. Ecrivez une fonction qui retourne une chaîne de caractères comme : &#34;Bonjour, je m&#39;appelle [nom] et j&#39;ai [age] ans.&#34; Testez la fonction avec vos variables. 2. Les tableaux et les boucles Objectif : Savoir manipuler des tableaux et parcourir leurs éléments.</description>
     </item>
   </channel>
 </rss>

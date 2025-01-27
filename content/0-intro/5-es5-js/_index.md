@@ -1,7 +1,7 @@
 +++
 pre = '<b>5. </b>'
 title = 'JS depuis ES5'
-weight = '05'
+weight = '15'
 draft = false
 +++
 

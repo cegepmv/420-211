@@ -1,8 +1,8 @@
 +++
 pre = '<b>7. </b>'
 title = 'Git/GitHub'
-weight = '07'
-draft = true
+weight = '17'
+draft = false
 +++
 
 ### Introduction
