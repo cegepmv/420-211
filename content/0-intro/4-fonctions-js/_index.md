@@ -57,7 +57,7 @@ hey();
 // Fonction anonyme
 const hey = function() {
     alert("hey!");
-    };
+};
 
 ```
     TypeError: hey is not a function
@@ -98,7 +98,7 @@ createCompliment("Molly", "You're so cool") ;
 ```
 
 ```js
-console.log(createCompliment("You're so cool", "Molly")) ;
+console.log(createCompliment("Molly", "You're so cool")) ;
 ```
 
 #### Arguments par défaut

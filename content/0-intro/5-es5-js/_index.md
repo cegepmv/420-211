@@ -52,10 +52,26 @@ Pour tout nouveau code, il est recommandé d’utiliser `let` pour déclarer tou
 {{% /notice %}}
 
 
-Avec ES6, on dispose également du mot-clé `const` pour garantir que la déclaration est constante (une fois déclarée, sa valeur ne peut pas être modifiée) :
+Avec ES6, on dispose également du mot-clé `const` pour garantir que la déclaration est constante (une fois déclarée, sa valeur ne peut pas être réasigné) :
 
 ```js
 const pi = 3.1416;
+```
+
+À noter qu'en JavaScript, le mot-clé `const` empêche la réaffectation d'une variable, mais il ne protège pas l'objet lui-même. Cela signifie que l'on peut modifier les propriétés d'un objet déclaré avec `const`, mais on ne peut pas réassigner une nouvelle valeur à l'objet.
+
+```js
+const personne = {
+  nom: "John",
+  age: 30
+};
+
+// Cela est valide : nous pouvons modifier les propriétés de l'objet
+personne.age = 31;
+console.log(personne.age); // Affiche 31
+
+// Cela n'est pas valide : nous ne pouvons pas réassigner l'objet entier
+personne = { nom: "Jane", age: 25 }; // Erreur : Assignment to constant variable.
 ```
 
 ### Structure for … of
