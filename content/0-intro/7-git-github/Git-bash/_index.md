@@ -132,6 +132,46 @@ git checkout <nom_de_la_branche>
 git checkout feature-nouvelle-fonctionnalité
 ```
 
+##### 9. Fusionner des branches 
+Lorsque vous avez terminé le travail sur une branche, vous pouvez la fusionner dans la branche principale (généralement main).
+
+Étapes pour fusionner des branches :
+
+Basculez sur la branche principale (main) :
+```bash
+git checkout main
+```
+
+Assurez-vous que main est à jour :
+```bash
+git pull origin main
+```
+
+Fusionnez la branche de travail (par exemple feature-nouvelle-fonctionnalité) dans main :
+```bash
+git merge feature-nouvelle-fonctionnalité
+```
+
+Résoudre les conflits s'il y en a :
+- Ouvrez les fichiers en conflit.
+- Recherchez les délimiteurs de conflit <<<<<<<, =======, >>>>>>>.
+- Modifiez le fichier pour résoudre les conflits, puis sauvegardez.
+
+Ajoutez les fichiers résolus :
+
+```bash
+git add <fichier_conflit>
+```
+
+Finalisez la fusion avec un commit :
+
+git commit -m "Fusion de feature-nouvelle-fonctionnalité dans main"
+
+Poussez les modifications fusionnées vers GitHub :
+```bash
+git push origin main
+```
+
 ---
 
 Pour plus de détails sur les commandes Git, vous pouvez consulter le Cheat Sheet officiel : [https://training.github.com/downloads/fr/github-git-cheat-sheet.pdf](https://training.github.com/downloads/fr/github-git-cheat-sheet.pdf)
