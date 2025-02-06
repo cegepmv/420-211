@@ -12,14 +12,7 @@
       <link>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</guid>
-      <description>Git Bash : Guide pratique Git Bash est un terminal puissant qui permet d’utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande.</description>
-    </item>
-    <item>
-      <title>Guide GitHub Desktop</title>
-      <link>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</guid>
-      <description>GitHub Desktop : Guide Pratique GitHub Desktop est une application graphique conviviale qui simplifie l’utilisation de Git. Contrairement à Git Bash, elle permet de gérer vos dépôts sans avoir à taper de commandes en ligne. Voici un guide étape par étape pour utiliser GitHub Desktop efficacement.&#xA;Git : Guide pratique 1. Cloner un dépôt GitHub existant Ouvrez GitHub Desktop. Cliquez sur File &gt; Clone Repository ou utilisez le bouton Clone Repository visible sur l’interface principale.</description>
+      <description>Qu’est-ce que Git Bash et pourquoi est-il important ? Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.&#xA;Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel.</description>
     </item>
   </channel>
 </rss>

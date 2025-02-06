@@ -3,7 +3,7 @@
   <channel>
     <title>Guide Git Bash :: App Web</title>
     <link>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</link>
-    <description>Git Bash : Guide pratique Git Bash est un terminal puissant qui permet d’utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande.</description>
+    <description>Qu’est-ce que Git Bash et pourquoi est-il important ? Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.&#xA;Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel.</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.xml" rel="self" type="application/rss+xml" />
