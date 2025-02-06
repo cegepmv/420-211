@@ -14,39 +14,37 @@ Les principales fonctionnalités de Git incluent :
 - La possibilité de revenir à des états antérieurs en cas de besoin.
 - La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications.
 
-** image sur la fonctionnalité 
-** image sur les branchements + explication 
+
+##### Comprendre le Flux de Travail de Git
+
+![Git Workflow](/420-211/images/0-intro/014-gitworkflow.png)
+
+Cette image illustre le flux de travail fondamental de Git, qui repose sur trois zones clés :
+
+**Working Directory (Répertoire de travail)** :
+C’est là où tu modifies tes fichiers localement. Chaque changement est visible ici avant d’être suivi par Git.
+
+**Staging Area (Zone de préparation)** :
+Lorsque tu exécutes git add, tes fichiers sont placés dans cette zone temporaire. Cela te permet de sélectionner les modifications que tu souhaites inclure dans ton prochain commit.
+
+**Git Repository (Dépôt Git)** :
+Après avoir validé tes changements avec git commit, ils sont enregistrés de façon permanente dans l’historique du projet.
+
+ 
+##### Comprendre les Branches dans Git
+Les branches dans Git permettent de travailler sur différentes fonctionnalités ou corrections sans modifier le code principal (généralement appelé main ou master). Elles offrent un espace où tu peux expérimenter, développer et tester de nouvelles idées en toute sécurité.
+
+![Git Branches](/420-211/images/0-intro/015-gitbranches.png)
+
+**Créer une branche** : Tu peux démarrer une nouvelle fonctionnalité sans affecter le reste du projet.
+**Fusionner une branche** : Une fois le travail terminé et testé, tu peux fusionner la branche avec le code principal.
+**Travailler en parallèle** : Les branches facilitent le travail en équipe, chacun pouvant travailler sur sa propre branche sans conflits immédiats.
+
+--- 
 
 Nous allons, à travers ce guide, explorer deux méthodes d'utilisation de Git :
+
 1. **Git Bash**, un outil en ligne de commande.
-2. **GitHub Desktop**, une application graphique.
+2. **Git intégré à Visual Studio Code**, une interface graphique directement dans l'éditeur de code.
 
 ---
-
-### Git Bash
-##### Qu'est-ce que Git Bash et pourquoi est-il important ?
-Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.
-
-Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel.
-
-##### Installation
-1. Rendez-vous sur le site officiel de Git : [https://git-scm.com/](https://git-scm.com/)
-2. Téléchargez et installez Git en suivant les instructions adaptées à votre système d’exploitation.
-3. Pendant l’installation, laissez les options par défaut, sauf indication contraire.
-
----
-### GitHub Desktop
-
-##### Qu'est-ce que GitHub Desktop ?
-
-GitHub Desktop est une application graphique qui simplifie l'utilisation de Git. Contrairement à Git Bash, il ne nécessite pas de lignes de commande, ce qui en fait une excellente option pour les débutants ou ceux qui préfèrent une interface visuelle.
-
-##### Fonctionnalités principales
-- Interface conviviale pour gérer vos dépôts.
-- Synchronisation simplifiée avec GitHub.
-- Gestion visuelle des branches et des commits.
-
-##### Installation de GitHub Desktop
-1. Allez sur le site officiel de GitHub Desktop : [https://desktop.github.com/](https://desktop.github.com/).
-2. Téléchargez et installez l’application pour votre système d’exploitation.
-3. Connectez-vous à votre compte GitHub ou créez-en un si nécessaire.

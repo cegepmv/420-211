@@ -6,9 +6,17 @@ draft = false
 +++
 
 ---
-### Git Bash : Guide pratique
-Git Bash est un terminal puissant qui permet d'utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande. 
-Voici un guide étape par étape pour tirer le meilleur parti de Git Bash.
+### Qu'est-ce que Git Bash et pourquoi est-il important ?
+Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.
+
+Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel. 
+
+Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande. Voici un guide étape par étape pour tirer le meilleur parti de Git Bash.
+
+##### Installation
+1. Rendez-vous sur le site officiel de Git : [https://git-scm.com/](https://git-scm.com/)
+2. Téléchargez et installez Git en suivant les instructions adaptées à votre système d’exploitation.
+3. Pendant l’installation, laissez les options par défaut, sauf indication contraire.
 
 ##### 1. Configuration de votre nom d’utilisateur et de votre email
 
@@ -36,7 +44,7 @@ git clone <lien_du_dépôt>
 git clone https://github.com/votre-utilisateur/votre-projet.git
 ```
 
-##### 3. Initialiser un dépôt (pour un nouveau projet)
+##### Initialiser un dépôt (pour un nouveau projet)
 
 Si vous commencez un nouveau projet, vous devez initialiser un dépôt Git dans le dossier correspondant.
 
@@ -45,7 +53,7 @@ Si vous commencez un nouveau projet, vous devez initialiser un dépôt Git dans 
 git init
 ```
 
-##### 4. Ajouter des fichiers au dépôt
+##### 3. Ajouter des fichiers au dépôt
 
 Une fois que vous avez des fichiers à suivre, ajoutez-les à la gestion de versions avec Git.
 
@@ -56,8 +64,22 @@ git add <nom_du_fichier>
 
 **Commande pour ajouter tous les fichiers :**
 ```bash
-git add *
+git add .
 ```
+
+##### 4. Vérifier l'état des fichiers avec `git status`
+
+Avant de créer un commit, il est utile de vérifier quels fichiers ont été modifiés, ajoutés ou supprimés. La commande `git status` affiche l'état actuel du répertoire de travail et de la zone de staging (préparation).
+
+**Commande :**
+```bash
+git status
+```
+Ce que vous allez voir :  
+
+Les fichiers **modifiés** mais non ajoutés à la zone de staging.  
+Les fichiers **ajoutés** et prêts à être commités.  
+Les fichiers **non suivis** (nouveaux fichiers que Git ne suit pas encore).  
 
 ##### 5. Créer un commit
 

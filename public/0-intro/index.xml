@@ -54,7 +54,7 @@
       <link>http://localhost:1313/420-211/0-intro/7-git-github/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-211/0-intro/7-git-github/index.html</guid>
-      <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin. La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications. ** image sur la fonctionnalité ** image sur les branchements + explication</description>
+      <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin. La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications. Comprendre le Flux de Travail de Git</description>
     </item>
   </channel>
 </rss>
