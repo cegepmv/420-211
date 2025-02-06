@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Préalables :: App Web</title>
+    <link>http://localhost:1313/420-211/0-introduction/index.html</link>
+    <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5.</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:1313/420-211/0-introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML, DOM et CSS</title>
+      <link>http://localhost:1313/420-211/0-introduction/1-html-dom-css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-introduction/1-html-dom-css/index.html</guid>
+      <description>Structure d’un document HTML Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud document, au sommet de la hiérarchie) n’a pas de parent.&#xA;L’exemple suivant correspond à un document HTML simple:&#xA;&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script src=&#34;lib.</description>
+    </item>
+    <item>
+      <title>Conditions JS</title>
+      <link>http://localhost:1313/420-211/0-introduction/2-conditions-js/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-introduction/2-conditions-js/index.html</guid>
+      <description>Javascript dispose de manières alternatives pour exprimer les conditions. Celles-ci sont plus utilisées que la syntaxe if/else traditionnelle.&#xA;Opérateur ternaire Les conditions qui définissent deux alternatives utilisent l’opérateur ternaire, ainsi nommé pare qu’il prend trois opérandes : un pour la condition à évaluer, un pour la cas vrai et un pour le cas faux.&#xA;La syntaxe est CONDITION ? Cas vrai : Cas faux. Par exemple, les deux structures suivantes sont équivalentes:</description>
+    </item>
+    <item>
+      <title>Objets JS</title>
+      <link>http://localhost:1313/420-211/0-introduction/3-objets-js/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-introduction/3-objets-js/index.html</guid>
+      <description>Avec JavaScript, on utilise souvent des objets.&#xA;Un objet est une manière de regrouper sous un même nom une structure de données qui contient plusieurs valeurs. Par exemple, une variable nommée car peut contenir différentes informations reliées à une voiture, comme le nom de la marque, le modèle et l’année:&#xA;const car = { brand: &#34;Hyundai&#34;, model: &#34;Ioniq 5&#34;, year: 2022 } Chacune de ces informations est une propriété de l’objet.</description>
+    </item>
+    <item>
+      <title>Programmation fonctionnelle</title>
+      <link>http://localhost:1313/420-211/0-introduction/6-prog-fonctionnelle/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-introduction/6-prog-fonctionnelle/index.html</guid>
+      <description>Définition La programmation fonctionnelle est un paradigme de programmation qui insiste sur l’évaluation d’appel de fonctions plutôt que sur l’utilisation de variables et de blocs imbriqués (for, if…).&#xA;Les fonctions ont toujours été des objets de plein droit en JavaScript. Il est par exemple possible de créer des fonctions anonymes et de les affecter à des variables ou de les passer en paramètre d’autres fonctions.&#xA;Impératif vs déclaratif La programmation fonctionnelle fait partie d’un paradigme de programmation plus large : la programmation déclarative.</description>
+    </item>
+    <item>
+      <title>Git/GitHub</title>
+      <link>http://localhost:1313/420-211/0-introduction/7-git-github/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/0-introduction/7-git-github/index.html</guid>
+      <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.</description>
+    </item>
+  </channel>
+</rss>

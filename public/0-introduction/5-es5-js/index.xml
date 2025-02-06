@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JS depuis ES5 :: App Web</title>
+    <link>http://localhost:1313/420-211/0-introduction/5-es5-js/index.html</link>
+    <description>Depuis la version 5 de ECMAScript (et surtout avec la version 6), la syntaxe de JavaScript a beaucoup évolué pour aller vers une meilleure cohérence et une meilleure robustesse dans le code produit. Ce chapitre résume les évolutions les plus importantes.&#xA;Déclaration de variable avec let et const Le mot-clé var est utilisé en JavaScript pour déclarer des variables.&#xA;var i = 0; Cependant la notion de déclaration de variable est particulière en JavaScript par rapport à la plupart des autres langages de programmation proches.</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:1313/420-211/0-introduction/5-es5-js/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

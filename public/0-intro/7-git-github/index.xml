@@ -3,7 +3,7 @@
   <channel>
     <title>Git/GitHub :: App Web</title>
     <link>http://localhost:1313/420-211/0-intro/7-git-github/index.html</link>
-    <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin. La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications. ** image sur la fonctionnalité ** image sur les branchements + explication</description>
+    <description>Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.&#xA;Les principales fonctionnalités de Git incluent :&#xA;La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/0-intro/7-git-github/index.xml" rel="self" type="application/rss+xml" />
@@ -12,14 +12,14 @@
       <link>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-211/0-intro/7-git-github/git-bash/index.html</guid>
-      <description>Git Bash : Guide pratique Git Bash est un terminal puissant qui permet d’utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande. Voici un guide étape par étape pour tirer le meilleur parti de Git Bash.</description>
+      <description>Git Bash : Guide pratique Git Bash est un terminal puissant qui permet d’utiliser Git via des commandes en ligne. Contrairement à GitHub Desktop, il offre un contrôle précis et détaillé des opérations Git, idéal pour les utilisateurs qui souhaitent maîtriser les bases et les fonctionnalités avancées de Git. Avec Git Bash, vous pouvez gérer vos dépôts, créer des branches, et effectuer des opérations complexes directement depuis la ligne de commande.</description>
     </item>
     <item>
       <title>Guide GitHub Desktop</title>
       <link>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</guid>
-      <description>GitHub Desktop : Guide Pratique GitHub Desktop est une application graphique conviviale qui simplifie l’utilisation de Git. Contrairement à Git Bash, elle permet de gérer vos dépôts sans avoir à taper de commandes en ligne. Voici un guide étape par étape pour utiliser GitHub Desktop efficacement.&#xA;Git : Guide pratique 1. Cloner un dépôt GitHub existant Ouvrez GitHub Desktop. Cliquez sur File &gt; Clone Repository ou utilisez le bouton Clone Repository visible sur l’interface principale. Entrez l’URL du dépôt GitHub ou sélectionnez-en un directement depuis votre compte GitHub connecté. Choisissez un dossier local où le dépôt sera stocké sur votre machine. Astuce : Si vous travaillez sur plusieurs dépôts, organisez-les dans des dossiers dédiés pour une meilleure gestion.</description>
+      <description>GitHub Desktop : Guide Pratique GitHub Desktop est une application graphique conviviale qui simplifie l’utilisation de Git. Contrairement à Git Bash, elle permet de gérer vos dépôts sans avoir à taper de commandes en ligne. Voici un guide étape par étape pour utiliser GitHub Desktop efficacement.&#xA;Git : Guide pratique 1. Cloner un dépôt GitHub existant Ouvrez GitHub Desktop. Cliquez sur File &gt; Clone Repository ou utilisez le bouton Clone Repository visible sur l’interface principale.</description>
     </item>
   </channel>
 </rss>

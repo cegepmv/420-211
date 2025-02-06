@@ -3,7 +3,7 @@
   <channel>
     <title>Guide GitHub Desktop :: App Web</title>
     <link>http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.html</link>
-    <description>GitHub Desktop : Guide Pratique GitHub Desktop est une application graphique conviviale qui simplifie l’utilisation de Git. Contrairement à Git Bash, elle permet de gérer vos dépôts sans avoir à taper de commandes en ligne. Voici un guide étape par étape pour utiliser GitHub Desktop efficacement.&#xA;Git : Guide pratique 1. Cloner un dépôt GitHub existant Ouvrez GitHub Desktop. Cliquez sur File &gt; Clone Repository ou utilisez le bouton Clone Repository visible sur l’interface principale. Entrez l’URL du dépôt GitHub ou sélectionnez-en un directement depuis votre compte GitHub connecté. Choisissez un dossier local où le dépôt sera stocké sur votre machine. Astuce : Si vous travaillez sur plusieurs dépôts, organisez-les dans des dossiers dédiés pour une meilleure gestion.</description>
+    <description>GitHub Desktop : Guide Pratique GitHub Desktop est une application graphique conviviale qui simplifie l’utilisation de Git. Contrairement à Git Bash, elle permet de gérer vos dépôts sans avoir à taper de commandes en ligne. Voici un guide étape par étape pour utiliser GitHub Desktop efficacement.&#xA;Git : Guide pratique 1. Cloner un dépôt GitHub existant Ouvrez GitHub Desktop. Cliquez sur File &gt; Clone Repository ou utilisez le bouton Clone Repository visible sur l’interface principale.</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/0-intro/7-git-github/github-desktop/index.xml" rel="self" type="application/rss+xml" />

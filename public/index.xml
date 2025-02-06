@@ -3,16 +3,23 @@
   <channel>
     <title>Applications Web :: App Web</title>
     <link>http://localhost:1313/420-211/index.html</link>
-    <description>Bienvenue au cours 420-211 - Applications Web ! Plan du cours Module 0 - Préalables&#xA;Module 1 - Introduction à React&#xA;Module 2 - Application basées sur des données (data-driven applications)&#xA;Module 3 - États et cycle de vie (React states)&#xA;Module 4 - Introduction aux “hooks” : useEffect()</description>
+    <description>Bienvenue au cours 420-211 - Applications Web ! Plan du cours [Module 0 - Préalables]( “Module 0 - Préalables”)&#xA;Module 1 - Introduction à React&#xA;Module 2 - Application basées sur des données (data-driven applications)&#xA;Module 3 - États et cycle de vie (React states)&#xA;Module 4 - Introduction aux “hooks” : useEffect()</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
-      <link>http://localhost:1313/420-211/0-intro/index.html</link>
+      <link>http://localhost:1313/420-211/0-introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/0-intro/index.html</guid>
-      <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5. JS depuis ES5 Introduction aux syntaxes modernes de javascript introduites depuis la version 5</description>
+      <guid>http://localhost:1313/420-211/0-introduction/index.html</guid>
+      <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5.</description>
+    </item>
+    <item>
+      <title>Introduction à React</title>
+      <link>http://localhost:1313/420-211/1-intro-react/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/420-211/1-intro-react/index.html</guid>
+      <description>Dans cette section, nous allons apprendre comment créer une page statique avec React.&#xA;Vous devez sûrement vous dire “Mais je sais déjà comment faire des pages statiques…”, mais pour écrire du bon code avec React, nous devons d’abord apprendre à réfléchir en React et poser les fondations qui nous permettrons de développer des applications plus complexes par la suite.&#xA;Ce que nous allons apprendre dans ce module :&#xA;Pourquoi il est intéressant d’utiliser React Mettre en place un nouveau projet React La syntaxe JSX Créer nos premiers composants React Styliser nos composants avec des classes CSS Libraire vs Frameworks Librairie</description>
     </item>
     <item>
       <title>Annexe</title>

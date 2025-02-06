@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Relearn 7.3.1">
+    <meta name="description" content="Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.
+Les principales fonctionnalités de Git incluent :
+La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Git/GitHub :: App Web">
+    <meta name="twitter:description" content="Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.
+Les principales fonctionnalités de Git incluent :
+La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.">
+    <meta property="og:url" content="http://localhost:1313/420-211/0-introduction/7-git-github/index.html">
+    <meta property="og:site_name" content="App Web">
+    <meta property="og:title" content="Git/GitHub :: App Web">
+    <meta property="og:description" content="Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.
+Les principales fonctionnalités de Git incluent :
+La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Git/GitHub :: App Web">
+    <meta itemprop="description" content="Introduction Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.
+Les principales fonctionnalités de Git incluent :
+La gestion simultanée de plusieurs versions d’un projet. La possibilité de revenir à des états antérieurs en cas de besoin.">
+    <meta itemprop="wordCount" content="348">
+    <title>Git/GitHub :: App Web</title>
+    <link href="/420-211/0-introduction/7-git-github/index.xml" rel="alternate" type="application/rss+xml" title="Git/GitHub :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
+
+
+    <link href="/420-211/css/fontawesome-all.min.css?1738864245" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1738864245" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1738864245" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1738864245" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1738864245" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1738864245" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1738864245" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
+      window.relearn.min = ``;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/0-introduction/7-git-github/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#git-bash">Git Bash</a></li>
+        <li><a href="#github-desktop">GitHub Desktop</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/0-introduction/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Git/GitHub</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-introduction/6-prog-fonctionnelle/index.html" title="Programmation fonctionnelle (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-introduction/7-git-github/git-bash/index.html" title="Guide Git Bash (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 0-introduction" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="gitgithub">Git/GitHub</h1>
+
+<h3 id="introduction">Introduction</h3>
+<p>Git est un système de gestion de versions distribué, conçu pour suivre et gérer les modifications apportées aux fichiers au fil du temps. Il est largement utilisé dans le développement logiciel, permettant une collaboration efficace entre les développeurs tout en conservant un historique complet des changements.</p>
+<p>Les principales fonctionnalités de Git incluent :</p>
+<ul>
+<li>La gestion simultanée de plusieurs versions d’un projet.</li>
+<li>La possibilité de revenir à des états antérieurs en cas de besoin.</li>
+<li>La facilitation du travail en équipe sur un même projet, tout en minimisant les conflits liés aux modifications.</li>
+</ul>
+<p>** image sur la fonctionnalité
+** image sur les branchements + explication</p>
+<p>Nous allons, à travers ce guide, explorer deux méthodes d&rsquo;utilisation de Git :</p>
+<ol>
+<li><strong>Git Bash</strong>, un outil en ligne de commande.</li>
+<li><strong>GitHub Desktop</strong>, une application graphique.</li>
+</ol>
+<hr>
+<h3 id="git-bash">Git Bash</h3>
+<h5 id="quest-ce-que-git-bash-et-pourquoi-est-il-important-">Qu&rsquo;est-ce que Git Bash et pourquoi est-il important ?</h5>
+<p>Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.</p>
+<p>Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel.</p>
+<h5 id="installation">Installation</h5>
+<ol>
+<li>Rendez-vous sur le site officiel de Git : <a href="https://git-scm.com/" rel="external" target="_blank">https://git-scm.com/</a></li>
+<li>Téléchargez et installez Git en suivant les instructions adaptées à votre système d’exploitation.</li>
+<li>Pendant l’installation, laissez les options par défaut, sauf indication contraire.</li>
+</ol>
+<hr>
+<h3 id="github-desktop">GitHub Desktop</h3>
+<h5 id="quest-ce-que-github-desktop-">Qu&rsquo;est-ce que GitHub Desktop ?</h5>
+<p>GitHub Desktop est une application graphique qui simplifie l&rsquo;utilisation de Git. Contrairement à Git Bash, il ne nécessite pas de lignes de commande, ce qui en fait une excellente option pour les débutants ou ceux qui préfèrent une interface visuelle.</p>
+<h5 id="fonctionnalités-principales">Fonctionnalités principales</h5>
+<ul>
+<li>Interface conviviale pour gérer vos dépôts.</li>
+<li>Synchronisation simplifiée avec GitHub.</li>
+<li>Gestion visuelle des branches et des commits.</li>
+</ul>
+<h5 id="installation-de-github-desktop">Installation de GitHub Desktop</h5>
+<ol>
+<li>Allez sur le site officiel de GitHub Desktop : <a href="https://desktop.github.com/" rel="external" target="_blank">https://desktop.github.com/</a>.</li>
+<li>Téléchargez et installez l’application pour votre système d’exploitation.</li>
+<li>Connectez-vous à votre compte GitHub ou créez-en un si nécessaire.</li>
+</ol>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
+    <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
+</a>
+        </div>
+        <script>
+          window.index_js_url="/420-211/searchindex.en.js?1738864245";
+        </script>
+        <search><form action="/420-211/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-211/js/auto-complete.js?1738864245" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1738864245" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1738864245" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1738864245" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1738864245" defer></script>
+        <script src="/420-211/js/search.js?1738864245" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/420-211/0-introduction/index.html"><input type="checkbox" id="R-section-ffc5c970e9853f1b255e319b98ce7843" aria-controls="R-subsections-ffc5c970e9853f1b255e319b98ce7843" checked><label for="R-section-ffc5c970e9853f1b255e319b98ce7843"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-introduction/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-ffc5c970e9853f1b255e319b98ce7843" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-introduction/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-introduction/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-introduction/2-conditions-js/index.html"><a class="padding" href="/420-211/0-introduction/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-introduction/3-objets-js/index.html"><a class="padding" href="/420-211/0-introduction/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-introduction/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-introduction/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="active parent alwaysopen " data-nav-id="/420-211/0-introduction/7-git-github/index.html"><input type="checkbox" id="R-section-33bcee2932331960e97db5ce42d5bb6e" aria-controls="R-subsections-33bcee2932331960e97db5ce42d5bb6e" checked><label for="R-section-33bcee2932331960e97db5ce42d5bb6e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Git/GitHub</span></label><a class="padding" href="/420-211/0-introduction/7-git-github/index.html"><b>7. </b>Git/GitHub</a><ul id="R-subsections-33bcee2932331960e97db5ce42d5bb6e" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-introduction/7-git-github/git-bash/index.html"><a class="padding" href="/420-211/0-introduction/7-git-github/git-bash/index.html"><b>7.1 </b>Guide Git Bash</a></li>
+            <li class="" data-nav-id="/420-211/0-introduction/7-git-github/github-desktop/index.html"><a class="padding" href="/420-211/0-introduction/7-git-github/github-desktop/index.html"><b>7.2 </b>Guide GitHub Desktop</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/1-intro-react/index.html"><a class="padding" href="/420-211/1-intro-react/index.html"><b>1. </b>Introduction à React</a></li>
+            <li class="" data-nav-id="/420-211/annexe/index.html"><input type="checkbox" id="R-section-c42d2d00a11a971cfe1f59377ff37f39" aria-controls="R-subsections-c42d2d00a11a971cfe1f59377ff37f39"><label for="R-section-c42d2d00a11a971cfe1f59377ff37f39"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Annexe</span></label><a class="padding" href="/420-211/annexe/index.html">Annexe</a><ul id="R-subsections-c42d2d00a11a971cfe1f59377ff37f39" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/annexe/0-intro/index.html"><a class="padding" href="/420-211/annexe/0-intro/index.html">JS - Exercices préalables</a></li></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/0-introduction/7-git-github/index.html" lang="fr-fr" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-211/js/clipboard.min.js?1738864245" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1738864245" defer></script>
+    <script src="/420-211/js/theme.js?1738864245" defer></script>
+  </body>
+</html>

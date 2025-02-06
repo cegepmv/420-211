@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Relearn 7.3.1">
+    <meta name="description" content="Contrôle de version Le contrôle de version (Version Control), également appelé contrôle de source (Source Control), permet de suivre et de gérer toutes les modifications apportées à un code.
+Utilité Plusieurs personnes peuvent travailler simultanément sur le même projet. Il sert à la fois de référentiel, de récit de projet, de moyen de communication et d’outil de gestion d’équipe. Enregistre toutes les modifications d’un code source dans un journal (ou historique).">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Git/GitHub :: App Web">
+    <meta name="twitter:description" content="Contrôle de version Le contrôle de version (Version Control), également appelé contrôle de source (Source Control), permet de suivre et de gérer toutes les modifications apportées à un code.
+Utilité Plusieurs personnes peuvent travailler simultanément sur le même projet. Il sert à la fois de référentiel, de récit de projet, de moyen de communication et d’outil de gestion d’équipe. Enregistre toutes les modifications d’un code source dans un journal (ou historique).">
+    <meta property="og:url" content="http://localhost:1313/420-211/0-intro/7-git-github/git/index.html">
+    <meta property="og:site_name" content="App Web">
+    <meta property="og:title" content="Git/GitHub :: App Web">
+    <meta property="og:description" content="Contrôle de version Le contrôle de version (Version Control), également appelé contrôle de source (Source Control), permet de suivre et de gérer toutes les modifications apportées à un code.
+Utilité Plusieurs personnes peuvent travailler simultanément sur le même projet. Il sert à la fois de référentiel, de récit de projet, de moyen de communication et d’outil de gestion d’équipe. Enregistre toutes les modifications d’un code source dans un journal (ou historique).">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Git/GitHub :: App Web">
+    <meta itemprop="description" content="Contrôle de version Le contrôle de version (Version Control), également appelé contrôle de source (Source Control), permet de suivre et de gérer toutes les modifications apportées à un code.
+Utilité Plusieurs personnes peuvent travailler simultanément sur le même projet. Il sert à la fois de référentiel, de récit de projet, de moyen de communication et d’outil de gestion d’équipe. Enregistre toutes les modifications d’un code source dans un journal (ou historique).">
+    <meta itemprop="wordCount" content="2966">
+    <title>Git/GitHub :: App Web</title>
+    <link href="/420-211/0-intro/7-git-github/git/index.xml" rel="alternate" type="application/rss+xml" title="Git/GitHub :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
+
+
+    <link href="/420-211/css/fontawesome-all.min.css?1738169177" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1738169177" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1738169177" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1738169177" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1738169177" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1738169177" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1738169177" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
+      window.relearn.min = ``;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/0-intro/7-git-github/git/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#contrôle-de-version">Contrôle de version</a></li>
+        <li><a href="#configuration-de-git">Configuration de <code>git</code></a></li>
+        <li><a href="#introduction-à-github">Introduction à GitHub</a></li>
+        <li><a href="#commandes-git">Commandes git</a></li>
+        <li><a href="#clé-ssh">Clé SSH</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/0-intro/index.html"><span itemprop="name">Préalables</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/0-intro/7-git-github/index.html"><span itemprop="name">Git/GitHub</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Git/GitHub</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-intro/7-git-github/index.html" title="Git/GitHub (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/0-intro/7-git-github/git-bash/index.html" title="Guide Git Bash (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 0-intro" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="gitgithub">Git/GitHub</h1>
+
+<h3 id="contrôle-de-version">Contrôle de version</h3>
+<p>Le contrôle de version (<em>Version Control</em>), également appelé contrôle de source (<em>Source Control</em>), permet de suivre et de gérer toutes les modifications apportées à un code.</p>
+<h4 id="utilité">Utilité</h4>
+<ul>
+<li>Plusieurs personnes peuvent travailler simultanément sur le même projet.</li>
+<li>Il sert à la fois de référentiel, de récit de projet, de moyen de communication et d&rsquo;outil de gestion d&rsquo;équipe.</li>
+<li>Enregistre toutes les modifications d&rsquo;un code source dans un journal (ou historique).</li>
+<li>Permet aux membres d&rsquo;une équipe de travailler simultanément et offre la possibilité de fusionner leur travaux.</li>
+<li>Trace chaque modification apportée au logiciel/code source.</li>
+</ul>
+<h4 id="système-de-contrôle-de-version-vcs">Système de contrôle de version (VCS)</h4>
+<p>Également connu sous le nom de gestionnaire de code source (<em>Source Code Manager</em> ou <em>SCM</em>). Il s&rsquo;agit d&rsquo;un système qui conserve la trace des modifications apportées à un fichier ou à un ensemble de fichiers et qui, en cas de problème, vous permet de remonter dans l&rsquo;histoirique des modification, de comparer les modifications au fil du temps et de revenir facilement à un état fonctionnel de votre code source. Le très populaire <strong>Git</strong> est un système de contrôle de version très appréciés des développeurs. Il est gratuit et libre (<em>open-source</em>).</p>
+<h3 id="configuration-de-git">Configuration de <code>git</code></h3>
+<p>La première fois que vous installez <code>git</code> sur votre machine, vous devez faire la configuration initiale.</p>
+<p>Quelques éléments principaux que vous devez configurer :</p>
+<ul>
+<li>Vos coordonnées : comme votre nom et votre adresse courriel</li>
+<li>Votre éditeur Git par défaut (nano, vim ou emacs)</li>
+<li>Le nom de la branche par défaut (nous verrons les branches un peu plus tard).</li>
+</ul>
+<p>Nous pouvons changer toutes ces choses en utilisant la commande <code>git config</code> :</p>
+<ul>
+<li>Configurer le nom :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;Votre Nom&#34;</span></span></span></code></pre></div>
+<ul>
+<li>Configurer l&rsquo;adresse courriel :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;votre-adresse@exemple.com&#34;</span></span></span></code></pre></div>
+<ul>
+<li>Configurer l&rsquo;éditeur git par défaut :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global core.editor nano</span></span></code></pre></div>
+<ul>
+<li>Configurer la branche principal par défaut :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global init.defaultBranch main</span></span></code></pre></div>
+<ul>
+<li>Vérifier la configuration <code>git</code> :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --list</span></span></code></pre></div>
+
+<details open class=" box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Conseil
+  </summary>
+  <div class="box-content">
+<p>Il est préférable d&rsquo;avoir le même nom d&rsquo;utilisateur et adresse courriel que celle de votre profil GitHub (plus de détails dans les prochaines sections).</p>
+  </div>
+</details>
+<ul>
+<li>Configurer l&rsquo;éditeur par défaut :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global core.editor nano</span></span></code></pre></div>
+<h3 id="introduction-à-github">Introduction à GitHub</h3>
+<p>Avant de nous plonger dans les différentes commandes <code>git</code>, familiarisons-nous rapidement avec <strong>GitHub</strong>.</p>
+<p><strong>Git</strong> est l&rsquo;outil qui permet suivre les modifications apportées à un code (c&rsquo;est comme un historique/journal des changements).</p>
+<p><strong>GitHub</strong> est un site web sur lequel vous pouvez <strong>téléverser (<em>push</em>) vos projets locaux sur internet</strong> pour que vos coéquipiers (ou d&rsquo;autres personnes qui travaillent sur le même projet) puissent aussi avoir accès au code et le modifier.</p>
+<p><strong>GitHub est comme un &ldquo;hub&rdquo; où vous pouvez entreposer vos projets/codes sur internet</strong>.</p>
+<h4 id="inscription-à-github">Inscription à GitHub</h4>
+<p>Allez sur le site de GitHub et inscrivez-vous (utilisez l&rsquo;adresse courriel du Cégep !).</p>
+<h4 id="profil-github">Profil GitHub</h4>
+<p>Une fois inscrit, vous pouvez vous rendre sur le site <a href="https://github.com/VOTRE_USERNAME" rel="external" target="_blank">https://github.com/VOTRE_USERNAME</a>. Vous pourrez voir votre profil public où vous pourrez ajouter quelques informations vous concernant (photo de profil, description, etc&hellip;). Voici un exemple de profil sur lequel vous pouvez vous inspirer : <a href="https://github.com/bobbyiliev" rel="external" target="_blank">Profil GitHub</a>.</p>
+<h4 id="créer-un-nouveau-dépôt">Créer un nouveau dépôt</h4>
+<p>Si vous n&rsquo;êtes pas familier avec le terme &ldquo;dépôt&rdquo;, vous pouvez le considérer comme <strong>un projet</strong> : Il contient tous les fichiers de l&rsquo;application ou du site web que vous êtes en train de développer.</p>
+<p>On appelle généralement un dépot une &ldquo;repo&rdquo; (pour <em>repository</em> en anglais).</p>
+<p>Pour créer un nouveau dépôt sur GitHub, cliquez sur le bouton vert <code>NEW</code> en haut à gauche où les dépôts sont listés puis cliquer sur le bouton <code>New Repository</code> :</p>
+<p>(SCREEN)</p>
+<p>Après cela, vous arriverez à une page où vous pourrez spécifier les informations pour votre nouveau dépôt, comme par exemple :</p>
+<ul>
+<li>Le nom du projet (utilisez quelque chose de descriptif)</li>
+<li>Une description générale du projet et de son objet.</li>
+<li>Choisissez si vous voulez que le dépôt soit public ou privé.</li>
+</ul>
+<p>Une fois que vous avez ajouté les informations et crée votre &ldquo;repo&rdquo;, vous arriverez sur une page avec des instructions sur la façon de pousser votre projet local sur GitHub (nous verrons ces étapes plus en détail dans les prochains sections) :</p>
+<h5 id="dépôt-publique-vs-dépôt-privé">Dépôt publique vs dépôt privé</h5>
+<p>En fonction de la nature du projet (qu&rsquo;il soit ou non <em>open-source</em> par exemple), vous pouvez définir votre dépôt comme <strong>public</strong> ou <strong>privé</strong> :</p>
+<ul>
+<li><strong>Dépôt public :</strong> n&rsquo;importe qui sur internet peut le voir. Attention! Même s&rsquo;il est possible de voir le dépôt et de lire le code, vous serez le mainteneur du projet : C&rsquo;est vous qui choisirez les personnes autorisées à modifier le code.</li>
+<li><strong>Dépôt privé :</strong> n&rsquo;est accessible qu&rsquo;à vous et aux personnes que vous invitez.</li>
+</ul>
+<h5 id="le-fichier-readmemd">Le fichier <code>README.md</code></h5>
+<ul>
+<li>Le fichier <code>README.md</code> est une présentation/description de votre projet.</li>
+<li><strong>Avantage :</strong> Lorsque vous regardez le dépôt de quelqu&rsquo;un sur GitHub, lire son fichier <code>README</code> vous permettra de comprendre ce que fait son code, quelles sont les dépendances à installer pour faire fonctionner son logiciel, etc&hellip;</li>
+<li><strong>Il est très important qu&rsquo;projet/dépôt soit correctement décrit et documenté</strong> (si ce n&rsquo;est pas le cas, personne ne voudra l&rsquo;utiliser, l&rsquo;améliorer ou le développer).</li>
+</ul>
+<h3 id="commandes-git">Commandes git</h3>
+<h4 id="initialiser-un-projet-git">Initialiser un projet git</h4>
+<p>Si vous démarrez un nouveau projet ou si vous avez un projet existant que vous souhaitez ajouter à <code>Git</code> et ensuite le mettre sur GitHub, vous devez d&rsquo;abord initialiser le projet avec la commande <code>git init</code>.
+Pour simplifier les choses, disons que nous voulons commencer à construire un nouveau projet. La première chose que je ferais habituellement est de créer un nouveau dossier dans lequel je stockerai les fichiers de mon projet.</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir nouveau-projet
+</span></span><span style="display:flex;"><span>cd nouveau-projet
+</span></span><span style="display:flex;"><span>git init</span></span></code></pre></div>
+<p>Chaque fois que vous initialisez un nouveau projet Git crée un répertoire <code>.git</code> dans lequel tous la configuration de votre &ldquo;repo&rdquo; est stockée.</p>
+<h4 id="git-status">Git Status</h4>
+<p>Chaque fois que vous apportez des modifications à votre projet Git et que vous souhaitez vérifier ce qui a changé, vous pouvez utiliser la commande <code>git status</code></p>
+<p><em>Exemple de sortie avec le nouveau projet crée précédemment :</em></p>
+<pre><code>On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use &quot;git add&quot; to track)
+</code></pre>
+<p>Ajoutez un fichier <code>README.md</code> &ldquo;générique&rdquo; :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;# Projet Démo&#34;</span> &gt;&gt; README.md</span></span></code></pre></div>
+<p>Si vous lancez <code>git status</code> encore une fois :</p>
+<pre><code>Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    README.md
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<p>Git détecte qu&rsquo;il y a un nouveau fichier qui n&rsquo;est pas &ldquo;suivi&rdquo;, appelé <em>README.md</em>, (que nous venons de créer) et nous invite à utiliser la commande <code>git add</code> pour commencer à &ldquo;suivre&rdquo; le fichier.</p>
+<h4 id="git-add">git add</h4>
+<p>Par défaut, lorsque vous créez un nouveau fichier dans votre projet Git, il n&rsquo;est pas &ldquo;suivi&rdquo;. Pour indiquer à Git qu&rsquo;il doit commencer à suivre le fichier, vous devez utiliser la commande <code>git add</code>.</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add NOM_DU_FICHIER</span></span></code></pre></div>
+<p>Dans l&rsquo;exemple précédent :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add README.md</span></span></code></pre></div>
+<p>Si vous lancez <code>git status</code>:</p>
+<pre><code>Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+    new file: README.md
+</code></pre>
+<p>Git nous indique que le fichier <code>README.md</code> est un nouveau fichier qui vient d&rsquo;être mis à disposition, qui n&rsquo;a pas été suivi auparavant et qui est prêt à être &ldquo;commit&rdquo;</p>
+<p>Pour &ldquo;suivre&rdquo; plusieurs fichiers :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add NOM_DU_FICHIER1 NOM_DU_FICHIER2 NOM_DU_FICHIER3 </span></span></code></pre></div>
+<p>Pour &ldquo;suivre&rdquo; la totalité des fichiers non suivis dans le répertoire :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .</span></span></code></pre></div>
+
+<details open class=" box cstyle notices warning">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-triangle"></i> 
+    Attention
+  </summary>
+  <div class="box-content">
+<p>Soyez prudents! Dans certains cas, il peut y avoir des fichiers que vous ne voulez pas ajouter à Git.</p>
+  </div>
+</details>
+<h4 id="git-commit">git commit</h4>
+<p>Une fois que vous avez ajouté vos fichiers, l&rsquo;étape suivante est de valider ces modifications. Si vous exécutez à nouveau <code>git status</code>, vous pourrez voir que Git nous indique qu&rsquo;il y a des modifications à valider :</p>
+<pre><code>Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+    new file: README.md
+</code></pre>
+<p>Dans ce cas, seul le fichier <code>README.md</code> sera validé. Pour ce faire, nous pouvons exécuter la commande suivante :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Commit initial&#34;</span></span></span></code></pre></div>
+<ul>
+<li><code>git commit</code> : pour indiquer à git que nous voulons livrer les changements que nous avons mis en place avec la commande git add
+<code>-m </code>: indique que nous allons spécifier notre message qui va accompagner notre <em>commit</em>.</li>
+<li>Entre les guillemets : notre message de livraison (<strong>il est important d&rsquo;écrire des messages de livraison courts et descriptifs de vos changements</strong>).</li>
+</ul>
+<h4 id="git-log">git log</h4>
+<p>Afin de lister l&rsquo;historique des commits, vous pouvez utiliser la commande suivante :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log</span></span></code></pre></div>
+<h3 id="clé-ssh">Clé SSH</h3>
+<p>Il existe plusieurs façons de s&rsquo;authentifier auprès de GitHub. Essentiellement, vous en avez besoin pour pousser vos modifications locales depuis votre ordinateur portable vers votre dépôt GitHub.
+Vous pouvez utiliser l&rsquo;une des méthodes suivantes :</p>
+<ul>
+<li>HTTPS : cette méthode requiert votre nom d&rsquo;utilisateur et votre mot de passe GitHub à chaque fois que vous essayez d&rsquo;envoyer vos modifications.</li>
+<li>SSH (recommandé) : Avec SSH, vous pouvez générer une paire de clés SSH et ajouter votre clé publique à GitHub. De cette manière, votre nom d&rsquo;utilisateur et votre mot de passe ne vous seront pas demandés à chaque fois que vous enverrez vos modifications sur GitHub.</li>
+</ul>
+<h4 id="étapes-pour-se-connecter-à-github-via-ssh">Étapes pour se connecter à GitHub via SSH</h4>
+<ul>
+<li>Générer une nouvelle paire de clé</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen</span></span></code></pre></div>
+<ul>
+<li>Une fois crée, vous devez téléverser la clé publique sur votre compte GitHub. Copiez le résultat de la commande suivante :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_rsa.pub</span></span></code></pre></div>
+<ul>
+<li>Allez sur GitHub, cliquez sur votre photo de profil (en haut à droit) -&gt; <em>Settings</em>-&gt; <em>SSH and GPG Keys</em> -&gt; <em>New SSH Key</em></li>
+<li>Spécifiez un titre pour votre clé (par exemple Laptop de travail), puis dans la section <em>Key</em>, collez votre clé publique et enfin cliquez sur <em>Add SSH Key</em></li>
+</ul>
+<h4 id="git-push">git push</h4>
+<p>Enfin, une fois que vous avez effectué toutes vos modifications, que vous les avez mises en scène avec la commande git add . et que vous avez validé les modifications avec la commande git commit, vous devez pousser les modifications validées de votre dépôt local vers votre dépôt GitHub distant. Cela permet de s&rsquo;assurer que le dépôt distant est mis à jour avec votre dépôt local.</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin https://github.com/VOTRE_USERNAME/NOM_REPO.git
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git push -u origin main</span></span></code></pre></div>
+<p>Après avoir exécuté la commande git push, vous pouvez vous rendre sur votre projet GitHub et vous pourrez voir les <em>commits</em> que vous avez apportées localement dans le dépôt distant sur GitHub. Si vous cliquez sur le lien <em>commits</em>, vous pourrez voir tous les <em>commits</em> comme si vous lanciez la commande <code>git log</code>.</p>
+<h4 id="git-pull">git pull</h4>
+<p>Si vous travaillez sur un projet avec plusieurs personnes, il y a de fortes chances que le code change. Il vous faut donc un moyen de récupérer les dernières modifications du dépôt GitHub sur votre machine.</p>
+<p>Vous savez déjà que vous pouvez utiliser la commande <code>git push</code> pour pousser vos derniers commits, donc pour faire l&rsquo;inverse et télécharger les derniers <em>commits</em> de GitHub vous devez utiliser la commande <code>git pull</code>.</p>
+<p>Pour tester cela, faisons un changement directement sur GitHub. Une fois sur GitHub, cliquez sur le fichier <em>README.md</em> et cliquez sur l&rsquo;icône du crayon pour éditer le fichier :</p>
+<p>(SCREEN)</p>
+<p>Apportez une modification mineure au fichier, ajoutez un message et cliquez sur le bouton <code>Commit Changes</code> :</p>
+<p>(SCREEN)</p>
+<p>Si on essaie de push du nouveau code à partir de notre ordinateur, nous aurons une erreur :</p>
+<pre><code> ! [rejected] main -&gt; main (fetch first)
+error: failed to push some refs to
+'git@github.com:bobbyiliev/demo-repo.git'
+hint: Updates were rejected because the remote contains work
+that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+<p>Comme indiqué , le dépôt distant est en avance sur votre dépôt local, vous devez donc exécuter la commande git pull pour obtenir les dernières modifications :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git pull origin main</span></span></code></pre></div>
+<p>Résultat de la commande :</p>
+<pre><code>remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 646 bytes | 646.00 KiB/s, done.
+From github.com:bobbyiliev/demo-repo
+  * branch main -&gt; FETCH_HEAD
+    da46ce3..442afa5 main -&gt; origin/main
+
+  README.md | 3 ++-
+  1 file changed, 2 insertions(+), 1 deletion(-)
+</code></pre>
+<p>Comme indiqué, le dépôt distant est en avance sur votre dépôt local, vous devez donc exécuter la commande <code>git pull</code> pour obtenir les dernières modifications :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git pull origin main</span></span></code></pre></div>
+<pre><code>remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 646 bytes | 646.00 KiB/s, done.
+From github.com:bobbyiliev/demo-repo
+  * branch main -&gt; FETCH_HEAD
+    da46ce3..442afa5 main -&gt; origin/main
+  README.md | 3 ++-
+  1 file changed, 2 insertions(+), 1 deletion(-)
+</code></pre>
+<p>Nous pouvons voir que le fichier README.md a été modifié et qu&rsquo;il y a eu 2 nouvelles lignes ajoutées et 1 ligne supprimée.
+Maintenant, si vous lancez <code>git log</code>, vous verrez que le <em>commit</em> que vous avez fait sur GitHub est disponible localement.</p>
+<p>Remarque
+Bien entendu, il s&rsquo;agit d&rsquo;un scénario simplifié. Dans le monde réel, vous ne feriez pas de modifications directement sur GitHub, mais vous travailleriez très probablement avec d&rsquo;autres personnes sur le même projet, et vous devriez pull leurs dernières modifications régulièrement. Vous devez vous assurer que vous récupérez les dernières modifications à chaque fois avant d&rsquo;essayer de push les votres.</p>
+<h4 id="branches-git">Branches git</h4>
+<p>Jusqu&rsquo;à présent, nous n&rsquo;avons travaillé que sur la branche Main, qui est créée par défaut lors de la création d&rsquo;un nouveau dépôt GitHub. Dans ce chapitre, vous en apprendrez plus sur les branches Git. Pourquoi en avoir besoin et comment les utiliser.</p>
+<p>Les branches sont un moyen de travailler sur votre projet en ajoutant une nouvelle fonctionnalité ou en corrigeant des bogues sans affecter la branche principale.</p>
+<p>De cette façon, chaque nouvelle fonctionnalité ou correction de bogue que vous développez peut vivre sur une branche séparée, et plus tard, une fois que vous êtes prêt et que vous avez entièrement testé les changements, vous pouvez fusionner la nouvelle branche à votre branche principale. Vous en apprendrez plus sur la fusion dans le prochain chapitre !</p>
+<p>(ARBRE DE BRANCHES)</p>
+<p>Grâce aux branches multiples, vous pouvez avoir plusieurs personnes travaillant sur différentes fonctionnalités ou corrections en même temps, chacune travaillant sur sa propre branche.</p>
+<p>L&rsquo;image montre 3 branches :</p>
+<ul>
+<li>branche main (défaut)</li>
+<li>branche 1</li>
+<li>branche 2</li>
+</ul>
+<p>La branche main est la branche par défaut. Nous pouvons considérer les deux autres branches comme deux nouvelles fonctionnalités en cours de développement. Par exemple, un développeur peut travailler sur un nouveau formulaire de contact pour votre application web sur la branche 1, et un autre développeur peut travailler sur une fonctionnalité de formulaire d&rsquo;enregistrement d&rsquo;utilisateur sur la branche 2. Grâce aux branches séparées, les deux développeurs peuvent travailler sur le même projet sans se gêner l&rsquo;un l&rsquo;autre.</p>
+<ul>
+<li>Créer une branche :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch nouvelleFonctionnalite</span></span></code></pre></div>
+<ul>
+<li>Passer à la nouvelle branche :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout nouvelleFonctionnalite</span></span></code></pre></div>
+<ul>
+<li>Pour exécuter les deux commandes en une :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch -b nouvelleFonctionnalite</span></span></code></pre></div>
+<ul>
+<li>Pour vérifier dans quelle branche on est :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch</span></span></code></pre></div>
+<p>Maintenant que notre branche est crée, ajoutez du contenu :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;&lt;h1&gt;Ma Première Fonctionnalité&lt;/h1&gt;&#34;</span> &gt; fonctionnalite1.html
+</span></span><span style="display:flex;"><span>git add fonctionnalite1.html
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Ajout fonctionnalite1.html&#34;</span>
+</span></span><span style="display:flex;"><span>git push</span></span></code></pre></div>
+<h4 id="git-merge">git merge</h4>
+<p>Une fois que les développeurs ont terminé leurs modifications, ils peuvent fusionner leurs branches avec la branche <em>main</em> pour mettre les nouvelles fonctionnalités en ligne.</p>
+<p>(ARBRE DES BRANCHES)</p>
+<p>Si vous avez suivi les étapes précédentes, votre branche <em>nouvelleFonctionnalite</em> est maintenant en avance sur la branche <em>main</em> de 1 commit. Pour transférer ces nouveaux changements dans la branche principale, il faut fusionner la branche <em>nouvelleFonctionnalite</em>  dans notre branche <em>main</em>.</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Passer à la branche main</span>
+</span></span><span style="display:flex;"><span>git checkout main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fusionner la branche nouvelleFonctionnalite</span>
+</span></span><span style="display:flex;"><span>git merge nouvelleFonctionnalite</span></span></code></pre></div>
+<p>Comme vous étiez sur la branche <em>main</em> lorsque vous avez lancé la commande <code>git merge</code>, Git va prendre tous les commits de la branche <em>nouvelleFonctionnalite</em> et les fusionner avec la branche <em>main</em>.</p>
+<p>Dans notre cas, la fusion s&rsquo;est déroulée sans problème car il n&rsquo;y a pas eu de conflits. Toutefois, si vous travaillez sur un projet et que plusieurs personnes apportent des modifications, il peut y avoir des <strong>conflits de fusion</strong> (<em>Merge Conflicts</em>).
+Cela se produit lorsque des modifications sont apportées à la même ligne d&rsquo;un fichier, ou lorsqu&rsquo;un développeur modifie un fichier sur une branche et qu&rsquo;un autre développeur supprime le même fichier.</p>
+<h5 id="laboratoire--résoudre-des-conflits">Laboratoire : résoudre des conflits</h5>
+<p>Simulons un conflit</p>
+<ul>
+<li>Créez une nouvelle branche</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b demoConflit</span></span></code></pre></div>
+<ul>
+<li>Éditez le fichier <code>fonctionnalite1.html</code></li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;&lt;p&gt;Démo conflit&lt;/p&gt;&#34;</span> &gt;&gt; fonctionnalite1.html</span></span></code></pre></div>
+<ul>
+<li>Ajoutez et commit les changements :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add fonctionnalite1.html
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Démo conflit 1&#34;</span></span></span></code></pre></div>
+<ul>
+<li>Retournez sur la branche <em>main</em> :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main</span></span></code></pre></div>
+<ul>
+<li>Faites un changement sur la même ligne que sur la branche <code>demoConflit</code> :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;&lt;p&gt;Conflit: changement sur la branche main&lt;/p&gt;&#34;</span> &gt;&gt; fonctionnalite1.html</span></span></code></pre></div>
+<ul>
+<li>Ajoutez et commit les changements :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add fonctionnalite1.html
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Conflit sur main&#34;</span></span></span></code></pre></div>
+<p>Maintenant votre branche principale et la branche demoConflit ont des changements dans le même fichier, sur la même ligne.</p>
+<ul>
+<li>Lançons la commande <code>git merge</code> :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git merge demoConflit</span></span></code></pre></div>
+<ul>
+<li>
+<p>Sortie :</p>
+<p>Auto-merging fonctionnalite1.html
+CONFLICT (content): Merge conflict in fonctionnalite1.html
+Automatic merge failed; fix conflicts and then commit the result.</p>
+</li>
+</ul>
+<p>Dans la sortie, on voit que la fusion échoue car il y a eu des modifications au même fichier sur la même ligne, donc Git n&rsquo;est pas sûr de savoir quelle est la bonne modification.</p>
+<p>Si vous vérifiez le contenu du fichier <code>fonctionnalite1.html</code>, vous verrez la sortie suivante :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;Ma Première Fonctionnalité&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; <span style="color:#f92672">HEAD</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">p</span>&gt;Conflit: changement sur la branche main&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>=======
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;Démo conflit&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; demoConflit</span></span></code></pre></div>
+<ul>
+<li>
+<p><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> : Indique le début des modifications sur votre branche actuelle. Dans notre cas, la ligne <code>&lt;p&gt;Conflit: changement sur la branche main&lt;/p&gt;</code> est présente sur la branche main, qui est également la branche sur laquelle nous sommes.</p>
+</li>
+<li>
+<p><code>=======</code> : Indique où se terminent les changements de la branche actuelle et d&rsquo;où proviennent les changements de la nouvelle branche. Dans notre cas, la modification de la nouvelle branche est la ligne <code>&lt;p&gt;Démo conflit&lt;/p&gt;</code>.</p>
+</li>
+<li>
+<p><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; demoConflit</code> : Indique le nom de la branche d&rsquo;où proviennent les modifications.</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
+    <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
+</a>
+        </div>
+        <script>
+          window.index_js_url="/420-211/searchindex.en.js?1738169177";
+        </script>
+        <search><form action="/420-211/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-211/js/auto-complete.js?1738169177" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1738169177" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1738169177" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1738169177" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1738169177" defer></script>
+        <script src="/420-211/js/search.js?1738169177" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/420-211/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c" checked><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/2-conditions-js/index.html"><a class="padding" href="/420-211/0-intro/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/3-objets-js/index.html"><a class="padding" href="/420-211/0-intro/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/4-fonctions-js/index.html"><a class="padding" href="/420-211/0-intro/4-fonctions-js/index.html"><b>4. </b>Fonctions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/5-es5-js/index.html"><a class="padding" href="/420-211/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="parent alwaysopen " data-nav-id="/420-211/0-intro/7-git-github/index.html"><input type="checkbox" id="R-section-742167b1c2cc342071b49e0a70091d42" aria-controls="R-subsections-742167b1c2cc342071b49e0a70091d42" checked><label for="R-section-742167b1c2cc342071b49e0a70091d42"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Git/GitHub</span></label><a class="padding" href="/420-211/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a><ul id="R-subsections-742167b1c2cc342071b49e0a70091d42" class="collapsible-menu">
+            <li class="active " data-nav-id="/420-211/0-intro/7-git-github/git/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/git/index.html"><b>7. </b>Git/GitHub</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/git-bash/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/git-bash/index.html"><b>7.1 </b>Guide Git Bash</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/github-desktop/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/github-desktop/index.html"><b>7.2 </b>Guide GitHub Desktop</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/annexe/index.html"><input type="checkbox" id="R-section-c42d2d00a11a971cfe1f59377ff37f39" aria-controls="R-subsections-c42d2d00a11a971cfe1f59377ff37f39"><label for="R-section-c42d2d00a11a971cfe1f59377ff37f39"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Annexe</span></label><a class="padding" href="/420-211/annexe/index.html">Annexe</a><ul id="R-subsections-c42d2d00a11a971cfe1f59377ff37f39" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/annexe/0-intro/index.html"><a class="padding" href="/420-211/annexe/0-intro/index.html">JS - Exercices préalables</a></li></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/0-intro/7-git-github/git/index.html" lang="fr-fr" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-211/js/clipboard.min.js?1738169177" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1738169177" defer></script>
+    <script src="/420-211/js/theme.js?1738169177" defer></script>
+  </body>
+</html>
