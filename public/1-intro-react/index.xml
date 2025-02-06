@@ -3,7 +3,7 @@
   <channel>
     <title>Introduction à React :: App Web</title>
     <link>http://localhost:1313/420-211/1-intro-react/index.html</link>
-    <description>Dans cette section, nous allons apprendre comment créer une page statique avec React.&#xA;Vous devez sûrement vous dire “Mais je sais déjà comment faire des pages statiques…”, mais pour écrire du bon code avec React, nous devons d’abord apprendre à réfléchir en React et poser les fondations qui nous permettrons de développer des applications plus complexes par la suite.&#xA;Ce que nous allons apprendre dans ce module :&#xA;Pourquoi il est intéressant d’utiliser React Mettre en place un nouveau projet React La syntaxe JSX Créer nos premiers composants React Styliser nos composants avec des classes CSS Libraire vs Frameworks Librairie</description>
+    <description>React est une bibliothèque JavaScript développée par Facebook (Meta) qui permet de créer des interfaces utilisateur dynamiques et réactives. L’objectif principal de React est de simplifier le processus de développement d’applications web complexes en offrant une approche déclarative, ce qui signifie que tu décris l’interface utilisateur en termes de ce que tu veux voir, et React s’occupe de mettre à jour l’interface quand les données changent. Contrairement à la manipulation traditionnelle du DOM, React gère …</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <atom:link href="http://localhost:1313/420-211/1-intro-react/index.xml" rel="self" type="application/rss+xml" />
