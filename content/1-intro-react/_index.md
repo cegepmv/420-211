@@ -90,13 +90,11 @@ function UserCard() {
 
 Ici, le composant **`UserCard`** utilise deux instances du composant **`UserProfile`** pour afficher des informations de profil utilisateur.
 
-### La méthode `render` et approche déclarative
+### La méthode `render` dans les classes React (ancienne méthode)
 
-Dans React, chaque composant a une méthode spéciale appelée `render`. Cette méthode retourne ce que le composant doit afficher à l'écran. C'est un aspect fondamental de React, car cela rend l'interface utilisateur **déclarative** : tu dis à React ce que tu veux afficher, et React se charge de s'assurer que l'interface est toujours à jour en fonction de l'état des données.
+Avant l'introduction des hooks et des composants fonctionnels modernes, React utilisait principalement des classes pour définir des composants. Dans cette approche, chaque composant devait obligatoirement inclure une méthode `render`, qui définissait ce que le composant affichait à l'écran.
 
-##### Exemple de méthode `render`
-
-Voici un exemple d'un composant utilisant la méthode `render` :
+##### Exemple d'un composant de classe utilisant la méthode `render` :
 
 ```jsx
 class HelloWorld extends React.Component {
@@ -104,9 +102,15 @@ class HelloWorld extends React.Component {
     return <h1>Hello, world!</h1>;
   }
 }
-```
 
+```
 Ici, la méthode `render` est utilisée pour afficher un simple message à l'écran.
+
+##### Fonctionnement de render
+La méthode render est obligatoire dans une classe React.
+- Elle doit toujours retourner un seul élément JSX (ou un fragment <>...</>).
+- React appelle render à chaque mise à jour de l'état ou des props pour refléter les changements.
+- Cette approche était largement utilisée avant l'introduction des composants fonctionnels avec hooks, qui ont simplifié la syntaxe en supprimant le besoin d'une classe et d'une méthode `render`.
 
 ---
 
