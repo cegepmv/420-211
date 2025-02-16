@@ -10,18 +10,78 @@ draft = false
 L'une des grandes forces de React est la réutilisabilité des composants. Un composant bien conçu peut être utilisé plusieurs fois dans une application, avec des données différentes, permettant ainsi de réduire la duplication du code et de rendre le développement plus efficace.
 
 **Ce que nous allons allons explorer dans ce module:**
-1. L'utilisation des props pour transmettre des données aux composants
-2. L'insertion de JavaScript dans JSX
+1. L'insertion de JavaScript dans JSX
+2. L'utilisation des props pour transmettre des données aux composants
 3. La gestion des actifs statiques
 4. La mise en correspondance des données avec les composants
+
+### Insérer du JavaScript dans JSX
+React permet d'intégrer du JavaScript directement dans le JSX à l'aide des accolades {}. 
+Cela nous permet d'afficher des variables, d'effectuer des calculs ou d'utiliser des expressions JavaScript dans notre interface.
+
+**Exemple simple :**
+On peut afficher une variable directement dans du JSX :
+```jsx
+function Greeting() {
+  const name = "Alice";
+  return <h1>Bonjour, {name} !</h1>;
+}
+```
+Dans cet exemple, la variable name est insérée dynamiquement à l'intérieur du `<h1>`.
+
+**Exemple avec un calcul :**
+On peut aussi exécuter des calculs dans JSX :
+```jsx
+function TotalPrice() {
+  const price = 50;
+  const tax = 10;
+  return <p>Total : {price + tax} €</p>;
+}
+```
+```jsx
+function App() {
+  return (
+    <h1>Il est actuellement environ {new Date().getHours() % 12} heures</h1>
+  );
+}
+```
+Dans cet exemple, nous utilisons `new Date().getHours() % 12` pour afficher l'heure actuelle en format 12 heures.
+
+### Exercice dirigé 
+Voici un exemple où nous définissons une variable timeOfDay en fonction de l'heure actuelle à l'aide d'une structure if...else :
+```jsx
+function App() {
+  const hours = new Date().getHours();
+  let timeOfDay;
+
+  if (hours < 12) {
+    timeOfDay = "morning";
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "afternoon";
+  } else if (hours < 21) {
+    timeOfDay = "evening";
+  } else {
+    timeOfDay = "night";
+  }
+
+  return (
+    <h1>Good night</h1>
+  );
+}
+```
+🎯 Actuellement, le texte affiché est toujours "Good night", modifiez le `return` du composant pour que le message s'affiche dynamiquement en fonction de `timeOfDay`.
+
+🔹 Exemple de résultat attendu :
+- À 10h, l’affichage devrait être "Good morning".
+- À 15h, l’affichage devrait être "Good afternoon".
+- Etc.
+
+🚀 Au travail !! 
 
 ### Les props : partager des données entre composants 
 Les **props (propriétés)** permettent à un composant parent de transmettre des informations à un composant enfant. Elles sont accessibles en tant qu'attributs dans le JSX et en tant qu'objet dans le composant enfant.
 
 **Exemple de composant avec props**
-function WelcomeMessage({ name }) {
-  return <h1>Bienvenue, {name} !</h1>;
-}
 ```jsx
 function App() {
   return (
@@ -33,27 +93,60 @@ function App() {
 }
 ```
 Ici, le composant `WelcomeMessage` est réutilisé avec des valeurs différentes passées via les `props`.
+
+Voici comment nous pouvons créer ce composant qui reçoit un nom en **prop** et y accède via `props.name` :
+```jsx
+function WelcomeMessage(props) {
+  return <h1>Bienvenue, {props.name} !</h1>;
+}
+```
 > **Important :** Les `props` sont **en lecture seule** et ne doivent pas être modifiées à l'intérieur du composant enfant.
 
 
-### Insérer du JavaScript dans JSX
-React permet d'intégrer du JavaScript directement dans le JSX à l'aide des {}.
+#### Utiliser les props pour afficher des informations dynamiques
 
+On peut aussi passer plusieurs valeurs et y accéder avec `props.nomDeLaProp` :
 **Exemple d'utilisation**
 ```jsx
-function UserInfo({ name, age }) {
+function UserInfo(props) {
   return (
-    <p>{name} a {age} ans.</p>
+    <p>{props.name} a {props.age} ans.</p>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <UserInfo name="Alice" age={25} />
+      <UserInfo name="Bob" age={30} />
+    </div>
   );
 }
 ```
-On peut également utiliser des expressions plus complexes :
+Ici, `UserInfo` reçoit les props `name` et `age` et y accède dynamiquement via `props.name` et `props.age`.
+
+#### Utiliser les props pour effectuer des calculs
+
+On peut aussi effectuer des opérations logiques ou mathématiques dans JSX avec les props.
+
+Voici un exemple où l’on affiche si un produit est cher ou abordable en fonction de son prix, en utilisant un opérateur ternaire :
 ```jsx
-function PriceTag({ price }) {
-  return <p>Prix : {price > 100 ? 'Cher' : 'Abordable'}</p>;
+function PriceTag(props) {
+  return <p>Prix : {props.price > 100 ? 'Cher' : 'Abordable'}</p>;
+}
+
+function App() {
+  return (
+    <div>
+      <PriceTag price={120} />
+      <PriceTag price={80} />
+    </div>
+  );
 }
 ```
-Dans cet exemple, nous utilisons une **expression conditionnelle (opérateur ternaire)** pour afficher un texte différent en fonction de la valeur de `price`.
+Dans cet exemple, nous utilisons une **expression conditionnelle** pour afficher un texte différent en fonction de la valeur de `price`:
+- si le prix est supérieur à 100, l'affichage sera "Cher".
+- sinon, l'affichage sera "Abordable".
 
 ### Gestion des actifs statiques
 Dans une application React, les images et autres fichiers statiques sont généralement placés dans le dossier public ou src/assets.
