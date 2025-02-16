@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DDA :: App Web</title>
+    <link>http://localhost:1313/420-211/2-dda/index.html</link>
+    <description>Application basées sur des données (data-driven applications) L’une des grandes forces de React est la réutilisabilité des composants. Un composant bien conçu peut être utilisé plusieurs fois dans une application, avec des données différentes, permettant ainsi de réduire la duplication du code et de rendre le développement plus efficace.&#xA;Ce que nous allons allons explorer dans ce module:&#xA;L’utilisation des props pour transmettre des données aux composants L’insertion de JavaScript dans JSX La gestion des actifs statiques La mise en correspondance des données avec les composants Les props : partager des données entre composants Les props (propriétés) permettent à un composant parent de transmettre des informations à un composant enfant. Elles sont accessibles en tant qu’attributs dans le JSX et en tant qu’objet dans le composant enfant.</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:1313/420-211/2-dda/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
