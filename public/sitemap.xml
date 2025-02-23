@@ -37,6 +37,12 @@
     <loc>http://localhost:1313/420-211/2-dda/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/420-211/2-dda/exercices-props/index.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-211/2-dda/exercices-props/test/index.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/420-211/annexe/index.html</loc>
   </url>
   <url>

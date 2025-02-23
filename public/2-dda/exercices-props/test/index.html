@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.141.0">
+    <meta name="generator" content="Relearn 7.3.1">
+    <meta name="description" content="Voici une série d’exercices basés sur les concepts abordés dans cadre du chapitre 2 ; DDA. Chaque exercice vise à renforcer la compréhension de la transmission des données entre composants et la réutilisabilité des composants.
+La section suivante présente une série d’exercices sur l’utilisation des props pour transmettre des données aux composants sous toutes ses formes;
+les types de bases chaine de caractère int boolean les tableaux et objets en javascript les fonctions 📝 Exercices sur les Props en React Exercice 1 : Affichage dynamique d’un message de bienvenue Objectif : Créez un composant WelcomeMessage qui affiche un message de bienvenue avec un nom passé en prop.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSX et les props - exercices :: App Web">
+    <meta name="twitter:description" content="Voici une série d’exercices basés sur les concepts abordés dans cadre du chapitre 2 ; DDA. Chaque exercice vise à renforcer la compréhension de la transmission des données entre composants et la réutilisabilité des composants.
+La section suivante présente une série d’exercices sur l’utilisation des props pour transmettre des données aux composants sous toutes ses formes;
+les types de bases chaine de caractère int boolean les tableaux et objets en javascript les fonctions 📝 Exercices sur les Props en React Exercice 1 : Affichage dynamique d’un message de bienvenue Objectif : Créez un composant WelcomeMessage qui affiche un message de bienvenue avec un nom passé en prop.">
+    <meta property="og:url" content="http://localhost:1313/420-211/2-dda/exercices-props/test/index.html">
+    <meta property="og:site_name" content="App Web">
+    <meta property="og:title" content="JSX et les props - exercices :: App Web">
+    <meta property="og:description" content="Voici une série d’exercices basés sur les concepts abordés dans cadre du chapitre 2 ; DDA. Chaque exercice vise à renforcer la compréhension de la transmission des données entre composants et la réutilisabilité des composants.
+La section suivante présente une série d’exercices sur l’utilisation des props pour transmettre des données aux composants sous toutes ses formes;
+les types de bases chaine de caractère int boolean les tableaux et objets en javascript les fonctions 📝 Exercices sur les Props en React Exercice 1 : Affichage dynamique d’un message de bienvenue Objectif : Créez un composant WelcomeMessage qui affiche un message de bienvenue avec un nom passé en prop.">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="DDA">
+    <meta itemprop="name" content="JSX et les props - exercices :: App Web">
+    <meta itemprop="description" content="Voici une série d’exercices basés sur les concepts abordés dans cadre du chapitre 2 ; DDA. Chaque exercice vise à renforcer la compréhension de la transmission des données entre composants et la réutilisabilité des composants.
+La section suivante présente une série d’exercices sur l’utilisation des props pour transmettre des données aux composants sous toutes ses formes;
+les types de bases chaine de caractère int boolean les tableaux et objets en javascript les fonctions 📝 Exercices sur les Props en React Exercice 1 : Affichage dynamique d’un message de bienvenue Objectif : Créez un composant WelcomeMessage qui affiche un message de bienvenue avec un nom passé en prop.">
+    <meta itemprop="wordCount" content="2096">
+    <title>JSX et les props - exercices :: App Web</title><link rel="icon" href="/images/react-logo.png" type="image/png">
+
+
+    <link href="/420-211/css/fontawesome-all.min.css?1740343961" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1740343961" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1740343961" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1740343961" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1740343961" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1740343961" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1740343961" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
+      window.relearn.min = ``;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/2-dda/exercices-props/test/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#exercice-1--affichage-dynamique-dun-message-de-bienvenue"><strong>Exercice 1 : Affichage dynamique d&rsquo;un message de bienvenue</strong></a>
+      <ul>
+        <li><a href="#instructions"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-2--afficher-lâge-dun-utilisateur"><strong>Exercice 2 : Afficher l&rsquo;âge d&rsquo;un utilisateur</strong></a>
+      <ul>
+        <li><a href="#instructions-1"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-1"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-3--vérifier-si-un-produit-est-abordable"><strong>Exercice 3 : Vérifier si un produit est abordable</strong></a>
+      <ul>
+        <li><a href="#instructions-2"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-2"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-4--liste-dachats-dynamique"><strong>Exercice 4 : Liste d&rsquo;achats dynamique</strong></a>
+      <ul>
+        <li><a href="#instructions-3"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-3"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-5--affichage-dun-profil-utilisateur-avec-un-objet"><strong>Exercice 5 : Affichage d&rsquo;un profil utilisateur avec un objet</strong></a>
+      <ul>
+        <li><a href="#instructions-4"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-4"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-6--transmettre-une-fonction-en-prop"><strong>Exercice 6 : Transmettre une fonction en prop</strong></a>
+      <ul>
+        <li><a href="#instructions-5"><strong>Instructions</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-7--affichage-dynamique-dune-liste-dutilisateurs"><strong>Exercice 7 : Affichage dynamique d&rsquo;une liste d&rsquo;utilisateurs</strong></a>
+      <ul>
+        <li><a href="#instructions-6"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-5"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-8--refonte-dun-composant-réutilisable"><strong>Exercice 8 : Refonte d&rsquo;un composant réutilisable</strong></a>
+      <ul>
+        <li><a href="#instructions-7"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-6"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#-challenge-bonus--afficher-un-message-dynamique-selon-lheure">🚀 <strong>Challenge Bonus : Afficher un message dynamique selon l&rsquo;heure</strong></a>
+      <ul>
+        <li><a href="#instructions-8"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-7"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-1--laffichage-dun-profil-utilisateur-avec-un-objet">Exercice 1 : l&rsquo;affichage d&rsquo;un profil utilisateur avec un objet</a>
+      <ul>
+        <li><a href="#instructions-">Instructions :</a></li>
+        <li><a href="#exemple-daffichage-attendu-">Exemple d&rsquo;affichage attendu :</a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-2--la-carte-utilisateur-avec-mise-en-forme-conditionnelle">Exercice 2 : la carte utilisateur avec mise en forme conditionnelle</a>
+      <ul>
+        <li><a href="#instructions--1">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-2--liste-de-produits-avec-gestion-de-stock">🔢 Exercice 2 : Liste de produits avec gestion de stock</a>
+      <ul>
+        <li><a href="#instructions--2">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-3--filtrage-de-produits-avec-une-fonction-en-prop">🔢 Exercice 3 : Filtrage de produits avec une fonction en prop</a>
+      <ul>
+        <li><a href="#instructions--3">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-4--génération-dynamique-de-composants-avec-props">🔢 Exercice 4 : Génération dynamique de composants avec props</a>
+      <ul>
+        <li><a href="#instructions--4">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-5--passer-un-composant-en-prop-children-as-props">🔢 Exercice 5 : Passer un composant en prop (Children as Props)</a>
+      <ul>
+        <li><a href="#instructions--5">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-6--génération-dynamique-de-formulaires-avec-des-props">🔢 Exercice 6 : Génération dynamique de formulaires avec des props</a>
+      <ul>
+        <li><a href="#instructions--6">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-7--passer-une-fonction-de-mise-à-jour-en-prop-lifting-state-up">🔢 Exercice 7 : Passer une fonction de mise à jour en prop (Lifting State Up)</a>
+      <ul>
+        <li><a href="#instructions--7">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-exercice-8--liste-darticles-avec-suppression-dynamique">🔢 Exercice 8 : Liste d’articles avec suppression dynamique</a>
+      <ul>
+        <li><a href="#instructions--8">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-challenge-bonus--dark-mode-avec-prop--state">🔫 <strong>Challenge Bonus : Dark Mode avec Prop &amp; State</strong></a>
+      <ul>
+        <li><a href="#instructions--9">Instructions :</a></li>
+      </ul>
+    </li>
+    <li><a href="#-conclusion">🌟 <strong>Conclusion</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#exercice-1--affichage-dynamique-dun-message-de-bienvenue-1"><strong>Exercice 1 : Affichage dynamique d&rsquo;un message de bienvenue</strong></a>
+      <ul>
+        <li><a href="#instructions-9"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-8"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-2--carte-utilisateur-avec-mise-en-forme-conditionnelle"><strong>Exercice 2 : Carte utilisateur avec mise en forme conditionnelle</strong></a>
+      <ul>
+        <li><a href="#instructions-10"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-9"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-3--liste-de-produits-avec-gestion-de-stock"><strong>Exercice 3 : Liste de produits avec gestion de stock</strong></a>
+      <ul>
+        <li><a href="#instructions-11"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-10"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-4--génération-dynamique-de-composants-avec-props"><strong>Exercice 4 : Génération dynamique de composants avec props</strong></a>
+      <ul>
+        <li><a href="#instructions-12"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-11"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-5--passer-un-composant-en-prop-children-as-props"><strong>Exercice 5 : Passer un composant en prop (Children as Props)</strong></a>
+      <ul>
+        <li><a href="#instructions-13"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-12"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#exercice-6--passer-une-fonction-de-mise-à-jour-en-prop-lifting-state-up"><strong>Exercice 6 : Passer une fonction de mise à jour en prop (Lifting State Up)</strong></a>
+      <ul>
+        <li><a href="#instructions-14"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-13"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#-challenge-bonus--dark-mode-avec-prop--state-1"><strong>🚀 Challenge Bonus : Dark Mode avec Prop &amp; State</strong></a>
+      <ul>
+        <li><a href="#instructions-15"><strong>Instructions</strong></a></li>
+        <li><a href="#exemple-daffichage-attendu-14"><strong>Exemple d&rsquo;affichage attendu</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#-conclusion-1">🌟 <strong>Conclusion</strong></a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/2-dda/index.html"><span itemprop="name">DDA</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/2-dda/exercices-props/index.html"><span itemprop="name">JSX et les props - exercices</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">JSX et les props - exercices</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/2-dda/exercices-props/index.html" title="JSX et les props - exercices (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/annexe/index.html" title="Annexe (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 2-dda" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="jsx-et-les-props---exercices">JSX et les props - exercices</h1>
+
+<p>Voici une série d&rsquo;exercices basés sur les concepts abordés dans cadre du chapitre 2 ; DDA.
+Chaque exercice vise à renforcer la compréhension de la transmission des données entre composants et la réutilisabilité des composants.</p>
+<p>La section suivante présente une série d&rsquo;exercices sur l&rsquo;utilisation des props pour transmettre des données aux composants sous toutes ses formes;</p>
+<ul>
+<li>les types de bases chaine de caractère int boolean</li>
+<li>les tableaux et objets en javascript</li>
+<li>les fonctions</li>
+</ul>
+<h1 id="-exercices-sur-les-props-en-react">📝 Exercices sur les Props en React</h1>
+<h2 id="exercice-1--affichage-dynamique-dun-message-de-bienvenue"><strong>Exercice 1 : Affichage dynamique d&rsquo;un message de bienvenue</strong></h2>
+<p><strong>Objectif</strong> : Créez un composant <code>WelcomeMessage</code> qui affiche un message de bienvenue avec un nom passé en prop.</p>
+<h3 id="instructions"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>WelcomeMessage</code> qui prend une prop <code>name</code> et affiche :<br>
+<code>&quot;Bienvenue, [nom] !&quot;</code>.</li>
+<li>Dans le composant <code>App</code>, utilisez <code>WelcomeMessage</code> avec trois noms différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Bienvenue, Alice !
+Bienvenue, Bob !
+Bienvenue, Charlie !</code></pre></div>
+<hr>
+<h2 id="exercice-2--afficher-lâge-dun-utilisateur"><strong>Exercice 2 : Afficher l&rsquo;âge d&rsquo;un utilisateur</strong></h2>
+<p><strong>Objectif</strong> : Utiliser plusieurs props pour afficher des informations sur un utilisateur.</p>
+<h3 id="instructions-1"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>UserInfo</code> qui prend deux props : <code>name</code> et <code>age</code>.</li>
+<li>Il doit afficher : <code>&quot;[Nom] a [âge] ans.&quot;</code>.</li>
+<li>Dans <code>App</code>, affichez <code>UserInfo</code> avec trois utilisateurs différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-1"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Alice a 25 ans.
+Bob a 30 ans.
+Charlie a 35 ans.</code></pre></div>
+<hr>
+<h2 id="exercice-3--vérifier-si-un-produit-est-abordable"><strong>Exercice 3 : Vérifier si un produit est abordable</strong></h2>
+<p><strong>Objectif</strong> : Utiliser les props et les expressions conditionnelles dans JSX.</p>
+<h3 id="instructions-2"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>PriceTag</code> qui prend une prop <code>price</code>.</li>
+<li>Affichez <code>&quot;Cher&quot;</code> si <code>price</code> est supérieur à 100, sinon affichez <code>&quot;Abordable&quot;</code>.</li>
+<li>Dans <code>App</code>, affichez <code>PriceTag</code> avec plusieurs prix différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-2"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Prix : Cher
+Prix : Abordable
+Prix : Abordable</code></pre></div>
+<hr>
+<h2 id="exercice-4--liste-dachats-dynamique"><strong>Exercice 4 : Liste d&rsquo;achats dynamique</strong></h2>
+<p><strong>Objectif</strong> : Passer un tableau en prop et l&rsquo;afficher sous forme de liste.</p>
+<h3 id="instructions-3"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>ShoppingList</code> qui prend une prop <code>items</code> (un tableau de chaînes de caractères).</li>
+<li>Affichez chaque élément sous forme de <code>&lt;li&gt;</code>.</li>
+<li>Dans <code>App</code>, passez deux listes différentes à <code>ShoppingList</code>.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-3"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Liste 1 :
+- Pommes
+- Bananes
+- Oranges
+
+Liste 2 :
+- Lait
+- Pain
+- Beurre</code></pre></div>
+<hr>
+<h2 id="exercice-5--affichage-dun-profil-utilisateur-avec-un-objet"><strong>Exercice 5 : Affichage d&rsquo;un profil utilisateur avec un objet</strong></h2>
+<p><strong>Objectif</strong> : Passer un objet en prop et l&rsquo;afficher dynamiquement.</p>
+<h3 id="instructions-4"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>UserProfile</code> qui prend une prop <code>user</code> (objet contenant <code>name</code>, <code>age</code> et <code>city</code>).</li>
+<li>Affichez les informations de l&rsquo;utilisateur dans un <code>&lt;p&gt;</code>.</li>
+<li>Dans <code>App</code>, affichez <code>UserProfile</code> avec deux objets utilisateurs différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-4"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Alice a 25 ans et habite à Paris.
+Bob a 30 ans et habite à Lyon.</code></pre></div>
+<hr>
+<h2 id="exercice-6--transmettre-une-fonction-en-prop"><strong>Exercice 6 : Transmettre une fonction en prop</strong></h2>
+<p><strong>Objectif</strong> : Passer une fonction en prop et l&rsquo;exécuter dans un composant enfant.</p>
+<h3 id="instructions-5"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>Button</code> qui prend une prop <code>onClick</code> et affiche un bouton <code>&lt;button&gt;</code>.</li>
+<li>Lorsque le bouton est cliqué, il doit exécuter la fonction passée en prop.</li>
+<li>Dans <code>App</code>, définissez une fonction <code>handleClick</code> qui affiche une alerte <code>&quot;Bouton cliqué !&quot;</code>.</li>
+<li>Passez <code>handleClick</code> en prop à <code>Button</code>.</li>
+</ol>
+<hr>
+<h2 id="exercice-7--affichage-dynamique-dune-liste-dutilisateurs"><strong>Exercice 7 : Affichage dynamique d&rsquo;une liste d&rsquo;utilisateurs</strong></h2>
+<p><strong>Objectif</strong> : Générer des composants dynamiquement à partir d&rsquo;un tableau d&rsquo;objets.</p>
+<h3 id="instructions-6"><strong>Instructions</strong></h3>
+<ol>
+<li>Définissez un tableau <code>users</code> contenant trois objets <code>{ id, name, age }</code>.</li>
+<li>Créez un composant <code>UserList</code> qui génère dynamiquement des <code>UserInfo</code> avec <code>map()</code>.</li>
+<li>Affichez <code>UserList</code> dans <code>App</code>.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-5"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>- Alice - 25 ans
+- Bob - 30 ans
+- Charlie - 35 ans</code></pre></div>
+<hr>
+<h2 id="exercice-8--refonte-dun-composant-réutilisable"><strong>Exercice 8 : Refonte d&rsquo;un composant réutilisable</strong></h2>
+<p><strong>Objectif</strong> : Transformer une liste statique en composants réutilisables.</p>
+<h3 id="instructions-7"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>ListItem</code> qui prend <code>title</code>, <code>description</code> et <code>image</code> en props.</li>
+<li>Définissez un tableau <code>reasons</code> contenant des objets <code>{ title, description, image }</code>.</li>
+<li>Affichez dynamiquement des <code>ListItem</code> à partir de ce tableau.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-6"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>[Image] J&#39;aime React : Parce que c&#39;est réutilisable !
+[Image] J&#39;aime JavaScript : Parce qu&#39;il est flexible !
+[Image] J&#39;aime CSS : Parce qu&#39;il permet de beaux designs !</code></pre></div>
+<hr>
+<h2 id="-challenge-bonus--afficher-un-message-dynamique-selon-lheure">🚀 <strong>Challenge Bonus : Afficher un message dynamique selon l&rsquo;heure</strong></h2>
+<p><strong>Objectif</strong> : Modifier dynamiquement l&rsquo;affichage selon l&rsquo;heure.</p>
+<h3 id="instructions-8"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>Greeting</code> qui détermine le moment de la journée (<code>morning</code>, <code>afternoon</code>, <code>evening</code>, <code>night</code>).</li>
+<li>Affichez <code>&quot;Good [timeOfDay]!&quot;</code>.</li>
+<li>Dans <code>App</code>, affichez <code>Greeting</code> et testez-le à différentes heures.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-7"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>À 10h : Good morning!
+À 15h : Good afternoon!
+À 20h : Good evening!
+À 23h : Good night!</code></pre></div>
+<h2 id="exercice-1--laffichage-dun-profil-utilisateur-avec-un-objet">Exercice 1 : l&rsquo;affichage d&rsquo;un profil utilisateur avec un objet</h2>
+<p>Créez un composant UserProfile qui prend une prop user (objet contenant name, age et city).
+Affichez les informations de l&rsquo;utilisateur dans un <!-- raw HTML omitted -->.</p>
+<h3 id="instructions-">Instructions :</h3>
+<ol>
+<li>Créez un composant UserProfile qui prend une prop user (objet contenant name, age et city).</li>
+<li>Affichez les informations de l&rsquo;utilisateur dans un <!-- raw HTML omitted -->.</li>
+<li>Dans App, affichez UserProfile avec deux objets utilisateurs différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-">Exemple d&rsquo;affichage attendu :</h3>
+<p>Alice a 25 ans et habite à Paris.
+Bob a 30 ans et habite à Lyon.</p>
+<h2 id="exercice-2--la-carte-utilisateur-avec-mise-en-forme-conditionnelle">Exercice 2 : la carte utilisateur avec mise en forme conditionnelle</h2>
+<p><strong>Objectif</strong> : Créer une carte utilisateur qui affiche des informations et change dynamiquement de style en fonction de l&rsquo;âge de l&rsquo;utilisateur.</p>
+<h3 id="instructions--1">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>UserCard</code> qui prend en props un objet <code>user</code> contenant <code>{ name, age, city }</code>.</li>
+<li>Si l&rsquo;utilisateur a moins de 30 ans, affichez un fond vert, sinon affichez un fond bleu.</li>
+<li>Dans <code>App</code>, affichez plusieurs <code>UserCard</code> avec des utilisateurs différents.</li>
+</ol>
+<hr>
+<h2 id="-exercice-2--liste-de-produits-avec-gestion-de-stock">🔢 Exercice 2 : Liste de produits avec gestion de stock</h2>
+<p><strong>Objectif</strong> : Afficher une liste de produits en précisant s&rsquo;ils sont en stock ou non.</p>
+<h3 id="instructions--2">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>ProductList</code> qui prend une prop <code>products</code> (tableau d&rsquo;objets <code>{ id, name, price, inStock }</code>).</li>
+<li>Pour chaque produit, affichez son nom et son prix.</li>
+<li>Si le produit est en stock, affichez <code>&quot;En stock&quot;</code>, sinon affichez <code>&quot;Rupture de stock&quot;</code> en rouge.</li>
+<li>Dans <code>App</code>, affichez au moins 5 produits.</li>
+</ol>
+<hr>
+<h2 id="-exercice-3--filtrage-de-produits-avec-une-fonction-en-prop">🔢 Exercice 3 : Filtrage de produits avec une fonction en prop</h2>
+<p><strong>Objectif</strong> : Ajouter une fonctionnalité pour filtrer les produits en fonction de leur disponibilité.</p>
+<h3 id="instructions--3">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>ProductFilter</code> qui prend en prop une fonction <code>onFilterChange</code>.</li>
+<li>Le composant doit contenir un bouton <code>&quot;Afficher seulement les produits en stock&quot;</code>.</li>
+<li>Lorsqu&rsquo;on clique sur ce bouton, il doit appeler <code>onFilterChange(true)</code>, sinon <code>onFilterChange(false)</code>.</li>
+<li>Dans <code>App</code>, affichez <code>ProductList</code> et mettez en place la logique pour filtrer les produits.</li>
+</ol>
+<hr>
+<h2 id="-exercice-4--génération-dynamique-de-composants-avec-props">🔢 Exercice 4 : Génération dynamique de composants avec props</h2>
+<p><strong>Objectif</strong> : Générer dynamiquement des composants enfants avec des props basées sur un tableau d&rsquo;objets.</p>
+<h3 id="instructions--4">Instructions :</h3>
+<ol>
+<li>Définissez un tableau <code>teams</code> contenant plusieurs objets <code>{ id, name, members }</code>, où <code>members</code> est un tableau de noms.</li>
+<li>Créez un composant <code>TeamCard</code> qui prend <code>name</code> et <code>members</code> en props.</li>
+<li><code>TeamCard</code> doit afficher le nom de l&rsquo;équipe et une liste des membres.</li>
+<li>Dans <code>App</code>, affichez dynamiquement plusieurs <code>TeamCard</code> à partir du tableau.</li>
+</ol>
+<hr>
+<h2 id="-exercice-5--passer-un-composant-en-prop-children-as-props">🔢 Exercice 5 : Passer un composant en prop (Children as Props)</h2>
+<p><strong>Objectif</strong> : Passer un autre composant en prop et l&rsquo;afficher dynamiquement.</p>
+<h3 id="instructions--5">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>Card</code> qui affiche une boîte avec un titre et <strong>n&rsquo;importe quel contenu passé en prop</strong> via <code>children</code>.</li>
+<li>Dans <code>App</code>, affichez plusieurs <code>Card</code> contenant des éléments différents (texte, images, boutons).</li>
+</ol>
+<hr>
+<h2 id="-exercice-6--génération-dynamique-de-formulaires-avec-des-props">🔢 Exercice 6 : Génération dynamique de formulaires avec des props</h2>
+<p><strong>Objectif</strong> : Créer un composant <code>FormInput</code> qui génère dynamiquement des champs de formulaire en fonction des props.</p>
+<h3 id="instructions--6">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>FormInput</code> qui prend une prop <code>fields</code> (tableau d&rsquo;objets <code>{ id, label, type }</code>).</li>
+<li>Pour chaque élément du tableau, affichez un <code>&lt;label&gt;</code> et un <code>&lt;input&gt;</code> du type correspondant (<code>text</code>, <code>password</code>, <code>email</code>, etc.).</li>
+<li>Dans <code>App</code>, affichez <code>FormInput</code> avec plusieurs champs dynamiques.</li>
+</ol>
+<hr>
+<h2 id="-exercice-7--passer-une-fonction-de-mise-à-jour-en-prop-lifting-state-up">🔢 Exercice 7 : Passer une fonction de mise à jour en prop (Lifting State Up)</h2>
+<p><strong>Objectif</strong> : Permettre à un composant enfant de modifier l&rsquo;état du composant parent.</p>
+<h3 id="instructions--7">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>Counter</code> qui prend en prop une fonction <code>onIncrement</code>.</li>
+<li>Le composant affiche un bouton <code>&quot;Ajouter 1&quot;</code> et lorsqu’on clique dessus, il appelle <code>onIncrement</code>.</li>
+<li>Dans <code>App</code>, affichez un <code>Counter</code> et mettez à jour un état <code>count</code> en fonction des clics.</li>
+</ol>
+<hr>
+<h2 id="-exercice-8--liste-darticles-avec-suppression-dynamique">🔢 Exercice 8 : Liste d’articles avec suppression dynamique</h2>
+<p><strong>Objectif</strong> : Permettre de supprimer dynamiquement des éléments d’une liste.</p>
+<h3 id="instructions--8">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>ArticleList</code> qui prend une prop <code>articles</code> (tableau d&rsquo;objets <code>{ id, title }</code>).</li>
+<li>Chaque article affiché contient un bouton <code>&quot;Supprimer&quot;</code>.</li>
+<li>Lorsqu&rsquo;on clique sur <code>&quot;Supprimer&quot;</code>, l’article est retiré de la liste.</li>
+</ol>
+<hr>
+<h2 id="-challenge-bonus--dark-mode-avec-prop--state">🔫 <strong>Challenge Bonus : Dark Mode avec Prop &amp; State</strong></h2>
+<p><strong>Objectif</strong> : Implémenter un mode sombre en utilisant une prop.</p>
+<h3 id="instructions--9">Instructions :</h3>
+<ol>
+<li>Créez un composant <code>ThemeToggle</code> qui prend une prop <code>onThemeChange</code> (fonction).</li>
+<li><code>ThemeToggle</code> contient un bouton <code>&quot;Activer le mode sombre&quot;</code>.</li>
+<li>Lorsqu&rsquo;on clique, il appelle <code>onThemeChange(&quot;dark&quot;)</code> ou <code>onThemeChange(&quot;light&quot;)</code>.</li>
+<li>Dans <code>App</code>, changez dynamiquement l’arrière-plan selon le mode.</li>
+</ol>
+<hr>
+<h2 id="-conclusion">🌟 <strong>Conclusion</strong></h2>
+<p>Ces exercices avancés permettent de manipuler des <strong>props complexes</strong>, d&rsquo;utiliser des <strong>fonctions en props</strong>, et de <strong>générer dynamiquement des composants</strong>. Ils couvrent également des concepts comme <strong>le filtrage</strong>, <strong>les événements</strong>, <strong>la mise à jour d&rsquo;état</strong>, et <strong>la transmission de composants en prop</strong>.</p>
+<p>Prêt à relever le défi ? 🚀💡</p>
+<h1 id="-exercices-sur-les-props-en-react-1">📝 Exercices sur les Props en React</h1>
+<h2 id="exercice-1--affichage-dynamique-dun-message-de-bienvenue-1"><strong>Exercice 1 : Affichage dynamique d&rsquo;un message de bienvenue</strong></h2>
+<p><strong>Objectif</strong> : Créez un composant <code>WelcomeMessage</code> qui affiche un message de bienvenue avec un nom passé en prop.</p>
+<h3 id="instructions-9"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>WelcomeMessage</code> qui prend une prop <code>name</code> et affiche :<br>
+<code>&quot;Bienvenue, [nom] !&quot;</code>.</li>
+<li>Dans le composant <code>App</code>, utilisez <code>WelcomeMessage</code> avec trois noms différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-8"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Bienvenue, Alice !
+Bienvenue, Bob !
+Bienvenue, Charlie !</code></pre></div>
+<hr>
+<h2 id="exercice-2--carte-utilisateur-avec-mise-en-forme-conditionnelle"><strong>Exercice 2 : Carte utilisateur avec mise en forme conditionnelle</strong></h2>
+<p><strong>Objectif</strong> : Créer une carte utilisateur qui affiche des informations et change dynamiquement de style en fonction de l&rsquo;âge de l&rsquo;utilisateur.</p>
+<h3 id="instructions-10"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>UserCard</code> qui prend en props un objet <code>user</code> contenant <code>{ name, age, city }</code>.</li>
+<li>Si l&rsquo;utilisateur a moins de 30 ans, affichez un fond vert, sinon affichez un fond bleu.</li>
+<li>Dans <code>App</code>, affichez plusieurs <code>UserCard</code> avec des utilisateurs différents.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-9"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Alice a 25 ans et habite à Paris. (fond vert)
+Bob a 35 ans et habite à Lyon. (fond bleu)</code></pre></div>
+<hr>
+<h2 id="exercice-3--liste-de-produits-avec-gestion-de-stock"><strong>Exercice 3 : Liste de produits avec gestion de stock</strong></h2>
+<p><strong>Objectif</strong> : Afficher une liste de produits en précisant s&rsquo;ils sont en stock ou non.</p>
+<h3 id="instructions-11"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>ProductList</code> qui prend une prop <code>products</code> (tableau d&rsquo;objets <code>{ id, name, price, inStock }</code>).</li>
+<li>Pour chaque produit, affichez son nom et son prix.</li>
+<li>Si le produit est en stock, affichez <code>&quot;En stock&quot;</code>, sinon affichez <code>&quot;Rupture de stock&quot;</code> en rouge.</li>
+<li>Dans <code>App</code>, affichez au moins 5 produits.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-10"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Téléphone - 600€ - En stock
+Ordinateur - 1200€ - Rupture de stock
+Clavier - 50€ - En stock</code></pre></div>
+<hr>
+<h2 id="exercice-4--génération-dynamique-de-composants-avec-props"><strong>Exercice 4 : Génération dynamique de composants avec props</strong></h2>
+<p><strong>Objectif</strong> : Générer dynamiquement des composants enfants avec des props basées sur un tableau d&rsquo;objets.</p>
+<h3 id="instructions-12"><strong>Instructions</strong></h3>
+<ol>
+<li>Définissez un tableau <code>teams</code> contenant plusieurs objets <code>{ id, name, members }</code>, où <code>members</code> est un tableau de noms.</li>
+<li>Créez un composant <code>TeamCard</code> qui prend <code>name</code> et <code>members</code> en props.</li>
+<li><code>TeamCard</code> doit afficher le nom de l&rsquo;équipe et une liste des membres.</li>
+<li>Dans <code>App</code>, affichez dynamiquement plusieurs <code>TeamCard</code> à partir du tableau.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-11"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Équipe Alpha
+- Alice
+- Bob
+
+Équipe Beta
+- Charlie
+- David</code></pre></div>
+<hr>
+<h2 id="exercice-5--passer-un-composant-en-prop-children-as-props"><strong>Exercice 5 : Passer un composant en prop (Children as Props)</strong></h2>
+<p><strong>Objectif</strong> : Passer un autre composant en prop et l&rsquo;afficher dynamiquement.</p>
+<h3 id="instructions-13"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>Card</code> qui affiche une boîte avec un titre et <strong>n&rsquo;importe quel contenu passé en prop</strong> via <code>children</code>.</li>
+<li>Dans <code>App</code>, affichez plusieurs <code>Card</code> contenant des éléments différents (texte, images, boutons).</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-12"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>--- Carte ---
+Titre : Info
+Contenu : Ceci est une carte informative.
+
+--- Carte ---
+Titre : Alerte
+Contenu : Attention, un problème est survenu !</code></pre></div>
+<hr>
+<h2 id="exercice-6--passer-une-fonction-de-mise-à-jour-en-prop-lifting-state-up"><strong>Exercice 6 : Passer une fonction de mise à jour en prop (Lifting State Up)</strong></h2>
+<p><strong>Objectif</strong> : Permettre à un composant enfant de modifier l&rsquo;état du composant parent.</p>
+<h3 id="instructions-14"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>Counter</code> qui prend en prop une fonction <code>onIncrement</code>.</li>
+<li>Le composant affiche un bouton <code>&quot;Ajouter 1&quot;</code> et lorsqu’on clique dessus, il appelle <code>onIncrement</code>.</li>
+<li>Dans <code>App</code>, affichez un <code>Counter</code> et mettez à jour un état <code>count</code> en fonction des clics.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-13"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Compteur : 0
+[Ajouter 1]
+(Click)
+Compteur : 1</code></pre></div>
+<hr>
+<h2 id="-challenge-bonus--dark-mode-avec-prop--state-1"><strong>🚀 Challenge Bonus : Dark Mode avec Prop &amp; State</strong></h2>
+<p><strong>Objectif</strong> : Implémenter un mode sombre en utilisant une prop.</p>
+<h3 id="instructions-15"><strong>Instructions</strong></h3>
+<ol>
+<li>Créez un composant <code>ThemeToggle</code> qui prend une prop <code>onThemeChange</code> (fonction).</li>
+<li><code>ThemeToggle</code> contient un bouton <code>&quot;Activer le mode sombre&quot;</code>.</li>
+<li>Lorsqu&rsquo;on clique, il appelle <code>onThemeChange(&quot;dark&quot;)</code> ou <code>onThemeChange(&quot;light&quot;)</code>.</li>
+<li>Dans <code>App</code>, changez dynamiquement l’arrière-plan selon le mode.</li>
+</ol>
+<h3 id="exemple-daffichage-attendu-14"><strong>Exemple d&rsquo;affichage attendu</strong></h3>
+<div class="highlight wrap-code"><pre tabindex="0"><code>Mode actuel : Clair
+[Activer le mode sombre]
+(Click)
+Mode actuel : Sombre</code></pre></div>
+<hr>
+<h2 id="-conclusion-1">🌟 <strong>Conclusion</strong></h2>
+<p>Ces exercices avancés permettent de manipuler des <strong>props complexes</strong>, d&rsquo;utiliser des <strong>fonctions en props</strong>, et de <strong>générer dynamiquement des composants</strong>. Ils couvrent également des concepts comme <strong>le filtrage</strong>, <strong>les événements</strong>, <strong>la mise à jour d&rsquo;état</strong>, et <strong>la transmission de composants en prop</strong>.</p>
+<p>Prêt à relever le défi ? 🚀💡</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
+    <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
+</a>
+        </div>
+        <script>
+          window.index_js_url="/420-211/searchindex.en.js?1740343961";
+        </script>
+        <search><form action="/420-211/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-211/js/auto-complete.js?1740343961" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1740343961" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1740343961" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1740343961" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1740343961" defer></script>
+        <script src="/420-211/js/search.js?1740343961" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c"><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/2-conditions-js/index.html"><a class="padding" href="/420-211/0-intro/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/3-objets-js/index.html"><a class="padding" href="/420-211/0-intro/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/4-fonctions-js/index.html"><a class="padding" href="/420-211/0-intro/4-fonctions-js/index.html"><b>4. </b>Fonctions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/5-es5-js/index.html"><a class="padding" href="/420-211/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="alwaysopen " data-nav-id="/420-211/0-intro/7-git-github/index.html"><input type="checkbox" id="R-section-742167b1c2cc342071b49e0a70091d42" aria-controls="R-subsections-742167b1c2cc342071b49e0a70091d42" checked><label for="R-section-742167b1c2cc342071b49e0a70091d42"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Git/GitHub</span></label><a class="padding" href="/420-211/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a><ul id="R-subsections-742167b1c2cc342071b49e0a70091d42" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/git-bash/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/git-bash/index.html"><b>7.1 </b>Guide Git Bash</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/1-intro-react/index.html"><a class="padding" href="/420-211/1-intro-react/index.html"><b>1. </b>Introduction à React</a></li>
+            <li class="parent " data-nav-id="/420-211/2-dda/index.html"><input type="checkbox" id="R-section-3f439693a8597dbe5c28428c2f31ece2" aria-controls="R-subsections-3f439693a8597dbe5c28428c2f31ece2" checked><label for="R-section-3f439693a8597dbe5c28428c2f31ece2"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu DDA</span></label><a class="padding" href="/420-211/2-dda/index.html"><b>2. </b>DDA</a><ul id="R-subsections-3f439693a8597dbe5c28428c2f31ece2" class="collapsible-menu">
+            <li class="parent alwaysopen " data-nav-id="/420-211/2-dda/exercices-props/index.html"><input type="checkbox" id="R-section-c6fbc743f206c08c47aa9d05b2ffa7ae" aria-controls="R-subsections-c6fbc743f206c08c47aa9d05b2ffa7ae" checked><label for="R-section-c6fbc743f206c08c47aa9d05b2ffa7ae"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu JSX et les props - exercices</span></label><a class="padding" href="/420-211/2-dda/exercices-props/index.html"><b>1. </b>JSX et les props - exercices</a><ul id="R-subsections-c6fbc743f206c08c47aa9d05b2ffa7ae" class="collapsible-menu">
+            <li class="active " data-nav-id="/420-211/2-dda/exercices-props/test/index.html"><a class="padding" href="/420-211/2-dda/exercices-props/test/index.html"><b>1. </b>JSX et les props - exercices</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/annexe/index.html"><input type="checkbox" id="R-section-c42d2d00a11a971cfe1f59377ff37f39" aria-controls="R-subsections-c42d2d00a11a971cfe1f59377ff37f39"><label for="R-section-c42d2d00a11a971cfe1f59377ff37f39"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Annexe</span></label><a class="padding" href="/420-211/annexe/index.html">Annexe</a><ul id="R-subsections-c42d2d00a11a971cfe1f59377ff37f39" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/annexe/0-intro/index.html"><a class="padding" href="/420-211/annexe/0-intro/index.html">JS - Exercices préalables</a></li></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/2-dda/exercices-props/test/index.html" lang="fr-fr" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-211/js/clipboard.min.js?1740343961" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1740343961" defer></script>
+    <script src="/420-211/js/theme.js?1740343961" defer></script>
+  </body>
+</html>
