@@ -174,7 +174,7 @@ Température : -5°C - Condition : Neigeux
 
 ---
 
-### 🚀 **Challenge Bonus : Gestion des places de parking**
+### **Exercice 9 : Gestion des places de parking**
 **Objectif** : Indiquer dynamiquement si une place est disponible et permettre la réservation.
 
 **Instructions**
