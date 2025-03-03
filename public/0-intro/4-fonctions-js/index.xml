@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fonctions JS :: App Web</title>
-    <link>http://localhost:1313/420-211/0-intro/4-fonctions-js/index.html</link>
-    <description>Chaque fois que l’on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs syntaxes pour déclarer une fonction.&#xA;Fonctions nommées Une fonction nommée commence par le mot-clé function, suivi du nom de la fonction (dans l’exemple ci-dessous : logCompliment). Le corps de la fonction et ses instructions (i.e. son bloc d’instruction) sont définis entre des accolades :&#xA;function logCompliment() { console.log(&#34;Vous vous débrouillez très bien !&#34;) ; } Une fois la fonction déclarée, vous l’invoquez ou l’appelez pour la voir s’exécuter :</description>
+    <link>http://localhost:45341/420-211/0-intro/4-fonctions-js/index.html</link>
+    <description>Chaque fois que l’on souhaite effectuer une tâche répétitive, on utilise des fonctions. En Javascript, il existe plusieurs syntaxes pour déclarer une fonction.&#xA;Fonctions nommées Une fonction nommée commence par le mot-clé function, suivi du nom de la fonction (dans l’exemple ci-dessous : logCompliment). Le corps de la fonction et ses instructions (i.e. son bloc d’instruction) sont définis entre des accolades :&#xA;function logCompliment() { console.log(&#34;Vous vous débrouillez très bien !</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="http://localhost:1313/420-211/0-intro/4-fonctions-js/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45341/420-211/0-intro/4-fonctions-js/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

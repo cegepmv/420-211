@@ -1,7 +1,6 @@
 +++
-pre = '<b>1. </b>'
-title = 'JSX et les props - exercices'
-weight = '310'
+title = 'Exercices - JSX et les props'
+weight = '360'
 draft = false
 +++
 

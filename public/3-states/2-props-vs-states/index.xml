@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>useState :: App Web</title>
+    <link>http://localhost:45341/420-211/3-states/2-props-vs-states/index.html</link>
+    <description>Props Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables).&#xA;function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a + b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:45341/420-211/3-states/2-props-vs-states/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

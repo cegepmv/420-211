@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Insérer du JS dans JSX :: App Web</title>
+    <link>http://localhost:45341/420-211/2-dda/1-js-dans-jsx/index.html</link>
+    <description>React permet d’intégrer du JavaScript directement dans le JSX à l’aide des accolades {}. Cela nous permet d’afficher des variables, d’effectuer des calculs ou d’utiliser des expressions JavaScript dans notre interface.&#xA;Exemple simple : On peut afficher une variable directement dans du JSX :&#xA;function Greeting() { const name = &#34;Alice&#34;; return &lt;h1&gt;Bonjour, {name} !&lt;/h1&gt;; } Dans cet exemple, la variable name est insérée dynamiquement à l’intérieur du &lt;h1&gt;.&#xA;Exemple avec un calcul : On peut aussi exécuter des calculs dans JSX :</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:45341/420-211/2-dda/1-js-dans-jsx/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

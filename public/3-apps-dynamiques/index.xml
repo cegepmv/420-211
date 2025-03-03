@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React dynamique :: App Web</title>
+    <link>http://localhost:45341/420-211/3-apps-dynamiques/index.html</link>
+    <description>Dans cette section, nous allons apprendre à développer des applications interactives et dynamiques avec React.&#xA;Jusque là, nous avons vu comment fonctionne React dans les coulisses, les spécificités de la syntaxe JSX, comment créer des pages Web statiques avec React et diviser notre page web en composants.&#xA;Ensuite, nous avons appris à créer des composants réutilisables, à l’aide de props, faire passer des données dans les composants pour garantir leur réutilisabilité, ce qui nous a permis d’utiliser des données statiques (avec des objets JS) pour générer des portions de nos pages Web (Cards, ListItems etc…).</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:45341/420-211/3-apps-dynamiques/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Écouteurs d&#39;évènements</title>
+      <link>http://localhost:45341/420-211/3-apps-dynamiques/1-event-listeners/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:45341/420-211/3-apps-dynamiques/1-event-listeners/index.html</guid>
+      <description>En Javascript, on utilise des écouteurs d’évènenements (Event Listeners) pour permettre à l’utilisateur d’interagir avec notre application.&#xA;Dans une application Javascript “vanille”, il y a 2 façons d’ajouter des événements :&#xA;Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.</description>
+    </item>
+    <item>
+      <title>useState()</title>
+      <link>http://localhost:45341/420-211/3-apps-dynamiques/2-usestate/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:45341/420-211/3-apps-dynamiques/2-usestate/index.html</guid>
+      <description>Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a + b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.</description>
+    </item>
+  </channel>
+</rss>

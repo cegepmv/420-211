@@ -2,37 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Applications Web :: App Web</title>
-    <link>http://localhost:1313/420-211/index.html</link>
+    <link>http://localhost:45341/420-211/index.html</link>
     <description>Bienvenue au cours 420-211 - Applications Web ! Plan du cours Module 0 - Préalables&#xA;Module 1 - Introduction à React&#xA;Module 2 - Application basées sur des données (data-driven applications)&#xA;Module 3 - États et cycle de vie (React states)&#xA;Module 4 - Introduction aux “hooks” : useEffect()</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="http://localhost:1313/420-211/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45341/420-211/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
-      <link>http://localhost:1313/420-211/0-intro/index.html</link>
+      <link>http://localhost:45341/420-211/0-intro/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/0-intro/index.html</guid>
-      <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5. JS depuis ES5 Introduction aux syntaxes modernes de javascript introduites depuis la version 5</description>
+      <guid>http://localhost:45341/420-211/0-intro/index.html</guid>
+      <description>1. HTML, DOM et CSS Une petite révision des concepts vus dans le cours de création de sites Web :&#xA;HTML Manipulation simple du DOM Style avec CSS 2. Conditions JS Introduction à l’opérateur &amp;&amp; et l’opérateur ternaire 3. Objets JS Introduction aux objets JavaScript : déclaration, affectation et accès aux paramètres.&#xA;4. Fonctions JS Les différentes syntaxes pour déclarer une fonction en Javascript :&#xA;Fonctions nommées Fonctions anonymes Fonctions fléchées 5.</description>
     </item>
     <item>
       <title>Introduction à React</title>
-      <link>http://localhost:1313/420-211/1-intro-react/index.html</link>
+      <link>http://localhost:45341/420-211/1-intro-react/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/1-intro-react/index.html</guid>
+      <guid>http://localhost:45341/420-211/1-intro-react/index.html</guid>
       <description>React est une bibliothèque JavaScript développée par Facebook (Meta) qui permet de créer des interfaces utilisateur dynamiques et réactives. L’objectif principal de React est de simplifier le processus de développement d’applications web complexes en offrant une approche déclarative, ce qui signifie que tu décris l’interface utilisateur en termes de ce que tu veux voir, et React s’occupe de mettre à jour l’interface quand les données changent. Contrairement à la manipulation traditionnelle du DOM, React gère …</description>
     </item>
     <item>
       <title>DDA</title>
-      <link>http://localhost:1313/420-211/2-dda/index.html</link>
+      <link>http://localhost:45341/420-211/2-dda/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/2-dda/index.html</guid>
-      <description>Application basées sur des données (data-driven applications) L’une des grandes forces de React est la réutilisabilité des composants. Un composant bien conçu peut être utilisé plusieurs fois dans une application, avec des données différentes, permettant ainsi de réduire la duplication du code et de rendre le développement plus efficace.&#xA;Ce que nous allons allons explorer dans ce module:&#xA;L’insertion de JavaScript dans JSX L’utilisation des props pour transmettre des données aux composants La gestion des actifs statiques La mise en correspondance des données avec les composants Insérer du JavaScript dans JSX React permet d’intégrer du JavaScript directement dans le JSX à l’aide des accolades {}. Cela nous permet d’afficher des variables, d’effectuer des calculs ou d’utiliser des expressions JavaScript dans notre interface.</description>
+      <guid>http://localhost:45341/420-211/2-dda/index.html</guid>
+      <description>Application basées sur des données (data-driven applications) L’une des grandes forces de React est la réutilisabilité des composants. Un composant bien conçu peut être utilisé plusieurs fois dans une application, avec des données différentes, permettant ainsi de réduire la duplication du code et de rendre le développement plus efficace.&#xA;Ce que nous allons allons explorer dans ce module:&#xA;L’insertion de JavaScript dans JSX L’utilisation des props pour transmettre des données aux composants La gestion des actifs statiques La mise en correspondance des données avec les composants Insérer du JavaScript dans JSX React permet d’intégrer du JavaScript directement dans le JSX à l’aide des accolades {}.</description>
+    </item>
+    <item>
+      <title>States</title>
+      <link>http://localhost:45341/420-211/3-states/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:45341/420-211/3-states/index.html</guid>
+      <description>Dans cette section, nous allons apprendre à développer des applications interactives et dynamiques avec React.&#xA;Jusque là, nous avons vu comment fonctionne React dans les coulisses, les spécificités de la syntaxe JSX, comment créer des pages Web statiques avec React et diviser notre page web en composants.&#xA;Ensuite, nous avons appris à créer des composants réutilisables, à l’aide de props, faire passer des données dans les composants pour garantir leur réutilisabilité, ce qui nous a permis d’utiliser des données statiques (avec des objets JS) pour générer des portions de nos pages Web (Cards, ListItems etc…).</description>
     </item>
     <item>
       <title>Annexe</title>
-      <link>http://localhost:1313/420-211/annexe/index.html</link>
+      <link>http://localhost:45341/420-211/annexe/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-211/annexe/index.html</guid>
+      <guid>http://localhost:45341/420-211/annexe/index.html</guid>
       <description></description>
     </item>
   </channel>

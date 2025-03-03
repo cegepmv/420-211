@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=45341&amp;path=420-211/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Relearn 7.3.1">
+    <meta name="description" content="Props Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables).
+function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="useState :: App Web">
+    <meta name="twitter:description" content="Props Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables).
+function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta property="og:url" content="http://localhost:45341/420-211/3-apps-dynamiques/2-props-vs-states/index.html">
+    <meta property="og:site_name" content="App Web">
+    <meta property="og:title" content="useState :: App Web">
+    <meta property="og:description" content="Props Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables).
+function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="useState :: App Web">
+    <meta itemprop="description" content="Props Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables).
+function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta itemprop="wordCount" content="1778">
+    <title>useState :: App Web</title>
+    <link href="/420-211/3-apps-dynamiques/2-props-vs-states/index.xml" rel="alternate" type="application/rss+xml" title="useState :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
+
+
+    <link href="/420-211/css/fontawesome-all.min.css?1741026362" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1741026362" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1741026362" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1741026362" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1741026362" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1741026362" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1741026362" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:45341\/420-211';
+      window.relearn.min = ``;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/3-apps-dynamiques/2-props-vs-states/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#props">Props</a></li>
+        <li><a href="#states">States</a></li>
+        <li><a href="#gestion-de-variables-avec-state">Gestion de variables avec state</a></li>
+        <li><a href="#destructurer-le-retour-de-usestate">Destructurer le retour de useState</a></li>
+        <li><a href="#exercice">Exercice</a></li>
+        <li><a href="#mettre-à-jour-le-state-avec-une-fonction-callback">Mettre à jour le state avec une fonction callback</a></li>
+        <li><a href="#exercice-1">Exercice</a></li>
+        <li><a href="#manipulation-de-states-complexes">Manipulation de states complexes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/3-apps-dynamiques/index.html"><span itemprop="name">React dynamique</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">useState</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/3-apps-dynamiques/1-event-listeners/index.html" title="Écouteurs d&#39;évènements (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/annexe/index.html" title="Annexe (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 3-apps-dynamiques" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="usestate">useState</h1>
+
+<h3 id="props">Props</h3>
+<p><strong>Props</strong> fait référence aux <strong>propriétés transmises à un composant</strong> pour qu&rsquo;il fonctionne correctement, de la même manière qu&rsquo;une fonction reçoit des paramètres. Un composant recevant des props n&rsquo;est pas autorisé à les modifier (i.e. il sont immuables).</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addTwoNumbers</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// NE FAITES PAS ÇA
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">addTwoNumbers</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))</span></span></code></pre></div>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Navbar</span>(<span style="color:#a6e22e">props</span>) {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// NE FAITES PAS ÇA
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">logoIcon</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some-other-icon.png&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">Navbar</span> <span style="color:#a6e22e">logoIcon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;spatula.png&#34;</span> /&gt;</span></span></code></pre></div>
+<h3 id="states">States</h3>
+<p><strong>State</strong> fait référence aux valeurs <strong>gérées par le composant</strong>, comme les variables déclarées à l&rsquo;intérieur d&rsquo;une fonction. Chaque fois que vous avez des valeurs changeantes qui doivent être sauvegardées/affichées, vous utiliserez probablement un <em>state</em>.</p>
+<h3 id="gestion-de-variables-avec-state">Gestion de variables avec state</h3>
+<p>Prenons un exemple pour comprendre l&rsquo;utilité des <em>states</em> en React :</p>
+<div class="tab-panel" data-tab-group="07a7a9a8c2034422bf0c60cd6545db26">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('07a7a9a8c2034422bf0c60cd6545db26','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('07a7a9a8c2034422bf0c60cd6545db26','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Oui&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleClick</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bien sûr&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">Est</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">important</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">connaître</span> <span style="color:#a6e22e">les</span> <span style="color:#a6e22e">states</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleClick</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>&gt;{<span style="color:#a6e22e">state</span>}&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Inter&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#D9D9D9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">title</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">value</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Lorsqu&rsquo;on appuie sur le bouton, une fonction <code>handleClick()</code> sensée modifier le texte du bouton est appelée.</p>
+<p>Copiez ce code et essayez de cliquer sur le bouton. Que remarquez-vous ?</p>
+<p>Rien ne change sur la page ! Le simple fait de modifier une variable locale ne va pas inciter React à réexécuter notre composant. React ne va pas réagir au changement d&rsquo;état et afficher la valeur mise à jour. Pour que cela puisse fonctionner, nous devons utiliser une fonction fournie par React : <code>React.useState()</code> :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;Oui&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">Est</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">important</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">connaître</span> <span style="color:#a6e22e">les</span> <span style="color:#a6e22e">states</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleClick</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>&gt;{<span style="color:#a6e22e">state</span>[<span style="color:#ae81ff">0</span>]}&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Cette fonction prend en paramètre la valeur initiale de la variable et retourne un tableau avec deux éléments :</p>
+<ul>
+<li>Le premier élément est la valeur de la variable ;</li>
+<li>Le deuxième est une fonction qui nous permettra de modifier la valeur de cette variable.</li>
+</ul>
+<h3 id="destructurer-le-retour-de-usestate">Destructurer le retour de useState</h3>
+<p>Afin de mieux nommer les éléments du tableau que retourne <code>useState()</code> (et rendre notre code plus lisible), nous pouvons destructurer sa valeur de retour :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">isImportant</span>, <span style="color:#a6e22e">setIsImportant</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;Oui&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">Est</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">important</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">connaître</span> <span style="color:#a6e22e">les</span> <span style="color:#a6e22e">states</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>&gt;{<span style="color:#a6e22e">isImportant</span>}&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+
+<details open class=" box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>Par convention, on donne à la variable un nom qui décrit la valeur stockée, et on nomme la fonction <code>setNomDeLaVariable</code></p>
+  </div>
+</details>
+<p>Le code du bouton peut donc être modifié de la façon suivante :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">isImportant</span>, <span style="color:#a6e22e">setIsImportant</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#e6db74">&#34;Oui&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleClick</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setIsImportant</span>(<span style="color:#e6db74">&#34;Bien sûr&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">Est</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">important</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">connaître</span> <span style="color:#a6e22e">les</span> <span style="color:#a6e22e">states</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleClick</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>&gt;{<span style="color:#a6e22e">isImportant</span>}&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice">Exercice</h3>
+<p>Pour le code ci-dessous :</p>
+<ol>
+<li>Créez un <em>state</em> pour suivre la valeur de la variable <code>count</code> (valeur initiale à 0)</li>
+<li>Créez une fonction <code>add</code> qui sera appelée lorsqu&rsquo;on appuie sur le bouton <code>+</code></li>
+<li>Réfléchissez à un moyen d&rsquo;ajouter 1 à <code>count</code> à chaque fois qu&rsquo;on appuie sur le bouton <code>+</code></li>
+<li>Faites la même chose pour le bouton <code>-</code></li>
+</ol>
+<div class="tab-panel" data-tab-group="97feb1ad4a68b8b5e8a2275d37433ad1">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('97feb1ad4a68b8b5e8a2275d37433ad1','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('97feb1ad4a68b8b5e8a2275d37433ad1','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">Combien</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">fois</span> <span style="color:#a6e22e">mon</span> <span style="color:#a6e22e">enseignant</span> <span style="color:#a6e22e">va</span><span style="color:#f92672">-</span><span style="color:#a6e22e">t</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">dire</span> <span style="color:#a6e22e">le</span> <span style="color:#a6e22e">mot</span> <span style="color:#a6e22e">state</span> <span style="color:#a6e22e">dans</span> <span style="color:#a6e22e">ce</span> <span style="color:#a6e22e">chapitre</span> <span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;counter&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;minus&#34;</span> <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Decrease count&#34;</span>&gt;<span style="color:#960050;background-color:#1e0010">–</span>
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>&gt;<span style="color:#ae81ff">0</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plus&#34;</span> <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Increase count&#34;</span>&gt;<span style="color:#f92672">+</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Inter&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#D9D9D9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">h1</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">counter</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">flex-end</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-self</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">counter</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">button</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#737373</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#D9D9D9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">counter</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">button</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#404040</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#D9D9D9</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">count</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    margin-block: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">plus</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">-20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">minus</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-right</span>: <span style="color:#ae81ff">-20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="mettre-à-jour-le-state-avec-une-fonction-callback">Mettre à jour le state avec une fonction callback</h3>
+<p>Si vous avez besoin de l&rsquo;ancienne valeur du <em>state</em> pour déterminer la nouvelle, il est fortement conseillé d&rsquo;utiliser une <strong>fonction de rappel</strong> (<em>callback function</em>) au lieu d&rsquo;utiliser directement la valeur du <em>state</em>. Cette fonction callback recevra l&rsquo;ancienne valeur en paramètre. Vous pourrez ensuite l&rsquo;utiliser pour déterminer la nouvelle valeur :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setCount</span>(<span style="color:#a6e22e">prevCount</span> =&gt; <span style="color:#a6e22e">prevCount</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">subtract</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setCount</span>(<span style="color:#a6e22e">prevCount</span> =&gt; <span style="color:#a6e22e">prevCount</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)    
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">Combien</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">fois</span> <span style="color:#a6e22e">mon</span> <span style="color:#a6e22e">enseignant</span> <span style="color:#a6e22e">va</span><span style="color:#f92672">-</span><span style="color:#a6e22e">t</span><span style="color:#f92672">-</span><span style="color:#a6e22e">il</span> <span style="color:#a6e22e">dire</span> <span style="color:#a6e22e">le</span> <span style="color:#a6e22e">mot</span> <span style="color:#a6e22e">state</span> <span style="color:#a6e22e">dans</span> <span style="color:#a6e22e">ce</span> <span style="color:#a6e22e">chapitre</span> <span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;counter&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;minus&#34;</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">subtract</span>} <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Decrease count&#34;</span>&gt;<span style="color:#960050;background-color:#1e0010">–</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>&gt;<span style="color:#ae81ff">0</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plus&#34;</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">add</span>} <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Increase count&#34;</span>&gt;<span style="color:#f92672">+</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exercice-1">Exercice</h3>
+<p>En utilisant l&rsquo;opérateur ternaire et les <em>states</em>, faites en sorte que lorsqu&rsquo;on clique sur le bouton, la valeur change à &ldquo;Non&rdquo; si elle est à &ldquo;Oui&rdquo; et à &ldquo;Oui&rdquo; si elle est à &ldquo;Non&rdquo;.</p>
+<div class="tab-panel" data-tab-group="a398b9ca1972a8293613cec9aa495634">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('a398b9ca1972a8293613cec9aa495634','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle blue"
+      onclick="switchTab('a398b9ca1972a8293613cec9aa495634','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">Est</span><span style="color:#f92672">-</span><span style="color:#a6e22e">ce</span> <span style="color:#a6e22e">que</span> <span style="color:#a6e22e">je</span> <span style="color:#a6e22e">sors</span> <span style="color:#a6e22e">ce</span> <span style="color:#a6e22e">soir</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>&gt;<span style="color:#a6e22e">Oui</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle blue">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Inter&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#D9D9D9</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">title</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">value</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#262626</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="manipulation-de-states-complexes">Manipulation de states complexes</h3>
+<h4 id="exercice-1--tableaux">Exercice 1 : tableaux</h4>
+<ul>
+<li>Changez le code ci-dessous pour utiliser un tableau initialisé avec <code>useState()</code>.</li>
+<li>Initialisez le <em>state</em> avec un tableau vide (<code>[]</code>)</li>
+<li>Modifiez la fonction <code>addFavoriteThing()</code> pour qu&rsquo;à chaque fois qu&rsquo;on appuie sur le bouton <code>Add Item</code>, la fonction ajoute un nouvel élément &ldquo;Test&rdquo; à la page</li>
+<li>Maintenant, faites en sorte qu&rsquo;à chaque fois qu&rsquo;on appuie sur le bouton, un nouvel élément du tableau <code>allFavoriteThings</code> est affiché.
+<div class="tab-panel" data-tab-group="161cc27e25bbcc06d1d605bcf77fb19c">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('161cc27e25bbcc06d1d605bcf77fb19c','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('161cc27e25bbcc06d1d605bcf77fb19c','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myFavoriteThings</span> <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allFavoriteThings</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;💦🌹&#34;</span>, <span style="color:#e6db74">&#34;😺&#34;</span>, <span style="color:#e6db74">&#34;💡🫖&#34;</span>, <span style="color:#e6db74">&#34;🔥🧤&#34;</span>, <span style="color:#e6db74">&#34;🟤🎁&#34;</span>, 
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;🐴&#34;</span>, <span style="color:#e6db74">&#34;🍎🥧&#34;</span>, <span style="color:#e6db74">&#34;🚪🔔&#34;</span>, <span style="color:#e6db74">&#34;🛷🔔&#34;</span>, <span style="color:#e6db74">&#34;🥩🍝&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">thingsElements</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myFavoriteThings</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">thing</span> =&gt; &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">thing</span>}&gt;{<span style="color:#a6e22e">thing</span>}&lt;/<span style="color:#f92672">p</span>&gt;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addFavoriteThing</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">myFavoriteThings</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#34;Test&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">addFavoriteThing</span>}&gt;<span style="color:#a6e22e">Add</span> <span style="color:#a6e22e">item</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">live</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;polite&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        {<span style="color:#a6e22e">thingsElements</span>}
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#70B85D</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.3</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>; 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">button</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">transparent</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Karla&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">button</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFEF1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#2C5E2E</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">button</span>:<span style="color:#a6e22e">focus</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">outline</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+</span></span><span style="display:flex;"><span>    margin-block: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    Solution
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">myFavoriteThings</span>, <span style="color:#a6e22e">setMyFavoriteThings</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allFavoriteThings</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;💦🌹&#34;</span>, <span style="color:#e6db74">&#34;😺&#34;</span>, <span style="color:#e6db74">&#34;💡🫖&#34;</span>, <span style="color:#e6db74">&#34;🔥🧤&#34;</span>, <span style="color:#e6db74">&#34;🟤🎁&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;🐴&#34;</span>, <span style="color:#e6db74">&#34;🍎🥧&#34;</span>, <span style="color:#e6db74">&#34;🚪🔔&#34;</span>, <span style="color:#e6db74">&#34;🛷🔔&#34;</span>, <span style="color:#e6db74">&#34;🥩🍝&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">thingsElements</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myFavoriteThings</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">thing</span> =&gt; &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">thing</span>}&gt;{<span style="color:#a6e22e">thing</span>}&lt;/<span style="color:#f92672">p</span>&gt;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addFavoriteThing</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setMyFavoriteThings</span>(
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">prevFavThings</span> =&gt; [
+</span></span><span style="display:flex;"><span>                ...<span style="color:#a6e22e">prevFavThings</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">allFavoriteThings</span>[<span style="color:#a6e22e">prevFavThings</span>.<span style="color:#a6e22e">length</span>]
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">addFavoriteThing</span>}&gt;<span style="color:#a6e22e">Add</span> <span style="color:#a6e22e">item</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">live</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;polite&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                {<span style="color:#a6e22e">thingsElements</span>}
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+  </div>
+</details></li>
+</ul>
+<h4 id="exercice-2--objets">Exercice 2 : objets</h4>
+<p>Pour les questions suivantes, vous pouvez utiliser les images <a href="./images/user.png">user.png</a>, <a href="/420-211/3-apps-dynamiques/2-props-vs-states/images/star-empty.png">star-empty.png</a> et <a href="./images/star-filled.png">star-filled.png</a></p>
+<ol>
+<li>Remplissez les valeurs du markup avec les propriétés de l&rsquo;objet/state <code>contact</code>.</li>
+</ol>
+<div class="tab-panel" data-tab-group="48496f2a2572aaf8ec7cdf809e268c5a">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('48496f2a2572aaf8ec7cdf809e268c5a','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('48496f2a2572aaf8ec7cdf809e268c5a','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">avatar</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/user.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starFilled</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-filled.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starEmpty</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-empty.png&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">contact</span>, <span style="color:#a6e22e">setContact</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;+1 (514) 555-1212&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;itsmyrealname@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">isFavorite</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toggleFavorite</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Toggle Favorite&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">avatar</span>}
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;avatar&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Photo de profil de John Doe&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">button</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleFavorite</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">pressed</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite-button&#34;</span>
+</span></span><span style="display:flex;"><span>                    &gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">starEmpty</span>}
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icône étoile vide&#34;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite&#34;</span>
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">John</span> <span style="color:#a6e22e">Doe</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">212</span>) <span style="color:#ae81ff">555</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1212</span>&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;<span style="color:#a6e22e">itsmyrealname</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">example</span>.<span style="color:#a6e22e">com</span>&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#0C4A6E</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#34;Inter&#34;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">align-items</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">lightgray</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">350</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">avatar</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">name</span> {
+</span></span><span style="display:flex;"><span>    margin-block: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#333333</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">info</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">favorite</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">contact</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">gray</span>;
+</span></span><span style="display:flex;"><span>    margin-block: <span style="color:#ae81ff">7</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">favorite-button</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: <span style="color:#66d9ef">transparent</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">card</span> .<span style="color:#a6e22e">favorite-button</span>:<span style="color:#a6e22e">active</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ol start="2">
+<li>Utilisez l&rsquo;opérateur ternaire pour déterminer quelle image de l&rsquo;étoile (remplie ou vide) devrait être utilisée, basé sur la valeur de <code>contact.isFavorite</code></li>
+</ol>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">avatar</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/user.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starFilled</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-filled.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starEmpty</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-empty.png&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">contact</span>, <span style="color:#a6e22e">setContact</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;+1 (212) 555-1212&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;itsmyrealname@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">isFavorite</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">starIcon</span> <span style="color:#f92672">=</span> <span style="color:#75715e">// Votre opération ternaire ici
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toggleFavorite</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Toggle Favorite&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">avatar</span>}
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;avatar&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Photo de profil de John Doe&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">button</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleFavorite</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">pressed</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite-button&#34;</span>
+</span></span><span style="display:flex;"><span>                    &gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">starEmpty</span>}
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icône étoile vide&#34;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite&#34;</span>
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        {<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">firstName</span>} {<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">lastName</span>}
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">phone</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">email</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<ol start="3">
+<li>
+<p>Modifiez les choses suivantes :</p>
+<ul>
+<li><code>aria-pressed</code> doit être égale à la valeur de <code>contact.isFavorite</code></li>
+<li><code>aria-label</code> devrait changer de valeur à &ldquo;Supprimer des favoris&rdquo; si <code>contact.isFavorite</code> est à <code>true</code></li>
+<li><code>img alt</code> devrait être égal à <code>icône étoile remplie</code> quand elle est remplie.</li>
+</ul>
+</li>
+<li>
+<p>Modifiez la valeur de <code>contact.isFavorite</code>, lorsqu&rsquo;on appuie sur l&rsquo;étoile.</p>
+</li>
+</ol>
+
+<details class=" box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    Solution
+  </summary>
+  <div class="box-content">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">avatar</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/user.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starFilled</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-filled.png&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">starEmpty</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./images/star-empty.png&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">contact</span>, <span style="color:#a6e22e">setContact</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;+1 (212) 555-1212&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;itsmyrealname@example.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">isFavorite</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">starIcon</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">isFavorite</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">starFilled</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">starEmpty</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toggleFavorite</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setContact</span>(<span style="color:#a6e22e">prevContact</span> =&gt; ({
+</span></span><span style="display:flex;"><span>            ...<span style="color:#a6e22e">prevContact</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">isFavorite</span><span style="color:#f92672">:</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">prevContact</span>.<span style="color:#a6e22e">isFavorite</span>
+</span></span><span style="display:flex;"><span>        }))
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">avatar</span>}
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;avatar&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Photo de profil de John Doe&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;info&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">button</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">toggleFavorite</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">pressed</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">isFavorite</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">aria</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">label</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">isFavorite</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Supprimer des favoris&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ajouter aux favoris&#34;</span>}
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite-button&#34;</span>
+</span></span><span style="display:flex;"><span>                    &gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">starIcon</span>}
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">isFavorite</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;icône étoile remplie&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;icône étoile vide&#34;</span>}
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favorite&#34;</span>
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                        {<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">firstName</span>} {<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">lastName</span>}
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">phone</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contact&#34;</span>&gt;{<span style="color:#a6e22e">contact</span>.<span style="color:#a6e22e">email</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+  </div>
+</details>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
+    <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
+</a>
+        </div>
+        <script>
+          window.index_js_url="/420-211/searchindex.en.js?1741026362";
+        </script>
+        <search><form action="/420-211/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-211/js/auto-complete.js?1741026362" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1741026362" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1741026362" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1741026362" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1741026362" defer></script>
+        <script src="/420-211/js/search.js?1741026362" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c"><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/2-conditions-js/index.html"><a class="padding" href="/420-211/0-intro/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/3-objets-js/index.html"><a class="padding" href="/420-211/0-intro/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/4-fonctions-js/index.html"><a class="padding" href="/420-211/0-intro/4-fonctions-js/index.html"><b>4. </b>Fonctions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/5-es5-js/index.html"><a class="padding" href="/420-211/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="alwaysopen " data-nav-id="/420-211/0-intro/7-git-github/index.html"><input type="checkbox" id="R-section-742167b1c2cc342071b49e0a70091d42" aria-controls="R-subsections-742167b1c2cc342071b49e0a70091d42" checked><label for="R-section-742167b1c2cc342071b49e0a70091d42"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Git/GitHub</span></label><a class="padding" href="/420-211/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a><ul id="R-subsections-742167b1c2cc342071b49e0a70091d42" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/git-bash/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/git-bash/index.html"><b>7.1 </b>Guide Git Bash</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/1-intro-react/index.html"><a class="padding" href="/420-211/1-intro-react/index.html"><b>1. </b>Introduction à React</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/index.html"><input type="checkbox" id="R-section-3f439693a8597dbe5c28428c2f31ece2" aria-controls="R-subsections-3f439693a8597dbe5c28428c2f31ece2"><label for="R-section-3f439693a8597dbe5c28428c2f31ece2"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu DDA</span></label><a class="padding" href="/420-211/2-dda/index.html"><b>2. </b>DDA</a><ul id="R-subsections-3f439693a8597dbe5c28428c2f31ece2" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/2-dda/1-js-dans-jsx/index.html"><a class="padding" href="/420-211/2-dda/1-js-dans-jsx/index.html"><b>1. </b>Insérer du JS dans JSX</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/2-props/index.html"><a class="padding" href="/420-211/2-dda/2-props/index.html"><b>2. </b>Props</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/3-actifs-statiques/index.html"><a class="padding" href="/420-211/2-dda/3-actifs-statiques/index.html"><b>3. </b>Gestion des actifs statiques</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/4-donnees-composants/index.html"><a class="padding" href="/420-211/2-dda/4-donnees-composants/index.html"><b>4. </b>Données et composants</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/5-exercice-dirige/index.html"><a class="padding" href="/420-211/2-dda/5-exercice-dirige/index.html"><b>5. </b>Exercice dirigé</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/6-exercices-props/index.html"><a class="padding" href="/420-211/2-dda/6-exercices-props/index.html">Exercices - JSX et les props</a></li></ul></li>
+            <li class="parent " data-nav-id="/420-211/3-apps-dynamiques/index.html"><input type="checkbox" id="R-section-a38810c36669d98bbeca715c67f76680" aria-controls="R-subsections-a38810c36669d98bbeca715c67f76680" checked><label for="R-section-a38810c36669d98bbeca715c67f76680"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu React dynamique</span></label><a class="padding" href="/420-211/3-apps-dynamiques/index.html"><b>3. </b>React dynamique</a><ul id="R-subsections-a38810c36669d98bbeca715c67f76680" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/3-apps-dynamiques/1-event-listeners/index.html"><a class="padding" href="/420-211/3-apps-dynamiques/1-event-listeners/index.html"><b>1. </b>Écouteurs d&#39;évènements</a></li>
+            <li class="active " data-nav-id="/420-211/3-apps-dynamiques/2-props-vs-states/index.html"><a class="padding" href="/420-211/3-apps-dynamiques/2-props-vs-states/index.html"><b>2. </b>useState</a></li></ul></li>
+            <li class="" data-nav-id="/420-211/annexe/index.html"><input type="checkbox" id="R-section-c42d2d00a11a971cfe1f59377ff37f39" aria-controls="R-subsections-c42d2d00a11a971cfe1f59377ff37f39"><label for="R-section-c42d2d00a11a971cfe1f59377ff37f39"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Annexe</span></label><a class="padding" href="/420-211/annexe/index.html">Annexe</a><ul id="R-subsections-c42d2d00a11a971cfe1f59377ff37f39" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/annexe/0-intro/index.html"><a class="padding" href="/420-211/annexe/0-intro/index.html">JS - Exercices préalables</a></li></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/3-apps-dynamiques/2-props-vs-states/index.html" lang="fr-fr" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-211/js/clipboard.min.js?1741026362" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1741026362" defer></script>
+    <script src="/420-211/js/theme.js?1741026362" defer></script>
+  </body>
+</html>

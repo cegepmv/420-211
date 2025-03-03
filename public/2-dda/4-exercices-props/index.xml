@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exercices - JSX et les props :: App Web</title>
+    <link>http://localhost:45341/420-211/2-dda/4-exercices-props/index.html</link>
+    <description>La section suivante présente une série d’exercices visant à renforcer votre compréhension de la transmission des données entre composants et la réutilisabilité de ceux-ci.&#xA;Exercice 1 : Affichage dynamique d’un message d’accueil Objectif : Créez un composant WelcomeBanner qui affiche un message de bienvenue basé sur la prop username.&#xA;Instructions&#xA;Créez un composant WelcomeBanner qui prend une prop username (string) et affiche : &#34;Bienvenue sur notre site, [username] !&#34;. Dans le composant App, utilisez WelcomeBanner avec trois utilisateurs différents (par exemple, “Alice”, “Bob”, “Charlie”).</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <atom:link href="http://localhost:45341/420-211/2-dda/4-exercices-props/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

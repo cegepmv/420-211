@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction à React :: App Web</title>
-    <link>http://localhost:1313/420-211/1-intro-react/index.html</link>
+    <link>http://localhost:45341/420-211/1-intro-react/index.html</link>
     <description>React est une bibliothèque JavaScript développée par Facebook (Meta) qui permet de créer des interfaces utilisateur dynamiques et réactives. L’objectif principal de React est de simplifier le processus de développement d’applications web complexes en offrant une approche déclarative, ce qui signifie que tu décris l’interface utilisateur en termes de ce que tu veux voir, et React s’occupe de mettre à jour l’interface quand les données changent. Contrairement à la manipulation traditionnelle du DOM, React gère …</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="http://localhost:1313/420-211/1-intro-react/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45341/420-211/1-intro-react/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
