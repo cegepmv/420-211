@@ -35,30 +35,30 @@ import './App.css';
 import voitures from './assets/voitures';
 import Voiture from './components/Voiture';
 
-function voituresComponents() {
-  return voitures.map(voiture => (
-    <Voiture
-      key={voiture.id}
-      marque={voiture.marque}
-      model={voiture.model}
-      couleur={voiture.couleur}
-      annee={voiture.annee}
-    />
-  ));
-}
-
 function App() {
+
+  const voituresElements = voitures.map(voiture => {
+    return <Voiture
+              marque={voiture.marque}
+              model={voiture.model}
+              couleur={voiture.couleur}
+              annee={voiture.annee}
+      />
+  })
+
   return (
     <>
-      <h1>Liste des voitures</h1>
-      <div className="voiture-list">
-        <voituresComponents />
+      <div className="app">
+        <h1>Liste des voitures</h1>
+        <div className="voiture-list">
+          {voituresElements}
+        </div>
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ### Composant Voiture
@@ -66,12 +66,12 @@ export default App;
 import React from 'react';
 import './Voiture.css';
 
-function Voiture({ marque, model, couleur, annee }) {
+function Voiture(props) {
   return (
     <div className="voiture-card">
-      <h2>{marque} {model}</h2>
-      <p><strong>Couleur :</strong> {couleur}</p>
-      <p><strong>Année :</strong> {annee}</p>
+      <h2>{props.marque} {props.model}</h2>
+      <p><strong>Couleur :</strong> {props.couleur}</p>
+      <p><strong>Année :</strong> {props.annee}</p>
     </div>
   );
 }

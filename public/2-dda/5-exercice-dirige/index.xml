@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exercice dirigé :: App Web</title>
-    <link>http://localhost:45341/420-211/2-dda/5-exercice-dirige/index.html</link>
-    <description>Réutilisabilité des composants L’objectif de cet exercice est de refactoriser la page web précédemment développée afin d’améliorer la réutilisabilité des composants. Vous devrez optimiser votre implémentation en appliquant les bonnes pratiques de développement avec React, notamment en structurant le code de manière modulaire et en favorisant la transmission efficace des données entre les composants.&#xA;🎯 Objectifs :&#xA;Identifier et extraire les éléments communs dans des composants réutilisables. Utiliser les props pour transmettre les données nécessaires aux composants.</description>
+    <link>http://localhost:1313/420-211/2-dda/5-exercice-dirige/index.html</link>
+    <description>Réutilisabilité des composants L’objectif de cet exercice est de refactoriser la page web précédemment développée afin d’améliorer la réutilisabilité des composants. Vous devrez optimiser votre implémentation en appliquant les bonnes pratiques de développement avec React, notamment en structurant le code de manière modulaire et en favorisant la transmission efficace des données entre les composants.&#xA;🎯 Objectifs :&#xA;Identifier et extraire les éléments communs dans des composants réutilisables. Utiliser les props pour transmettre les données nécessaires aux composants. Simplifier et structurer votre code en évitant les répétitions. Points clés à améliorer :</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="http://localhost:45341/420-211/2-dda/5-exercice-dirige/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-211/2-dda/5-exercice-dirige/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

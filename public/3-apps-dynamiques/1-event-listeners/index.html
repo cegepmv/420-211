@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=45341&amp;path=420-211/livereload" data-no-instant defer></script>
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Hugo 0.141.0">
     <meta name="generator" content="Relearn 7.3.1">
     <meta name="description" content="En Javascript, on utilise des écouteurs d’évènenements (Event Listeners) pour permettre à l’utilisateur d’interagir avec notre application.
 Dans une application Javascript “vanille”, il y a 2 façons d’ajouter des événements :
-Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.">
+Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.log(&#34;Le bouton a été cliqué&#34;); } Cette deuxième méthode ressemble beaucoup à celle qu’on utilise avec React. Par exemple. Si on veut faire en sorte que, lorsque nous cliquons sur un bouton, quelque chose est affiché dans la console, il suffit simplement d’ajouter un onClick={fonction} au bouton. Contrairement à la méthode précédente, vous remarquerez qu’on utilise un C majuscule :">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Écouteurs d&#39;évènements :: App Web">
     <meta name="twitter:description" content="En Javascript, on utilise des écouteurs d’évènenements (Event Listeners) pour permettre à l’utilisateur d’interagir avec notre application.
 Dans une application Javascript “vanille”, il y a 2 façons d’ajouter des événements :
-Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.">
-    <meta property="og:url" content="http://localhost:45341/420-211/3-apps-dynamiques/1-event-listeners/index.html">
+Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.log(&#34;Le bouton a été cliqué&#34;); } Cette deuxième méthode ressemble beaucoup à celle qu’on utilise avec React. Par exemple. Si on veut faire en sorte que, lorsque nous cliquons sur un bouton, quelque chose est affiché dans la console, il suffit simplement d’ajouter un onClick={fonction} au bouton. Contrairement à la méthode précédente, vous remarquerez qu’on utilise un C majuscule :">
+    <meta property="og:url" content="http://localhost:1313/420-211/3-apps-dynamiques/1-event-listeners/index.html">
     <meta property="og:site_name" content="App Web">
     <meta property="og:title" content="Écouteurs d&#39;évènements :: App Web">
     <meta property="og:description" content="En Javascript, on utilise des écouteurs d’évènenements (Event Listeners) pour permettre à l’utilisateur d’interagir avec notre application.
 Dans une application Javascript “vanille”, il y a 2 façons d’ajouter des événements :
-Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.">
+Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.log(&#34;Le bouton a été cliqué&#34;); } Cette deuxième méthode ressemble beaucoup à celle qu’on utilise avec React. Par exemple. Si on veut faire en sorte que, lorsque nous cliquons sur un bouton, quelque chose est affiché dans la console, il suffit simplement d’ajouter un onClick={fonction} au bouton. Contrairement à la méthode précédente, vous remarquerez qu’on utilise un C majuscule :">
     <meta property="og:locale" content="fr_fr">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Écouteurs d&#39;évènements :: App Web">
     <meta itemprop="description" content="En Javascript, on utilise des écouteurs d’évènenements (Event Listeners) pour permettre à l’utilisateur d’interagir avec notre application.
 Dans une application Javascript “vanille”, il y a 2 façons d’ajouter des événements :
-Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.">
+Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn = document.getElementById(&#39;btn&#39;); function handleClick() { console.log(&#34;Le bouton a été cliqué&#34;); } btn.addEventListener(&#34;click&#34;, handleClick); Avec onclick=&#34;fonction()&#34; sur l’élément HTML qu’on veut écouter : &lt;button onclick=&#34;fonction()&#34;&gt; function fonction() { // Tâche à faire quand le bouton est cliqué console.log(&#34;Le bouton a été cliqué&#34;); } Cette deuxième méthode ressemble beaucoup à celle qu’on utilise avec React. Par exemple. Si on veut faire en sorte que, lorsque nous cliquons sur un bouton, quelque chose est affiché dans la console, il suffit simplement d’ajouter un onClick={fonction} au bouton. Contrairement à la méthode précédente, vous remarquerez qu’on utilise un C majuscule :">
     <meta itemprop="wordCount" content="428">
     <title>Écouteurs d&#39;évènements :: App Web</title>
     <link href="/420-211/3-apps-dynamiques/1-event-listeners/index.xml" rel="alternate" type="application/rss+xml" title="Écouteurs d&#39;évènements :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
 
 
-    <link href="/420-211/css/fontawesome-all.min.css?1741026437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1741026437" rel="stylesheet"></noscript>
-    <link href="/420-211/css/auto-complete.css?1741026437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1741026437" rel="stylesheet"></noscript>
-    <link href="/420-211/css/perfect-scrollbar.min.css?1741026437" rel="stylesheet">
-    <link href="/420-211/css/theme.css?1741026437" rel="stylesheet">
-    <link href="/420-211/css/format-html.css?1741026437" rel="stylesheet" id="R-format-style">
+    <link href="/420-211/css/fontawesome-all.min.css?1741120515" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1741120515" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1741120515" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1741120515" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1741120515" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1741120515" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1741120515" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:45341\/420-211';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
       window.relearn.min = ``;
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
@@ -189,20 +189,20 @@ Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn
 </details>
 <h4 id="exemple-1">Exemple 1</h4>
 <p>Complétez le composant <code>App()</code> pour que la fonction <code>handleClick()</code> s&rsquo;exécute quand on clique sur le bouton.
-<div class="tab-panel" data-tab-group="d2a2cb9a160e87bff71bbdf747355990">
+<div class="tab-panel" data-tab-group="fecf3860d15e6fa767ae0879ae5d3d63">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('d2a2cb9a160e87bff71bbdf747355990','appjsx')"
+      onclick="switchTab('fecf3860d15e6fa767ae0879ae5d3d63','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle blue"
-      onclick="switchTab('d2a2cb9a160e87bff71bbdf747355990','indexcss')"
+      onclick="switchTab('fecf3860d15e6fa767ae0879ae5d3d63','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -304,7 +304,7 @@ Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn
 </a>
         </div>
         <script>
-          window.index_js_url="/420-211/searchindex.en.js?1741026437";
+          window.index_js_url="/420-211/searchindex.en.js?1741120515";
         </script>
         <search><form action="/420-211/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -317,12 +317,12 @@ Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn
         <script>
           var contentLangs=['fr'];
         </script>
-        <script src="/420-211/js/auto-complete.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.multi.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.fr.min.js?1741026437" defer></script>
-        <script src="/420-211/js/search.js?1741026437" defer></script>
+        <script src="/420-211/js/auto-complete.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1741120515" defer></script>
+        <script src="/420-211/js/search.js?1741120515" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -407,8 +407,8 @@ Avec la méthode .addEventListener() : &lt;button id=&#34;btn&#34;&gt; const btn
         </div>
       </div>
     </aside>
-    <script src="/420-211/js/clipboard.min.js?1741026437" defer></script>
-    <script src="/420-211/js/perfect-scrollbar.min.js?1741026437" defer></script>
-    <script src="/420-211/js/theme.js?1741026437" defer></script>
+    <script src="/420-211/js/clipboard.min.js?1741120515" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1741120515" defer></script>
+    <script src="/420-211/js/theme.js?1741120515" defer></script>
   </body>
 </html>

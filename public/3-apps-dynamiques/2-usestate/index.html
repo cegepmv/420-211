@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=45341&amp;path=420-211/livereload" data-no-instant defer></script>
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Hugo 0.141.0">
     <meta name="generator" content="Relearn 7.3.1">
-    <meta name="description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta name="description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.png&#34; /&gt; State fait référence aux valeurs gérées par le composant, comme les variables déclarées à l’intérieur d’une fonction. Chaque fois que vous avez des valeurs changeantes qui doivent être sauvegardées/affichées, vous utiliserez probablement un state. Gestion de variables avec state Prenons un exemple pour comprendre l’utilité des states en React :">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="useState() :: App Web">
-    <meta name="twitter:description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
-    <meta property="og:url" content="http://localhost:45341/420-211/3-apps-dynamiques/2-usestate/index.html">
+    <meta name="twitter:description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.png&#34; /&gt; State fait référence aux valeurs gérées par le composant, comme les variables déclarées à l’intérieur d’une fonction. Chaque fois que vous avez des valeurs changeantes qui doivent être sauvegardées/affichées, vous utiliserez probablement un state. Gestion de variables avec state Prenons un exemple pour comprendre l’utilité des states en React :">
+    <meta property="og:url" content="http://localhost:1313/420-211/3-apps-dynamiques/2-usestate/index.html">
     <meta property="og:site_name" content="App Web">
     <meta property="og:title" content="useState() :: App Web">
-    <meta property="og:description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta property="og:description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.png&#34; /&gt; State fait référence aux valeurs gérées par le composant, comme les variables déclarées à l’intérieur d’une fonction. Chaque fois que vous avez des valeurs changeantes qui doivent être sauvegardées/affichées, vous utiliserez probablement un state. Gestion de variables avec state Prenons un exemple pour comprendre l’utilité des states en React :">
     <meta property="og:locale" content="fr_fr">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="useState() :: App Web">
-    <meta itemprop="description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.">
+    <meta itemprop="description" content="Props vs State Props fait référence aux propriétés transmises à un composant pour qu’il fonctionne correctement, de la même manière qu’une fonction reçoit des paramètres. Un composant recevant des props n’est pas autorisé à les modifier (i.e. il sont immuables). function addTwoNumbers(a, b) { // NE FAITES PAS ÇA a = 42 return a &#43; b } console.log(addTwoNumbers(1, 2)) function Navbar(props) { // NE FAITES PAS ÇA props.logoIcon = &#34;some-other-icon.png&#34; } &lt;Navbar logoIcon=&#34;spatula.png&#34; /&gt; State fait référence aux valeurs gérées par le composant, comme les variables déclarées à l’intérieur d’une fonction. Chaque fois que vous avez des valeurs changeantes qui doivent être sauvegardées/affichées, vous utiliserez probablement un state. Gestion de variables avec state Prenons un exemple pour comprendre l’utilité des states en React :">
     <meta itemprop="wordCount" content="1779">
     <title>useState() :: App Web</title>
     <link href="/420-211/3-apps-dynamiques/2-usestate/index.xml" rel="alternate" type="application/rss+xml" title="useState() :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
 
 
-    <link href="/420-211/css/fontawesome-all.min.css?1741026437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1741026437" rel="stylesheet"></noscript>
-    <link href="/420-211/css/auto-complete.css?1741026437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1741026437" rel="stylesheet"></noscript>
-    <link href="/420-211/css/perfect-scrollbar.min.css?1741026437" rel="stylesheet">
-    <link href="/420-211/css/theme.css?1741026437" rel="stylesheet">
-    <link href="/420-211/css/format-html.css?1741026437" rel="stylesheet" id="R-format-style">
+    <link href="/420-211/css/fontawesome-all.min.css?1741120515" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1741120515" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1741120515" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1741120515" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1741120515" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1741120515" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1741120515" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:45341\/420-211';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
       window.relearn.min = ``;
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
@@ -161,20 +161,20 @@
 </ul>
 <h3 id="gestion-de-variables-avec-state">Gestion de variables avec state</h3>
 <p>Prenons un exemple pour comprendre l&rsquo;utilité des <em>states</em> en React :</p>
-<div class="tab-panel" data-tab-group="f275101210be3ed5f0a2a1aa8acc99b7">
+<div class="tab-panel" data-tab-group="94fd58495f33ca18adf30cd4daeee02a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('f275101210be3ed5f0a2a1aa8acc99b7','appjsx')"
+      onclick="switchTab('94fd58495f33ca18adf30cd4daeee02a','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('f275101210be3ed5f0a2a1aa8acc99b7','indexcss')"
+      onclick="switchTab('94fd58495f33ca18adf30cd4daeee02a','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -317,20 +317,20 @@
 <li>Réfléchissez à un moyen d&rsquo;ajouter 1 à <code>count</code> à chaque fois qu&rsquo;on appuie sur le bouton <code>+</code></li>
 <li>Faites la même chose pour le bouton <code>-</code></li>
 </ol>
-<div class="tab-panel" data-tab-group="4280326245707df9aae8bee2ec13eef7">
+<div class="tab-panel" data-tab-group="840faa714e405f5dedb0b101b39a2978">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('4280326245707df9aae8bee2ec13eef7','appjsx')"
+      onclick="switchTab('840faa714e405f5dedb0b101b39a2978','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('4280326245707df9aae8bee2ec13eef7','indexcss')"
+      onclick="switchTab('840faa714e405f5dedb0b101b39a2978','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -471,20 +471,20 @@
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <h3 id="exercice-1">Exercice</h3>
 <p>En utilisant l&rsquo;opérateur ternaire et les <em>states</em>, faites en sorte que lorsqu&rsquo;on clique sur le bouton, la valeur change à &ldquo;Non&rdquo; si elle est à &ldquo;Oui&rdquo; et à &ldquo;Oui&rdquo; si elle est à &ldquo;Non&rdquo;.</p>
-<div class="tab-panel" data-tab-group="3bf2087b0f499fb67776a1ba47f996b5">
+<div class="tab-panel" data-tab-group="86c0aceebeb76a38a93921d69cc38cbf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('3bf2087b0f499fb67776a1ba47f996b5','appjsx')"
+      onclick="switchTab('86c0aceebeb76a38a93921d69cc38cbf','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle blue"
-      onclick="switchTab('3bf2087b0f499fb67776a1ba47f996b5','indexcss')"
+      onclick="switchTab('86c0aceebeb76a38a93921d69cc38cbf','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -560,20 +560,20 @@
 <li>Initialisez le <em>state</em> avec un tableau vide (<code>[]</code>)</li>
 <li>Modifiez la fonction <code>addFavoriteThing()</code> pour qu&rsquo;à chaque fois qu&rsquo;on appuie sur le bouton <code>Add Item</code>, la fonction ajoute un nouvel élément &ldquo;Test&rdquo; à la page</li>
 <li>Maintenant, faites en sorte qu&rsquo;à chaque fois qu&rsquo;on appuie sur le bouton, un nouvel élément du tableau <code>allFavoriteThings</code> est affiché.
-<div class="tab-panel" data-tab-group="0b1c196f6fe2461c37909270884793b0">
+<div class="tab-panel" data-tab-group="18b83014ad366b22f358a40a8ba27ea6">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('0b1c196f6fe2461c37909270884793b0','appjsx')"
+      onclick="switchTab('18b83014ad366b22f358a40a8ba27ea6','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('0b1c196f6fe2461c37909270884793b0','indexcss')"
+      onclick="switchTab('18b83014ad366b22f358a40a8ba27ea6','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -696,24 +696,24 @@
 </details></li>
 </ul>
 <h4 id="exercice-2--objets">Exercice 2 : objets</h4>
-<p>Pour les questions suivantes, vous pouvez utiliser les images <a href="./images/user.png">user.png</a>, <a href="/420-211/3-apps-dynamiques/2-usestate/images/star-empty.png">star-empty.png</a> et <a href="./images/star-filled.png">star-filled.png</a></p>
+<p>Pour les questions suivantes, vous pouvez utiliser les images <a href="/420-211/3-apps-dynamiques/2-usestate/images/user.png">user.png</a>, <a href="/420-211/3-apps-dynamiques/2-usestate/images/star-empty.png">star-empty.png</a> et <a href="/420-211/3-apps-dynamiques/2-usestate/images/star-filled.png">star-filled.png</a></p>
 <ol>
 <li>Remplissez les valeurs du markup avec les propriétés de l&rsquo;objet/state <code>contact</code>.</li>
 </ol>
-<div class="tab-panel" data-tab-group="d71a475b674550be726153417ab22531">
+<div class="tab-panel" data-tab-group="6953f13b42e465b649602ad0d5374a57">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="appjsx"
       class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
-      onclick="switchTab('d71a475b674550be726153417ab22531','appjsx')"
+      onclick="switchTab('6953f13b42e465b649602ad0d5374a57','appjsx')"
     >
       <span class="tab-nav-text">App.jsx</span>
     </button>
     <button
       data-tab-item="indexcss"
       class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
-      onclick="switchTab('d71a475b674550be726153417ab22531','indexcss')"
+      onclick="switchTab('6953f13b42e465b649602ad0d5374a57','indexcss')"
     >
       <span class="tab-nav-text">index.css</span>
     </button>
@@ -991,7 +991,7 @@
 </a>
         </div>
         <script>
-          window.index_js_url="/420-211/searchindex.en.js?1741026437";
+          window.index_js_url="/420-211/searchindex.en.js?1741120515";
         </script>
         <search><form action="/420-211/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -1004,12 +1004,12 @@
         <script>
           var contentLangs=['fr'];
         </script>
-        <script src="/420-211/js/auto-complete.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.multi.min.js?1741026437" defer></script>
-        <script src="/420-211/js/lunr/lunr.fr.min.js?1741026437" defer></script>
-        <script src="/420-211/js/search.js?1741026437" defer></script>
+        <script src="/420-211/js/auto-complete.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1741120515" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1741120515" defer></script>
+        <script src="/420-211/js/search.js?1741120515" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -1094,8 +1094,8 @@
         </div>
       </div>
     </aside>
-    <script src="/420-211/js/clipboard.min.js?1741026437" defer></script>
-    <script src="/420-211/js/perfect-scrollbar.min.js?1741026437" defer></script>
-    <script src="/420-211/js/theme.js?1741026437" defer></script>
+    <script src="/420-211/js/clipboard.min.js?1741120515" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1741120515" defer></script>
+    <script src="/420-211/js/theme.js?1741120515" defer></script>
   </body>
 </html>
