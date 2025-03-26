@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Données et composants :: App Web</title>
-    <link>http://localhost:45341/420-211/2-dda/4-donnees-composants/index.html</link>
+    <link>http://localhost:1313/420-211/2-dda/4-donnees-composants/index.html</link>
     <description>Mise en correspondance Il est courant de générer dynamiquement des composants à partir d’un tableau de données. Cela se fait généralement avec la méthode map().&#xA;Exemple de liste d’éléments dynamiques const users = [ { id: 1, name: &#34;Alice&#34;, age: 30 }, { id: 2, name: &#34;Bob&#34;, age: 25 }, { id: 3, name: &#34;Charlie&#34;, age: 35 } ]; function UserList() { return ( &lt;ul&gt; {users.map(user =&gt; ( &lt;li key={user.id}&gt;{user.name} - {user.</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
-    <atom:link href="http://localhost:45341/420-211/2-dda/4-donnees-composants/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/420-211/2-dda/4-donnees-composants/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -14,6 +14,7 @@ function addTwoNumbers(a, b) {
     
     // NE FAITES PAS ÇA
     a = 42
+    
     return a + b
 }
 
@@ -375,12 +376,12 @@ main > .value {
 
 ### Manipulation de states complexes
 
-#### Exercice 1 : tableaux
+#### Exercice 1 - Tableaux
 
-+ Changez le code ci-dessous pour utiliser un tableau initialisé avec `useState()`.
-+ Initialisez le *state* avec un tableau vide (`[]`)
-+ Modifiez la fonction `addFavoriteThing()` pour qu'à chaque fois qu'on appuie sur le bouton `Add Item`, la fonction ajoute un nouvel élément "Test" à la page
+1. Changez le code ci-dessous pour utiliser un tableau initialisé avec `useState()` à la place du tableau `thingsElements`. Initialisez le *state* avec un tableau vide (`[]`)
+2. Modifiez la fonction `addFavoriteThing()` pour qu'à chaque fois qu'on appuie sur le bouton `Ajouter`, la fonction ajoute un nouvel élément "Test" à la page
 + Maintenant, faites en sorte qu'à chaque fois qu'on appuie sur le bouton, un nouvel élément du tableau `allFavoriteThings` est affiché.
+
 {{< tabs >}}
 {{% tab title="App.jsx" color="blue" %}}
 ```jsx
@@ -399,7 +400,7 @@ export default function App() {
   
   return (
     <main>
-      <button onClick={addFavoriteThing}>Add item</button>
+      <button onClick={addFavoriteThing}>Ajouter</button>
       <section aria-live="polite">
         {thingsElements}
       </section>
@@ -456,6 +457,7 @@ p {
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
 {{% expand title="Solution" %}}
 ```jsx
 import { useState } from "react"
@@ -488,11 +490,18 @@ export default function App() {
 ```
 {{% /expand %}}
 
-#### Exercice 2 : objets
+#### Exercice 2 - Objets
 
 Pour les questions suivantes, vous pouvez utiliser les images [user.png](./images/user.png), [star-empty.png](./images/star-empty.png) et [star-filled.png](./images/star-filled.png)
 
 1. Remplissez les valeurs du markup avec les propriétés de l'objet/state `contact`.
+2. Utilisez l'opérateur ternaire pour déterminer quelle image de l'étoile (remplie ou vide) devrait être utilisée, basé sur la valeur de `contact.isFavorite`.
+3. Modifiez les choses suivantes : 
+    + `aria-pressed` doit être égale à la valeur de `contact.isFavorite`
+    + `aria-label` devrait changer de valeur à "Supprimer des favoris" si `contact.isFavorite` est à `true`.
+    + `alt` devrait être égal à `icône étoile remplie` quand elle est remplie, et `icône étoile vide` quand elle est vide
+
+4. Modifiez la valeur de `contact.isFavorite` lorsqu'on appuie sur l'étoile. Sa valeur doit passer à `true` si elle était à `false` et `false` si elle était à `true`.
 
 {{< tabs >}}
 {{% tab title="App.jsx" color="blue" %}}
@@ -615,66 +624,6 @@ main {
 {{< /tab >}}
 {{< /tabs >}}
 
-2. Utilisez l'opérateur ternaire pour déterminer quelle image de l'étoile (remplie ou vide) devrait être utilisée, basé sur la valeur de `contact.isFavorite`
-```jsx
-import { useState } from "react"
-import avatar from "./images/user.png"
-import starFilled from "./images/star-filled.png"
-import starEmpty from "./images/star-empty.png"
-
-export default function App() {
-    const [contact, setContact] = useState({
-        firstName: "John",
-        lastName: "Doe",
-        phone: "+1 (212) 555-1212",
-        email: "itsmyrealname@example.com",
-        isFavorite: false
-    })
-    
-    let starIcon = // Votre opération ternaire ici
-
-    function toggleFavorite() {
-        console.log("Toggle Favorite")
-    }
-
-    return (
-        <main>
-            <article className="card">
-                <img
-                    src={avatar}
-                    className="avatar"
-                    alt="Photo de profil de John Doe"
-                />
-                <div className="info">
-                    <button
-                        onClick={toggleFavorite}
-                        aria-pressed={false}
-                        className="favorite-button"
-                    >
-                        <img
-                            src={starEmpty}
-                            alt="icône étoile vide"
-                            className="favorite"
-                        />
-                    </button>
-                    <h2 className="name">
-                        {contact.firstName} {contact.lastName}
-                    </h2>
-                    <p className="contact">{contact.phone}</p>
-                    <p className="contact">{contact.email}</p>
-                </div>
-
-            </article>
-        </main>
-    )
-}
-```
-3. Modifiez les choses suivantes : 
-    + `aria-pressed` doit être égale à la valeur de `contact.isFavorite`
-    + `aria-label` devrait changer de valeur à "Supprimer des favoris" si `contact.isFavorite` est à `true`
-    + `img alt` devrait être égal à `icône étoile remplie` quand elle est remplie.
-
-4. Modifiez la valeur de `contact.isFavorite`, lorsqu'on appuie sur l'étoile.
 
 {{% expand title="Solution" %}}
 ```jsx

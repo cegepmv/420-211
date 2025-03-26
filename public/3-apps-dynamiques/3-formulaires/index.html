@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="fr-fr" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/420-211/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-211/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="generator" content="Relearn 7.3.1">
+    <meta name="description" content="Un des outils permettant à une application dynamique de récupérer des données entrées par un utilisateur sont les formulaires. Ces données sont le plus souvent envoyées à un serveur (API) pour y être traitées.
+Exemple de cas d’utilisation de formulaires :
+Inscription à une application Connexion à un site Les bases ​ App.jsx index.css function App() { return ( &lt;section className=&#34;container&#34;&gt; &lt;h2&gt;Inscription&lt;/h2&gt; &lt;form className=&#34;form&#34;&gt; &lt;label htmlFor=&#34;email&#34;&gt;Email :&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;john-doe@exemple.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Formulaires :: App Web">
+    <meta name="twitter:description" content="Un des outils permettant à une application dynamique de récupérer des données entrées par un utilisateur sont les formulaires. Ces données sont le plus souvent envoyées à un serveur (API) pour y être traitées.
+Exemple de cas d’utilisation de formulaires :
+Inscription à une application Connexion à un site Les bases ​ App.jsx index.css function App() { return ( &lt;section className=&#34;container&#34;&gt; &lt;h2&gt;Inscription&lt;/h2&gt; &lt;form className=&#34;form&#34;&gt; &lt;label htmlFor=&#34;email&#34;&gt;Email :&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;john-doe@exemple.">
+    <meta property="og:url" content="http://localhost:1313/420-211/3-apps-dynamiques/3-formulaires/index.html">
+    <meta property="og:site_name" content="App Web">
+    <meta property="og:title" content="Formulaires :: App Web">
+    <meta property="og:description" content="Un des outils permettant à une application dynamique de récupérer des données entrées par un utilisateur sont les formulaires. Ces données sont le plus souvent envoyées à un serveur (API) pour y être traitées.
+Exemple de cas d’utilisation de formulaires :
+Inscription à une application Connexion à un site Les bases ​ App.jsx index.css function App() { return ( &lt;section className=&#34;container&#34;&gt; &lt;h2&gt;Inscription&lt;/h2&gt; &lt;form className=&#34;form&#34;&gt; &lt;label htmlFor=&#34;email&#34;&gt;Email :&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;john-doe@exemple.">
+    <meta property="og:locale" content="fr_fr">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Formulaires :: App Web">
+    <meta itemprop="description" content="Un des outils permettant à une application dynamique de récupérer des données entrées par un utilisateur sont les formulaires. Ces données sont le plus souvent envoyées à un serveur (API) pour y être traitées.
+Exemple de cas d’utilisation de formulaires :
+Inscription à une application Connexion à un site Les bases ​ App.jsx index.css function App() { return ( &lt;section className=&#34;container&#34;&gt; &lt;h2&gt;Inscription&lt;/h2&gt; &lt;form className=&#34;form&#34;&gt; &lt;label htmlFor=&#34;email&#34;&gt;Email :&lt;/label&gt; &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; placeholder=&#34;john-doe@exemple.">
+    <meta itemprop="wordCount" content="1408">
+    <title>Formulaires :: App Web</title>
+    <link href="/420-211/3-apps-dynamiques/3-formulaires/index.xml" rel="alternate" type="application/rss+xml" title="Formulaires :: App Web"><link rel="icon" href="/images/react-logo.png" type="image/png">
+
+
+    <link href="/420-211/css/fontawesome-all.min.css?1743031701" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/fontawesome-all.min.css?1743031701" rel="stylesheet"></noscript>
+    <link href="/420-211/css/auto-complete.css?1743031701" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-211/css/auto-complete.css?1743031701" rel="stylesheet"></noscript>
+    <link href="/420-211/css/perfect-scrollbar.min.css?1743031701" rel="stylesheet">
+    <link href="/420-211/css/theme.css?1743031701" rel="stylesheet">
+    <link href="/420-211/css/format-html.css?1743031701" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-211';
+      window.relearn.min = ``;
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'zen-light', 'zen-dark', 'blue' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-211/3-apps-dynamiques/3-formulaires/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#les-bases">Les bases</a></li>
+        <li><a href="#balise-form">Balise form</a></li>
+        <li><a href="#types-dentrées-dun-formulaire">Types d&rsquo;entrées d&rsquo;un formulaire</a></li>
+        <li><a href="#utiliser-objectfromentries">Utiliser Object.fromEntries</a></li>
+        <li><a href="#exemple-complet">Exemple Complet</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/index.html"><span itemprop="name">Applications Web</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-211/3-apps-dynamiques/index.html"><span itemprop="name">React dynamique</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Formulaires</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/3-apps-dynamiques/2-usestate/index.html" title="useState() (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/420-211/annexe/index.html" title="Annexe (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 3-apps-dynamiques" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="formulaires">Formulaires</h1>
+
+<p>Un des outils permettant à une application dynamique de récupérer des données entrées par un utilisateur sont les formulaires. Ces données sont le plus souvent envoyées à un serveur (API) pour y être traitées.</p>
+<p>Exemple de cas d&rsquo;utilisation de formulaires :</p>
+<ul>
+<li>Inscription à une application</li>
+<li>Connexion à un site</li>
+</ul>
+<h3 id="les-bases">Les bases</h3>
+<div class="tab-panel" data-tab-group="6ceadacf653fbb7bab2e82374caa525c">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      data-tab-item="appjsx"
+      class="tab-nav-button tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;" tabindex="-1"
+      onclick="switchTab('6ceadacf653fbb7bab2e82374caa525c','appjsx')"
+    >
+      <span class="tab-nav-text">App.jsx</span>
+    </button>
+    <button
+      data-tab-item="indexcss"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;"
+      onclick="switchTab('6ceadacf653fbb7bab2e82374caa525c','indexcss')"
+    >
+      <span class="tab-nav-text">index.css</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      data-tab-item="appjsx"
+      class="tab-content tab-panel-style cstyle filled active" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;<span style="color:#a6e22e">Email</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;john-doe@exemple.com&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;<span style="color:#a6e22e">Mot</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">passe</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit-btn&#34;</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      data-tab-item="indexcss"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: blue;">
+      <div class="tab-content-text">
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span>{ 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#2CA1CC</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Roboto&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">400</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#1F1F1F</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">container</span> <span style="color:#f92672">h2</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>; 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">input</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">90</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#EAEDF2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#A0A0A0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">textarea</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">resize</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">90</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">vh</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#EAEDF2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#A0A0A0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">fieldset</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">fieldset</span> <span style="color:#f92672">legend</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">fieldset</span> <span style="color:#f92672">input</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>:fit-content;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">7</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> <span style="color:#f92672">fieldset</span> <span style="color:#f92672">label</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>:fit-content;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">form</span> .<span style="color:#a6e22e">submit-btn</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border</span>:<span style="color:#66d9ef">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#F7F6FF</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">96</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-bottom</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#19B8D6</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">37</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<ul>
+<li>
+<p>Toutes les entrées d&rsquo;un formulaire doivent être à l&rsquo;intérieur d&rsquo;une balise <code>&lt;form&gt;</code></p>
+</li>
+<li>
+<p>Pour une entrée texte, on utilise l&rsquo;élément HTML <code>&lt;input&gt;</code>. Cet élément possède plusieurs propriétés :</p>
+<ul>
+<li><code>type</code> : le type d&rsquo;entrée. Peut être <code>email</code>, <code>password</code>, <code>checkbox</code>, etc&hellip;</li>
+<li><code>name</code> : Le nom de l&rsquo;élément. C&rsquo;est ce qui va nous permettre de récupérer sa valeur par la suite.</li>
+<li><code>placeholder</code>: un exemple qui va être affiché pour guider l&rsquo;utilisateur sur la forme attendue de l&rsquo;entrée.</li>
+</ul>
+</li>
+<li>
+<p>Un élément <code>&lt;label&gt;</code> doit être fourni pour donner un label à une entrée. Cet élément possède une propriété <code>htmlFor</code> dont la valeur est égale à la propriété <code>id</code> de l&rsquo;entrée qu&rsquo;elle décrit. Dans un code HTML, on remplacerait le <code>htmlFor=</code> par <code>for=</code>.</p>
+</li>
+</ul>
+<h3 id="balise-form">Balise form</h3>
+<p>Toutes les entrées d&rsquo;un formulaire doivent être à l&rsquo;intérieur d&rsquo;une balise <code>&lt;form&gt;</code>. Cette balise possède les propriétés suivantes :</p>
+<ul>
+<li><code>action=</code> : La fonction (ou le fichier) déclenchée lorsqu&rsquo;on soumet le formulaire.</li>
+<li><code>method=</code> : Le type d&rsquo;appel API effectué lors de la soumission du formulaire. Peut être de type <code>POST</code>, <code>GET</code>, <code>PUT</code> ou <code>DELETE</code>. Par défaut, sa valeur est <code>GET</code>.</li>
+</ul>
+<p>Lorsque vous soumettez un formulaire, la page est redirigée vers un URL qui contient les données entrées dans le formulaire. Si nous changeons la propriété <code>method=</code> à <code>&quot;POST&quot;</code>, le formulaire crée une requête <code>POST</code> et met les entrées du formulaire dans le corps (<em>body</em>) de la requête.</p>
+<p>Pour faire en sorte d&rsquo;éviter la redirection (ne pas afficher les données du formulaire dans l&rsquo;URL) et traiter les données du formulaire dans notre propre code JavaScript, nous pouvons utiliser la propriété <code>onSubmit</code> et lui donner une fonction qui va gérer la soumission. Nous pouvons empêcher le rafraîchissement de la page en utilisant <code>event.preventDefault()</code> comme suit :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleSubmit</span>(<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>()
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form&#34;</span> <span style="color:#a6e22e">onSubmit</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleSubmit</span>} &gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;<span style="color:#a6e22e">Mot</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">passe</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;<span style="color:#a6e22e">Email</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">placeholder </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;john-doe@exemple.com&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit-btn&#34;</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>L&rsquo;argument <code>event</code> passé à la fonction <code>handleSubmit()</code> possède beaucoup d&rsquo;informations utiles pour traiter le formulaire :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleSubmit</span>(<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">formEl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">currentTarget</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">formData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormData</span>(<span style="color:#a6e22e">formEl</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;email&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">formEl</span>.<span style="color:#a6e22e">reset</span>()
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<ul>
+<li>Pour récupérer l&rsquo;élément <code>&lt;form&gt;</code>, on utilise <code>event.target</code> ou <code>event.currentTarget</code> (conseillé).</li>
+<li>À partir de <code>event.currentTarget</code>, nous pouvons créer un objet JavaScript <code>FormData</code>. En lui passant <code>event.currentTarget</code> en argument, nous pouvons récupérer chaque donnée du formulaire en utilisant ensuite la méthode <code>formData.get(&quot;nom_de_l'entrée&quot;)</code>.</li>
+<li>Pour réinitialiser le formulaire après avoir traîté les données, on utilise la méthode <code>.reset()</code></li>
+</ul>
+<h4 id="propriété-action">Propriété action</h4>
+<p>À partir de la version 19, React a introduit une meilleure façon (plus déclarative) de gérer les formulaires, en utilisant la propriété <code>action={fonction}</code> de l&rsquo;élément <code>&lt;form&gt;</code>.</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;email&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">email</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">signUp</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;<span style="color:#a6e22e">Email</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;john-doe@exemple.com&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;<span style="color:#a6e22e">Mot</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">passe</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit-btn&#34;</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Cette façon de faire simplifie grandement la gestion du formulaire :</p>
+<ul>
+<li>Nous n&rsquo;avons plus besoin d&rsquo;utiliser <code>event.preventDefault()</code> et <code>form.reset()</code> (c&rsquo;est fait automatiquement).</li>
+<li>La fonction appelée prend maintenant en argument un objet de type <code>FormData</code> : Plus besoin d&rsquo;en créer un manuellement à partir de <code>event.currentTarget</code> !</li>
+<li>Cette façon, plus déclarative, simplifie beaucoup le code (il ne tient plus que sur une ligne !)</li>
+</ul>
+<h4 id="exercice">Exercice</h4>
+<p>Dans la méthode <code>signUp()</code> de l&rsquo;exemple précédent, récupérez le mot de passe puis affichez-le dans la console.</p>
+<h3 id="types-dentrées-dun-formulaire">Types d&rsquo;entrées d&rsquo;un formulaire</h3>
+<h4 id="bouton">Bouton</h4>
+<p>Lorsqu&rsquo;un bouton est à l&rsquo;intérieur d&rsquo;une balise <code>&lt;form&gt;</code>, celui-ci déclenche par défaut la fonction donnée à la propriété <code>action=</code> ou <code>onSubmit=</code> lorsqu&rsquo;on clique dessus.</p>
+<h4 id="textarea">textarea</h4>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;Description:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;&lt;/<span style="color:#f92672">textarea</span>&gt;</span></span></code></pre></div>
+<h4 id="boutons-radio">Boutons radio</h4>
+<p>Les boutons radio permettent de sélectionner un choix unique parmis plusieurs choix de réponse :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">employmentStatus</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;employmentStatus&#34;</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>&lt;<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">legend</span>&gt;<span style="color:#a6e22e">Situation</span> <span style="color:#a6e22e">professionnelle</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">legend</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;unemployed&#34;</span> 
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Sans</span> <span style="color:#a6e22e">emploi</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;part-time&#34;</span> 
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Temps</span> <span style="color:#a6e22e">partiel</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">defaultChecked</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;full-time&#34;</span> 
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Temps</span> <span style="color:#a6e22e">plein</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">fieldset</span>&gt;</span></span></code></pre></div>
+<ul>
+<li>Pour avoir une valeur spécifique pour chaque bouton radio, nous devons leur donner à chacun une propriété <code>value=&quot;une-valeur&quot;</code></li>
+<li>Si nous souhaitons avoir un bouton radio sélectionné par défaut, il faut lui rajouter la propriété <code>defaultChecked={true}</code></li>
+</ul>
+<h4 id="checkbox">Checkbox</h4>
+<p>Les <em>checkbox</em> fonctionnent comme les boutons radio, sauf que l&rsquo;on peut en sélectionner plusieurs :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>&lt;<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">legend</span>&gt;<span style="color:#a6e22e">Restrictions</span> <span style="color:#a6e22e">alimentaires</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">legend</span>&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;kosher&#34;</span> 
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Cachère</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vegan&#34;</span>
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Vegan</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">defaultChecked</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gluten-free&#34;</span> 
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Sans</span> <span style="color:#a6e22e">gluten</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">fieldset</span>&gt;</span></span></code></pre></div>
+<ul>
+<li>Les <em>checkbox</em> fonctionnent comme les boutons radio, et possèdent les mêmes propriétés (<code>name</code>, <code>value</code>, <code>defaultChecked</code> etc&hellip;)</li>
+<li>Pour recevoir toutes les valeurs sélectionnées, il faut utiliser la méthode <code>formData.getAll()</code> au lieu de <code>formData.get()</code>. Cette méthode retourne un tableau ayant toutes les options sélectionnées :</li>
+</ul>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dietaryRestrictions</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">getAll</span>(<span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="select-et-option">select et option</h4>
+<p>Les éléments <code>&lt;select&gt;</code> et <code>&lt;option&gt;</code> nous permettent de créer une liste déroulante :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">favColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;favColor&#34;</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>&lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favColor&#34;</span>&gt;<span style="color:#a6e22e">Quelle</span> <span style="color:#a6e22e">est</span> <span style="color:#a6e22e">ta</span> <span style="color:#a6e22e">couleur</span> <span style="color:#a6e22e">préférée</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favColor&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favColor&#34;</span> <span style="color:#a6e22e">defaultValue</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">required</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">disabled</span>&gt;<span style="color:#f92672">--</span> <span style="color:#a6e22e">Choisis</span> <span style="color:#a6e22e">une</span> <span style="color:#a6e22e">couleur</span> <span style="color:#f92672">--</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>&gt;<span style="color:#a6e22e">Rouge</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span>&gt;<span style="color:#a6e22e">Orange</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yellow&#34;</span>&gt;<span style="color:#a6e22e">Jaune</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span>&gt;<span style="color:#a6e22e">Vert</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>&gt;<span style="color:#a6e22e">Bleu</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;indigo&#34;</span>&gt;<span style="color:#a6e22e">Indigo</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;violet&#34;</span>&gt;<span style="color:#a6e22e">Violet</span>&lt;/<span style="color:#f92672">option</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">select</span>&gt;</span></span></code></pre></div>
+<ul>
+<li>Il est possible de donner une valeur par défaut avec la propriété <code>defaultValue=</code> en lui donnant la valeur de la propriété <code>value=</code> d&rsquo;une des options.</li>
+<li>Il est possible d&rsquo;interdire la selection d&rsquo;une des options en lui ajoutant la propriété <code>disabled</code>.</li>
+<li>Il est aussi possible de rendre le champ <code>&lt;select&gt;</code> (ainsi que tout autre champ) obligatoire pour soumettre le formulaire en ajoutant la propriété <code>required</code>.</li>
+</ul>
+<h3 id="utiliser-objectfromentries">Utiliser Object.fromEntries</h3>
+<p>Pour obtenir toutes les entrées d&rsquo;un formulaire en une ligne de code, nous pouvons utiliser l&rsquo;utilitaire JavaScript <code>Object.fromEntries()</code>. En lui passant l&rsquo;objet <code>formData</code> en argument, nous pouvons créer un objet contenant les noms et les valeurs de toutes les entrées du formulaire :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">fromEntries</span>(<span style="color:#a6e22e">formData</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Exemple de valeur que peux avoir <code>data</code> :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dd@exemple.com&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pass-123&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Une petite description de moi.&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">employmentStatus</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;unemployed&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">dietaryRestrictions</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;gluten-free&#34;</span>,
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p><strong>Problème :</strong> Dans le cas où nous avons une section <em>checkbox</em> dans notre formulaire, il ne sera pas possible de récupérer toutes les options sélectionnées. Un moyen (parmis d&rsquo;autres) pour récupérer toutes les options :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">fromEntries</span>(<span style="color:#a6e22e">formData</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dietaryRestrictions</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">getAll</span>(<span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allData</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        ...<span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">dietaryRestrictions</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="exemple-complet">Exemple Complet</h3>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signUp</span>(<span style="color:#a6e22e">formData</span>) { 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">fromEntries</span>(<span style="color:#a6e22e">formData</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dietaryRestrictions</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">getAll</span>(<span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allData</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            ...<span style="color:#a6e22e">data</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">dietaryRestrictions</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">signUp</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;<span style="color:#a6e22e">Email</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;john-doe@exemple.com&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;<span style="color:#a6e22e">Mot</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">passe</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>
+</span></span><span style="display:flex;"><span>                /&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">htmlFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;<span style="color:#a6e22e">Description</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span>&gt;&lt;/<span style="color:#f92672">textarea</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">legend</span>&gt;<span style="color:#a6e22e">Statut</span> <span style="color:#a6e22e">professionnel</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">legend</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;unemployed&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Sans</span> <span style="color:#a6e22e">emploi</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;part-time&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Temps</span> <span style="color:#a6e22e">partiel</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;employmentStatus&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">defaultChecked</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;full-time&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Temps</span> <span style="color:#a6e22e">plein</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">legend</span>&gt;<span style="color:#a6e22e">Restrictions</span> <span style="color:#a6e22e">alimentaires</span> <span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">legend</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;kosher&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Cachère</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vegan&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Vegan</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                    
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                        &lt;<span style="color:#f92672">input</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dietaryRestrictions&#34;</span> 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">defaultChecked</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} 
+</span></span><span style="display:flex;"><span>                            <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gluten-free&#34;</span> 
+</span></span><span style="display:flex;"><span>                        /&gt;
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">Sans</span> <span style="color:#a6e22e">Gluten</span>
+</span></span><span style="display:flex;"><span>                    &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#f92672">fieldset</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit-btn&#34;</span>&gt;<span style="color:#a6e22e">Inscription</span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="/420-211/index.html">
+    <img style="vertical-align: middle;" src="/420-211/images/react-logo.png" width="15%" alt="logo">
+    <span style="vertical-align: middle; padding-left: 2%; font-size: 140%">Applications Web</span>
+</a>
+        </div>
+        <script>
+          window.index_js_url="/420-211/searchindex.en.js?1743031701";
+        </script>
+        <search><form action="/420-211/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-211/js/auto-complete.js?1743031701" defer></script>
+        <script src="/420-211/js/lunr/lunr.min.js?1743031701" defer></script>
+        <script src="/420-211/js/lunr/lunr.stemmer.support.min.js?1743031701" defer></script>
+        <script src="/420-211/js/lunr/lunr.multi.min.js?1743031701" defer></script>
+        <script src="/420-211/js/lunr/lunr.fr.min.js?1743031701" defer></script>
+        <script src="/420-211/js/search.js?1743031701" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-shortcutmenu-home" class="R-sidebarmenu">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/index.html"><input type="checkbox" id="R-section-05d0b17726d86020a356648910ac551c" aria-controls="R-subsections-05d0b17726d86020a356648910ac551c"><label for="R-section-05d0b17726d86020a356648910ac551c"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Préalables</span></label><a class="padding" href="/420-211/0-intro/index.html"><b>0. </b>Préalables</a><ul id="R-subsections-05d0b17726d86020a356648910ac551c" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/1-html-dom-css/index.html"><a class="padding" href="/420-211/0-intro/1-html-dom-css/index.html"><b>1. </b>HTML, DOM et CSS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/2-conditions-js/index.html"><a class="padding" href="/420-211/0-intro/2-conditions-js/index.html"><b>2. </b>Conditions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/3-objets-js/index.html"><a class="padding" href="/420-211/0-intro/3-objets-js/index.html"><b>3. </b>Objets JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/4-fonctions-js/index.html"><a class="padding" href="/420-211/0-intro/4-fonctions-js/index.html"><b>4. </b>Fonctions JS</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/5-es5-js/index.html"><a class="padding" href="/420-211/0-intro/5-es5-js/index.html"><b>5. </b>JS depuis ES5</a></li>
+            <li class="" data-nav-id="/420-211/0-intro/6-prog-fonctionnelle/index.html"><a class="padding" href="/420-211/0-intro/6-prog-fonctionnelle/index.html"><b>6. </b>Programmation fonctionnelle</a></li>
+            <li class="alwaysopen " data-nav-id="/420-211/0-intro/7-git-github/index.html"><input type="checkbox" id="R-section-742167b1c2cc342071b49e0a70091d42" aria-controls="R-subsections-742167b1c2cc342071b49e0a70091d42" checked><label for="R-section-742167b1c2cc342071b49e0a70091d42"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Git/GitHub</span></label><a class="padding" href="/420-211/0-intro/7-git-github/index.html"><b>7. </b>Git/GitHub</a><ul id="R-subsections-742167b1c2cc342071b49e0a70091d42" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/0-intro/7-git-github/git-bash/index.html"><a class="padding" href="/420-211/0-intro/7-git-github/git-bash/index.html"><b>7.1 </b>Guide Git Bash</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/420-211/1-intro-react/index.html"><a class="padding" href="/420-211/1-intro-react/index.html"><b>1. </b>Introduction à React</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/index.html"><input type="checkbox" id="R-section-3f439693a8597dbe5c28428c2f31ece2" aria-controls="R-subsections-3f439693a8597dbe5c28428c2f31ece2"><label for="R-section-3f439693a8597dbe5c28428c2f31ece2"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu DDA</span></label><a class="padding" href="/420-211/2-dda/index.html"><b>2. </b>DDA</a><ul id="R-subsections-3f439693a8597dbe5c28428c2f31ece2" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/2-dda/1-js-dans-jsx/index.html"><a class="padding" href="/420-211/2-dda/1-js-dans-jsx/index.html"><b>1. </b>Insérer du JS dans JSX</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/2-props/index.html"><a class="padding" href="/420-211/2-dda/2-props/index.html"><b>2. </b>Props</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/3-actifs-statiques/index.html"><a class="padding" href="/420-211/2-dda/3-actifs-statiques/index.html"><b>3. </b>Gestion des actifs statiques</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/4-donnees-composants/index.html"><a class="padding" href="/420-211/2-dda/4-donnees-composants/index.html"><b>4. </b>Données et composants</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/5-exercice-dirige/index.html"><a class="padding" href="/420-211/2-dda/5-exercice-dirige/index.html"><b>5. </b>Exercice dirigé</a></li>
+            <li class="" data-nav-id="/420-211/2-dda/6-exercices-props/index.html"><a class="padding" href="/420-211/2-dda/6-exercices-props/index.html">Exercices - JSX et les props</a></li></ul></li>
+            <li class="parent " data-nav-id="/420-211/3-apps-dynamiques/index.html"><input type="checkbox" id="R-section-a38810c36669d98bbeca715c67f76680" aria-controls="R-subsections-a38810c36669d98bbeca715c67f76680" checked><label for="R-section-a38810c36669d98bbeca715c67f76680"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu React dynamique</span></label><a class="padding" href="/420-211/3-apps-dynamiques/index.html"><b>3. </b>React dynamique</a><ul id="R-subsections-a38810c36669d98bbeca715c67f76680" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/3-apps-dynamiques/1-event-listeners/index.html"><a class="padding" href="/420-211/3-apps-dynamiques/1-event-listeners/index.html"><b>1. </b>Écouteurs d&#39;évènements</a></li>
+            <li class="" data-nav-id="/420-211/3-apps-dynamiques/2-usestate/index.html"><a class="padding" href="/420-211/3-apps-dynamiques/2-usestate/index.html"><b>2. </b>useState()</a></li>
+            <li class="active " data-nav-id="/420-211/3-apps-dynamiques/3-formulaires/index.html"><a class="padding" href="/420-211/3-apps-dynamiques/3-formulaires/index.html"><b>3. </b>Formulaires</a></li></ul></li>
+            <li class="" data-nav-id="/420-211/annexe/index.html"><input type="checkbox" id="R-section-c42d2d00a11a971cfe1f59377ff37f39" aria-controls="R-subsections-c42d2d00a11a971cfe1f59377ff37f39"><label for="R-section-c42d2d00a11a971cfe1f59377ff37f39"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Annexe</span></label><a class="padding" href="/420-211/annexe/index.html">Annexe</a><ul id="R-subsections-c42d2d00a11a971cfe1f59377ff37f39" class="collapsible-menu">
+            <li class="" data-nav-id="/420-211/annexe/0-intro/index.html"><a class="padding" href="/420-211/annexe/0-intro/index.html">JS - Exercices préalables</a></li></ul></li>
+          </ul>
+        </div>
+    
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-211/3-apps-dynamiques/3-formulaires/index.html" lang="fr-fr" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.relearn.markVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-211/js/clipboard.min.js?1743031701" defer></script>
+    <script src="/420-211/js/perfect-scrollbar.min.js?1743031701" defer></script>
+    <script src="/420-211/js/theme.js?1743031701" defer></script>
+  </body>
+</html>
