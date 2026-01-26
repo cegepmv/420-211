@@ -5,11 +5,19 @@ weight = '110'
 draft = false
 +++
 
+Cette section constitue un rappel des notions essentielles vues dans le cours *Création de sites web*. Elle vise à s’assurer que tous les étudiants partagent une base commune avant d’aborder le développement d’applications Web avec un **cadriciel moderne (React)**.
+
+L’objectif n’est pas de tout revoir en profondeur, mais de réactiver les concepts clés : la structure HTML, le DOM, la manipulation avec JavaScript et les principes fondamentaux du CSS.
+
 ### Structure d’un document HTML
-Un document HTML se compose d’éléments organisés comme une hiérarchie ayant la forme d’une arbre inversé. Chaque noeud dans cet arbre correspond à un type d’élément HTML qui peut avoir plusieurs noeuds enfants et au maximum un parent. Seule la racine (le noeud `document`, au sommet de la hiérarchie) n’a pas de parent.
+Un document HTML est composé d’éléments organisés de façon hiérarchique, formant une structure en arbre inversé appelée **DOM (*Document Object Model*)**.
 
-L’exemple suivant correspond à un document HTML simple:
++ Chaque élément HTML correspond à un **nœud** de l’arbre
++ Un nœud peut avoir plusieurs **enfants**
++ Chaque nœud a au maximum **un parent**
++ Le nœud racine (document) n’a pas de parent
 
+#### Exemple de document HTML simple
 ```html
 <!DOCTYPE html>
 <html>
@@ -25,30 +33,36 @@ L’exemple suivant correspond à un document HTML simple:
 </html>
 ```
 
+Ce document génère un arbre DOM où les éléments `<h1>`, `<div>` et `<a>` sont des enfants de `<body>`, lui-même enfant de `<html>`
+
 Ce qui correspond au modèle suivant:
 
-![DOM](/420-211/images/010-dom.svg)
+![DOM](/420-211/images/0-intro/010-dom.svg)
 
 
-### Objet document
-Javascript comprend un objet nommé `document` qui permet d’accéder aux informations du DOM, de modifier des valeurs d’attributs ou du texte, d’ajouter, de supprimer ou de déplacer des éléments HTML, etc.
+### DOM et l'objet `document`
+JavaScript permet d’interagir avec le DOM grâce à l’objet global `document`. Celui-ci offre des méthodes pour:
 
-L’objet `document` comprend plusieurs méthodes pour accéder aux éléments du DOM; Parmi celles-ci:
++ accéder aux éléments HTML
++ modifier le contenu ou les attributs
++ ajouter, supprimer ou déplacer des éléments
++ modifier l’apparence des éléments
 
-`getElementById()`
+#### Méthodes courantes d’accès au DOM
 
-Retourne l’élément HTML dont l’attribut id correspond à la valeur passée.
++ `getElementById(id)` - Retourne **un seul élément** dont l’attribut `id` correspond à la valeur fournie.
 
-`getElementByTagName()`
++ `getElementsByTagName(nom)` - Retourne une **collection d’éléments** ayant le nom de balise donné.
 
-Retourne une collection d’éléments HTML dont les noms correspondent à la valeur passée.
++ `getElementsByClassName(classe)` - Retourne une **collection d’éléments** possédant la classe spécifiée.
 
-`getElementByClassName()`
++ `querySelector(selecteur)` - Retourne le **premier élément** du DOM correspondant au sélecteur CSS fourni.
 
-Retourne une collection d’éléments HTML dont les attributs class correspondent à la valeur passée.
++ `querySelectorAll(selecteur)` - Retourne une **collection d’éléments** correspondant au sélecteur CSS fourni.
 
-Par exemple pour le code HTML suivant:
+Les sélecteurs utilisés sont les mêmes qu’en CSS (`#id`, `.classe`, `balise`, combinaisons, etc.).
 
+##### Exemple
 ```html
 <!DOCTYPE html>
 <html>
@@ -71,9 +85,19 @@ Par exemple pour le code HTML suivant:
 Lorsque ces méthodes retournent plus d’un élément, ceux-ci font partie d’une collection et on doit utiliser une boucle pour accéder à chacun individuellement.
 {{% /notice %}}
 
+##### Exemples avec `querySelector`
++ `document.querySelector("#par1")` est équivalent à `getElementById("par1")`
++ `document.querySelectorAll(".title")` est équivalent à `getElementsByClassName("title")`
++ `document.querySelectorAll("div p")` retourne les `<p>` à l’intérieur des `<div>`
 
-### Propriétés des éléments
-Les éléments HTML contiennent d’innombrables propriétés et méthodes qu’on peut utiliser pour en modifier le contenu. Ici nous verrons les propriétés `innerHTML` et `style`.
+{{% notice style="info" title="Remarque"%}}
+Les méthodes `querySelector` et `querySelectorAll` sont plus flexibles et modernes que les méthodes traditionnelles, et sont très utilisées dans les projets actuels.
+{{% /notice %}}
+
+
+
+### Propriétés des éléments DOM
+Les éléments HTML exposent de nombreuses propriétés permettant de modifier leur contenu et leur apparence. Nous nous concentrons ici sur deux propriétés fondamentales : `innerHTML` et `style`.
 
 {{% notice style="info" title="Note"%}}
 Pour la référence complète de l’objet `Element` du DOM: https://www.w3schools.com/jsref/dom_obj_all.asp.
@@ -82,16 +106,16 @@ Pour la référence complète de l’objet `Element` du DOM: https://www.w3schoo
 
 #### innerHTML
 
-Permet d’accéder le contenu HTML d’un élément ou de le modifier. Par exemple, pour le document HTML de l’exemple plus haut:
+La propriété `innerHTML` permet de **lire ou modifier le contenu HTML** d’un élément.
 
 ```js
 let el = document.getElementById("par1");
 el.innerHTML="Bonjour";
 ```
 
-Le texte “Premier paragraphe” sera remplacé par “Bonjour”.
+Le texte *Premier paragraphe* sera remplacé par *Bonjour*.
 
-Attention, le texte ainsi inséré est interprété comme du HTML. On peut ainsi modifier indirectement la structure du DOM; par exmeple:
+Attention, le texte ainsi inséré est interprété comme du HTML. On peut ainsi modifier indirectement la structure du DOM:
 
 ```js
 let elems = document.getElementsByClassName("parag");
@@ -104,9 +128,10 @@ Les deux éléments `<p>` contiendront chacun un élément `<h1>` ayant le texte
 
 #### style
 
-La propriété `style` permet de changer les attributs de style. Tous les styles qui peuvent être définis par l’attribut HTML “style” ou dans un fichier CSS sont accessibles par javascript. Les noms des styles sont légèrement différents cependant car ils suivent la nomenclature “camelCase”: par exemple, la propriété CSS background-color est appelée backgroundColor dans javascript.
+La propriété `style` permet de modifier dynamiquement les styles CSS d’un élément.
 
-Par exemple, pour mettre en gras le texte des paragraphes d’un document:
++ Les propriétés CSS sont accessibles en **camelCase**
++ Exemple : `background-color` devient `backgroundColor`
 
 ```js
 let elems = document.getElementsByTagName("p");
@@ -119,20 +144,25 @@ for (let i=0;i<elems.length;i++) {
 Pour la référence complète des propriétés de style : https://www.w3schools.com/jsref/dom_obj_style.asp
 {{% /notice %}}
 
-### CSS
+### CSS: principes de base
 
-Il est possible de modifier l’apparence des éléments d’une page directement dans le code HTML en utilisant les attributs de style. Par exemple, pour changer la couleur du texte d’un paragraphe:
+Il est possible de modifier l’apparence des éléments d’une page directement dans le code HTML en utilisant les attributs de `style`. Par exemple, pour changer la couleur du texte d’un paragraphe:
 
 ```html
-<div>
+<section>
     <p>Texte normal</p>
     <p style="color:red">Texte rouge</p>
     <p style="background-color:yellow">Arrière-plan jaune</p>
-</div>
+</section>
 ```
 
-On recommande cependant de regrouper ces propriétés dans un fichier CSS: ceci permet de centraliser les éléments de style et de permettre plus facilement les modifications. Par exemple, si on souhaite que les citations dans un texte soient en italique, sans serif et de couleur grise, on pourra définir une classe nommée `quote` dans un fichier CSS et y spécifier ces propriétés typographiques, comme suit:
+Cependant, cette approche est déconseillée à grande échelle. On privilégie plutôt l’utilisation de **fichiers CSS externes**, qui permettent :
 
++ une meilleure organisation
++ une réutilisation des styles
++ une maintenance plus simple
+
+#### Définition d'une classe CSS
 ```css
 .quote {
     font-family: sans-serif;
@@ -140,15 +170,12 @@ On recommande cependant de regrouper ces propriétés dans un fichier CSS: ceci 
     font-style: italic;
 }
 ```
-
-Par la suite, on attribue la classe `quote` à l’élément HTML dont on veut modifier le style:
-
+#### Utilisation de la classe dans le HTML
 ```html
 <p class="quote">Alea Jacta Est</p>
 ```
 
-Pour que le navigateur puisse retrouver le fichier CSS où le style est défini, il faut y ajouter une référence dans le fichier HTML dans un élément `<link>`. En supposant que le fichier qui contient les styles se nomme styles.css, on aura donc le code HTML suivant:
-
+#### Lier un fichier CSS à un document HTML
 ```html
 <!DOCTYPE html>
 <html>
@@ -166,31 +193,48 @@ Pour que le navigateur puisse retrouver le fichier CSS où le style est défini,
 Une référence complète des propriétés CSS est disponible sur le site https://www.w3schools.com/cssref/index.php.
 {{% /notice %}}
 
----
+### Bonnes pratiques: sémantique HTML
+L’utilisation de balises HTML **sémantiques** permet de donner du sens à la structure d’une page, autant pour les navigateurs que pour les moteurs de recherche, les technologies d’assistance (lecteurs d’écran) et les développeurs.
 
-### Exercices
+Plutôt que d’utiliser uniquement des `<div>` génériques, HTML5 propose des balises décrivant explicitement le rôle du contenu.
 
-#### Exercice 1
+#### Exemples de balises sémantiques courantes
 
-À partir du DOM suivant, faites le fichier HTML correspondant (Nommez votre fichier *exercice-dom-1.html*) :
++ `<header>` : en-tête d’une page ou d’une section
++ `<nav>` : zone de navigation
++ `<main>` : contenu principal du document (une seule fois par page)
++ `<section>` : section thématique d’un document
++ `<article>` : contenu autonome (article, billet, carte, etc.)
++ `<aside>` : contenu secondaire ou complémentaire
++ `<footer>` : pied de page ou de section
 
-![DOM](/420-211/images/0-intro/011-ex1.png)
+#### Comparaison : non sémantique vs sémantique
 
-#### Exercice 2
-Dans le document [exercice-dom-2.html](/420-211/ressources/exercice-dom-2.html), les éléments ont des attributs `id`. En utilisant des appels à la fonction `getElementById()`, remplacez les mots "apple", "pear" et "banana" par "pomme", "poire" et "banane". (vous devez créer le fichier *exercice-dom-2.js*)
+❌ Structure peu sémantique :
+```html
+<div class="header">
+    <div class="title">Mon site</div>
+</div>
+<div class="content">
+    <div class="block">Article 1</div>
+    <div class="block">Article 2</div>
+</div>
+```
 
-#### Exercice 3
-Dans le document [exercice-dom-3.html](/420-211/ressources/exercice-dom-3.html), certains éléments ont un attribut `class`. Créez le fichier exercice-dom-3.js et utilisez la fonction `getElementsByClass()`, pour modifier le style du texte afin que celui-ci utilise la fonte Arial et soit écrit en bleu.
+✅ Structure sémantique recommandée :
+```html
+<header>
+    <h1>Mon site</h1>
+</header>
+<main>
+    <section>
+    <article>Article 1</article>
+    <article>Article 2</article>
+    </section>
+</main>
+```
+#### Bonnes pratiques à retenir
 
-#### Exercice 4 
-À partir du document [exercice-dom-4.html](/420-211/ressources/exercice-dom-4.html), définissez la fonction associée au bouton pour basculer en mode sombre en modifiant les styles des éléments HTML. 
-Vous pouvez utiliser le site suivant pour les références aux couleurs : https://htmlcolorcodes.com/. 
-
-Le résultat devrait ressembler à ceci (les titres sont en vert pâle et le texte en gris) :
-
-![DOM](/420-211/images/0-intro/012-ex4.jpg)
-
-#### Exercice 5
-En utilisant un fichier css, définissez des classes de style pour obtenir la page suivante à partir du fichier [exercice-css.html](/420-211/ressources/exercice-css.html) : 
-
-![Exercice 5](/420-211/images/0-intro/013-ex5.png)
++ Utiliser `<div>` uniquement lorsque aucune balise sémantique appropriée n’existe pas.
++ Ne pas choisir une balise pour son style, mais pour sa **signification**.
++ Une bonne sémantique facilite l’**accessibilité** et la **lisibilité du code**
