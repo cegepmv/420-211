@@ -221,19 +221,8 @@ Plutôt que d’utiliser uniquement des `<div>` génériques, HTML5 propose des 
 </div>
 ```
 
-✅ Structure sémantique recommandée :
-```html
-<header>
-    <h1>Mon site</h1>
-</header>
-<main>
-    <section>
-    <article>Article 1</article>
-    <article>Article 2</article>
-    </section>
-</main>
-```
-#### Bonnes pratiques à retenir
+#### Exercice 3
+Dans le document [exercice-dom-3.html](/420-211/ressources/exercice-dom-3.html), certains éléments ont un attribut `class`. Créez le fichier exercice-dom-3.js et utilisez la fonction `getElementsByClassName()`, pour modifier le style du texte afin que celui-ci utilise la fonte Arial et soit écrit en bleu.
 
 + Utiliser `<div>` uniquement lorsque aucune balise sémantique appropriée n’existe pas.
 + Ne pas choisir une balise pour son style, mais pour sa **signification**.
