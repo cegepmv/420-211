@@ -107,24 +107,7 @@ Afin de lister l'historique des commits, vous pouvez utiliser la commande suivan
 git log
 ```
 
-### Authentification
-Il existe plusieurs façons de s'authentifier auprès de GitHub. Essentiellement, vous en avez besoin pour pousser vos modifications locales depuis votre ordinateur portable vers votre dépôt GitHub.
-Vous pouvez utiliser l'une des méthodes suivantes :
-+ HTTPS : cette méthode requiert votre nom d'utilisateur et votre mot de passe GitHub à chaque fois que vous essayez d'envoyer vos modifications.
-+ SSH (recommandé) : Avec SSH, vous pouvez générer une paire de clés SSH et ajouter votre clé publique à GitHub. De cette manière, votre nom d'utilisateur et votre mot de passe ne vous seront pas demandés à chaque fois que vous enverrez vos modifications sur GitHub.
 
-#### Étapes pour se connecter à GitHub via SSH
-+ Générer une nouvelle paire de clé 
-```bash
-ssh-keygen
-```
-+ Une fois crée, vous devez téléverser la clé publique sur votre compte GitHub. Copiez le résultat de la commande suivante : 
-```bash
-cat ~/.ssh/id_rsa.pub
-```
-
-+ Allez sur GitHub, cliquez sur votre photo de profil (en haut à droit) -> *Settings*-> *SSH and GPG Keys* -> *New SSH Key*
-+ Spécifiez un titre pour votre clé (par exemple Laptop de travail), puis dans la section *Key*, collez votre clé publique et enfin cliquez sur *Add SSH Key*
 
 #### git push
 
@@ -144,13 +127,10 @@ Si vous travaillez sur un projet avec plusieurs personnes, il y a de fortes chan
 
 Vous savez déjà que vous pouvez utiliser la commande `git push` pour pousser vos derniers commits, donc pour faire l'inverse et télécharger les derniers *commits* de GitHub vous devez utiliser la commande `git pull`.
 
-Pour tester cela, faisons un changement directement sur GitHub. Une fois sur GitHub, cliquez sur le fichier *README.md* et cliquez sur l'icône du crayon pour éditer le fichier :
+Pour tester cela, faisons un changement directement sur GitHub. Une fois sur GitHub, cliquez sur le fichier *README.md* et cliquez sur l'icône du crayon pour éditer le fichier.
 
-(SCREEN)
+Apportez une modification mineure au fichier, ajoutez un message et cliquez sur le bouton `Commit Changes`.
 
-Apportez une modification mineure au fichier, ajoutez un message et cliquez sur le bouton `Commit Changes` :
-
-(SCREEN)
 
 Si on essaie de push du nouveau code à partir de notre ordinateur, nous aurons une erreur : 
 
@@ -164,24 +144,6 @@ Si on essaie de push du nouveau code à partir de notre ordinateur, nous aurons 
     hint: (e.g., 'git pull ...') before pushing again.
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-Comme indiqué , le dépôt distant est en avance sur votre dépôt local, vous devez donc exécuter la commande git pull pour obtenir les dernières modifications :
-
-```bash
-git pull origin main
-```
-
-Résultat de la commande : 
-
-    remote: Enumerating objects: 5, done.
-    remote: Counting objects: 100% (5/5), done.
-    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-    Unpacking objects: 100% (3/3), 646 bytes | 646.00 KiB/s, done.
-    From github.com:bobbyiliev/demo-repo
-      * branch main -> FETCH_HEAD
-        da46ce3..442afa5 main -> origin/main
-    
-      README.md | 3 ++-
-      1 file changed, 2 insertions(+), 1 deletion(-)
 
 Comme indiqué, le dépôt distant est en avance sur votre dépôt local, vous devez donc exécuter la commande `git pull` pour obtenir les dernières modifications :
 

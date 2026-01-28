@@ -112,7 +112,7 @@ Depuis 2021, GitHub n'accepte plus votre mot de passe habituel pour les opérati
 
 
 
-#### 2. Utiliser le jeton dans le terminal
+###### 2. Utiliser le jeton dans le terminal
 Lorsque vous ferez votre premier `git push`, le terminal vous demandera vos identifiants :
 
 * **Username :** Votre nom d'utilisateur GitHub.
@@ -120,7 +120,7 @@ Lorsque vous ferez votre premier `git push`, le terminal vous demandera vos iden
 
 *Note : Sous Linux ou macOS, il est normal que le curseur ne bouge pas et qu'aucun caractère ne s'affiche pendant que vous collez le jeton.*
 
-#### 3. Mémoriser les identifiants
+###### 3. Mémoriser les identifiants
 Pour éviter de copier-coller ce jeton à chaque interaction, utilisez la commande suivante pour que Git enregistre vos accès de façon permanente sur votre poste :
 
 ```bash
