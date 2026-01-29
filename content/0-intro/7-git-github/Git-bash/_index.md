@@ -1,13 +1,13 @@
 +++
 pre = '<b>7.1 </b>'
 title = 'Guide Git Bash'
-weight = '171'
+weight = '173'
 draft = false
 +++
 
 ---
 ### Qu'est-ce que Git Bash et pourquoi est-il important ?
-Git Bash est un terminal qui permet d’utiliser Git via des commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.
+Git Bash est un terminal qui permet d’utiliser Git en ligne de commandes. Il offre un environnement Unix sur votre ordinateur, simplifiant l’exécution des commandes, particulièrement pour les utilisateurs de Windows.
 
 Utiliser Git Bash est essentiel pour gérer efficacement vos projets grâce à un contrôle précis et rapide. Il permet d’approfondir votre compréhension des bases de Git et d’automatiser certaines tâches. De plus, maîtriser la ligne de commande est un atout majeur dans le développement logiciel professionnel. 
 
