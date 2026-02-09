@@ -4,6 +4,7 @@ title = 'Objets JS'
 weight = '130'
 draft = false
 +++
+-------------
 
 Avec JavaScript, on utilise souvent **des objets**.
 

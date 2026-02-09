@@ -1,16 +1,51 @@
 +++
 pre = '<b>7.3 </b>'
-title = 'Commandes'
+title = 'Commandes git'
 weight = '175'
 draft = false
 +++
+-----------
 
+## Configuration de git
 
-### Commandes git
+La première fois que vous installez `git` sur votre machine, vous devez faire la configuration initiale.
 
-#### Initialiser un projet git
+Quelques éléments principaux que vous devez configurer :
++ **Vos coordonnées :** comme votre nom et votre adresse courriel 
++ **Votre éditeur Git par défaut** (nano, vim ou emacs)
++ **Le nom de la branche par défaut** (nous verrons les branches un peu plus tard).
+
+Nous pouvons changer toutes ces choses en utilisant la commande `git config` :
+
++ Configurer le nom : 
+```bash
+git config --global user.name "Votre Nom"
+```
++ Configurer l'adresse courriel (utiliser celle que vous allez associer à votre compte GitHub, i.e. adresse courriel Marie-Victorin) : 
+```bash
+git config --global user.email "votre-adresse@exemple.com"
+```
++ Configurer l'éditeur git par défaut (vim si non spécifié) :
+```bash
+git config --global core.editor nano
+```
++ Configurer la branche principal par défaut (important pour ne pas avoir de conflit main-master) : 
+```bash
+git config --global init.defaultBranch main
+```
++ Vérifier la configuration `git` :
+```bash
+git config --list
+```
+
+{{% notice style="info" title="Conseil"%}}
+Il est préférable d'avoir le même nom d'utilisateur et adresse courriel que celle de votre profil GitHub (plus de détails dans les prochaines sections).
+{{% /notice %}}
+
+## Initialiser un projet git
 
 Si vous démarrez un nouveau projet ou si vous avez un projet existant que vous souhaitez ajouter à `Git` et ensuite le mettre sur GitHub, vous devez d'abord initialiser le projet avec la commande `git init`.
+
 Pour simplifier les choses, disons que nous voulons commencer à construire un nouveau projet. La première chose que je ferais habituellement est de créer un nouveau dossier dans lequel je stockerai les fichiers de mon projet.
 
 ```bash
@@ -18,11 +53,13 @@ mkdir nouveau-projet
 cd nouveau-projet
 git init
 ```
-
+{{%notice style="info" title="Remarque"%}}
 Chaque fois que vous initialisez un nouveau projet Git crée un répertoire `.git` dans lequel tous la configuration de votre "repo" est stockée.
+{{%/notice%}}
 
 
-#### git status
+## Commandes git
+### git status
 
 Chaque fois que vous apportez des modifications à votre projet Git et que vous souhaitez vérifier ce qui a changé, vous pouvez utiliser la commande `git status`
 
@@ -46,9 +83,9 @@ Si vous lancez `git status` encore une fois :
         README.md
     nothing added to commit but untracked files present (use "git add" to track)
 
-Git détecte qu'il y a un nouveau fichier qui n'est pas "suivi" (*untracked*), appelé *README.md*, (que nous venons de créer) et nous invite à utiliser la commande `git add` pour commencer à "suivre" le fichier.
+Git détecte qu'il y a un nouveau fichier qui n'est pas "suivi" (*untracked*), appelé `README.md`, (que nous venons de créer) et nous invite à utiliser la commande `git add` pour commencer à "suivre" le fichier.
 
-#### git add
+### git add
 
 Par défaut, lorsque vous créez un nouveau fichier dans votre projet Git, il n'est pas "suivi". Pour indiquer à Git qu'il doit commencer à suivre le fichier, vous devez utiliser la commande `git add`.
 
@@ -82,7 +119,7 @@ git add .
 Soyez prudents! Dans certains cas, il peut y avoir des fichiers que vous ne voulez pas ajouter à Git.
 {{% /notice %}}
 
-#### git commit
+### git commit
 Une fois que vous avez ajouté vos fichiers, l'étape suivante est de valider ces modifications. Si vous exécutez à nouveau `git status`, vous pourrez voir que Git nous indique qu'il y a des modifications à valider :
 
     Changes to be committed:
@@ -96,10 +133,16 @@ git commit -m "Commit initial"
 ```
 
 + `git commit` : pour indiquer à git que nous voulons livrer les changements que nous avons mis en place avec la commande git add
-`-m `: indique que nous allons spécifier notre message qui va accompagner notre *commit*.
-+ Entre les guillemets : notre message de livraison (**il est important d'écrire des messages de livraison courts et descriptifs de vos changements (Ex: Authentification des utilisateurs**)).
++ `-m `: indique que nous allons spécifier notre message qui va accompagner notre *commit*.
++ Entre les guillemets : notre message de livraison 
 
-#### git log
+{{%notice style="info" title="Important"%}}
+Il est important d'écrire des **messages de livraison courts et descriptifs** de vos changements.
+
+Ex: Authentification des utilisateurs.
+{{%/notice%}}
+
+### git log
 
 Afin de lister l'historique des commits, vous pouvez utiliser la commande suivante :
 
@@ -107,32 +150,31 @@ Afin de lister l'historique des commits, vous pouvez utiliser la commande suivan
 git log
 ```
 
+### git push
 
-
-#### git push
-
-Enfin, une fois que vous avez effectué toutes vos modifications, que vous les avez mises en scène avec la commande git add . et que vous avez validé les modifications avec la commande git commit, vous devez pousser les modifications validées de votre dépôt local vers votre dépôt GitHub distant. Cela permet de s'assurer que le dépôt distant est mis à jour avec votre dépôt local.
+Enfin, une fois que vous avez effectué toutes vos modifications, que vous les avez suivis avec commande `git add`. et que vous avez validé les modifications avec la commande `git commit`, vous devez **pousser** les modifications validées de votre dépôt local vers votre dépôt GitHub distant. Cela permet de s'assurer que le dépôt distant est mis à jour avec votre dépôt local.
 
 ```bash
 git remote add origin https://github.com/VOTRE_USERNAME/NOM_REPO.git
 git branch -M main
 git push -u origin main
 ```
-Après avoir exécuté la commande git push, vous pouvez vous rendre sur votre projet GitHub et vous pourrez voir les *commits* que vous avez apportées localement dans le dépôt distant sur GitHub. Si vous cliquez sur le lien *commits*, vous pourrez voir tous les *commits* comme si vous lanciez la commande `git log`.
 
-#### git pull
+Après avoir exécuté la commande `git push`, vous pouvez vous rendre sur votre projet GitHub et vous pourrez voir les *commits* que vous avez apportées localement dans le dépôt distant sur GitHub. Si vous cliquez sur le lien *commits*, vous pourrez voir tous les *commits* comme si vous lanciez la commande `git log`.
 
+### git pull
 
-Si vous travaillez sur un projet avec plusieurs personnes, il y a de fortes chances que le code change. Il vous faut donc un moyen de récupérer les dernières modifications du dépôt GitHub sur votre machine.
+Si vous travaillez sur un projet avec plusieurs personnes, il y a de fortes chances que le code change. Il vous faut donc un moyen de récupérer les **dernières modifications** du dépôt GitHub sur votre machine.
 
-Vous savez déjà que vous pouvez utiliser la commande `git push` pour pousser vos derniers commits, donc pour faire l'inverse et télécharger les derniers *commits* de GitHub vous devez utiliser la commande `git pull`.
+Vous savez déjà que vous pouvez utiliser la commande `git push` pour pousser vos derniers *commits*, donc pour faire l'inverse et télécharger les derniers *commits* de GitHub vous devez utiliser la commande `git pull`.
 
-Pour tester cela, faisons un changement directement sur GitHub. Une fois sur GitHub, cliquez sur le fichier *README.md* et cliquez sur l'icône du crayon pour éditer le fichier.
+Pour tester cela, faisons un changement directement sur GitHub. 
 
-Apportez une modification mineure au fichier, ajoutez un message et cliquez sur le bouton `Commit Changes`.
+1. Une fois sur GitHub, cliquez sur le fichier *README.md* et cliquez sur l'icône du crayon pour éditer le fichier.
 
+2. Apportez une modification mineure au fichier, ajoutez un message et cliquez sur le bouton `Commit Changes`.
 
-Si on essaie de push du nouveau code à partir de notre ordinateur, nous aurons une erreur : 
+Si on essaie de *push* du nouveau code à partir de notre ordinateur, nous aurons une erreur : 
 
      ! [rejected] main -> main (fetch first)
     error: failed to push some refs to
@@ -161,29 +203,34 @@ git pull origin main
       README.md | 3 ++-
       1 file changed, 2 insertions(+), 1 deletion(-)
 
-Nous pouvons voir que le fichier README.md a été modifié et qu'il y a eu 2 nouvelles lignes ajoutées et 1 ligne supprimée.
+Nous pouvons voir que le fichier `README.md` a été modifié et qu'il y a eu 2 nouvelles lignes ajoutées et 1 ligne supprimée.
+
 Maintenant, si vous lancez `git log`, vous verrez que le *commit* que vous avez fait sur GitHub est disponible localement.
 
-Remarque 
-Bien entendu, il s'agit d'un scénario simplifié. Dans le monde réel, vous ne feriez pas de modifications directement sur GitHub, mais vous travailleriez très probablement avec d'autres personnes sur le même projet, et vous devriez pull leurs dernières modifications régulièrement. Vous devez vous assurer que vous récupérez les dernières modifications à chaque fois avant d'essayer de push les votres.
+{{%notice style="info" title="Remarque"%}} 
+Bien entendu, il s'agit d'un scénario simplifié. Dans le monde réel, vous ne feriez pas de modifications directement sur GitHub, mais vous travailleriez très probablement avec d'autres personnes sur le même projet, et vous devriez *pull* leurs dernières modifications régulièrement. 
 
-#### Branches git
-Jusqu'à présent, nous n'avons travaillé que sur la branche Main, qui est créée par défaut lors de la création d'un nouveau dépôt GitHub. Dans ce chapitre, vous en apprendrez plus sur les branches Git. Pourquoi en avoir besoin et comment les utiliser.
+Vous devez vous assurer de récupérer les dernières modifications **à chaque fois avant d'essayer de *push* les votres**.
+{{%/notice%}}
 
-Les branches sont un moyen de travailler sur votre projet en ajoutant une nouvelle fonctionnalité ou en corrigeant des bogues sans affecter la branche principale.
+### Branches git
+Jusqu'à présent, nous n'avons travaillé que sur la branche *main*, qui est créée par défaut lors de la création d'un nouveau dépôt GitHub. Dans cette section, vous en apprendrez plus sur **les branches Git**. Pourquoi en avoir besoin et comment les utiliser.
 
-De cette façon, chaque nouvelle fonctionnalité ou correction de bogue que vous développez peut vivre sur une branche séparée, et plus tard, une fois que vous êtes prêt et que vous avez entièrement testé les changements, vous pouvez fusionner la nouvelle branche à votre branche principale. Vous en apprendrez plus sur la fusion dans le prochain chapitre !
+Les branches sont un moyen de travailler sur votre projet en **ajoutant une nouvelle fonctionnalité ou en corrigeant des bogues sans affecter la branche principale**.
 
-(ARBRE DE BRANCHES)
+De cette façon, chaque nouvelle fonctionnalité ou correction de bogue que vous développez peut vivre sur une branche séparée, et plus tard, une fois que vous êtes prêt et que vous avez entièrement testé les changements, vous pouvez fusionner la nouvelle branche à votre branche principale (vous en apprendrez plus sur la fusion dans la prochaine section).
+
+![Git Branches](/420-211/images/0-intro/017-git-branches.png)
+
 
 Grâce aux branches multiples, vous pouvez avoir plusieurs personnes travaillant sur différentes fonctionnalités ou corrections en même temps, chacune travaillant sur sa propre branche.
 
-L'image montre 3 branches :
-+ branche main (défaut)
-+ branche 1
-+ branche 2
+L'image montre 3 branches : branche *main* (défaut), branche 1 et branche 2
 
-La branche main est la branche par défaut. Nous pouvons considérer les deux autres branches comme deux nouvelles fonctionnalités en cours de développement. Par exemple, un développeur peut travailler sur un nouveau formulaire de contact pour votre application web sur la branche 1, et un autre développeur peut travailler sur une fonctionnalité de formulaire d'enregistrement d'utilisateur sur la branche 2. Grâce aux branches séparées, les deux développeurs peuvent travailler sur le même projet sans se gêner l'un l'autre.
++ La branche main est la **branche par défaut**. 
++ Nous pouvons considérer les deux autres branches comme deux nouvelles fonctionnalités en cours de développement. 
+
+**Exemple :** un développeur peut travailler sur un nouveau formulaire de contact pour votre application web sur la branche 1, et un autre développeur peut travailler sur une fonctionnalité de formulaire d'enregistrement d'utilisateur sur la branche 2. Grâce aux branches séparées, les deux développeurs peuvent travailler sur le même projet sans se gêner l'un l'autre.
 
 + Créer une branche :
 ```bash
@@ -212,9 +259,11 @@ git push
 #### git merge
 Une fois que les développeurs ont terminé leurs modifications, ils peuvent fusionner leurs branches avec la branche *main* pour mettre les nouvelles fonctionnalités en ligne.
 
-(ARBRE DES BRANCHES)
+![Git merge](/420-211/images/0-intro/018-git-merge.png)
 
-Si vous avez suivi les étapes précédentes, votre branche *nouvelleFonctionnalite* est maintenant en avance sur la branche *main* de 1 commit. Pour transférer ces nouveaux changements dans la branche principale, il faut fusionner la branche *nouvelleFonctionnalite*  dans notre branche *main*. 
+Si vous avez suivi les étapes précédentes, votre branche *nouvelleFonctionnalite* est maintenant **en avance** sur la branche *main* **de 1 commit**. 
+
+Pour transférer ces nouveaux changements dans la branche principale, il faut fusionner la branche *nouvelleFonctionnalite*  dans notre branche *main* :
 ```bash
 # Passer à la branche main
 git checkout main
@@ -229,29 +278,29 @@ Cela se produit lorsque des modifications sont apportées à la même ligne d'un
 
 ##### Laboratoire : résoudre des conflits
 
-Simulons un conflit
-+ Créez une nouvelle branche
+Simulons un conflit:
+1.  Créez une nouvelle branche
 ```bash
 git checkout -b demoConflit
 ```
-+ Éditez le fichier `fonctionnalite1.html`
+2. Éditez le fichier `fonctionnalite1.html`
 ```bash
 echo "<p>Démo conflit</p>" >> fonctionnalite1.html
 ```
-+ Ajoutez et commit les changements :
+3. Ajoutez et commit les changements :
 ```bash
 git add fonctionnalite1.html
 git commit -m "Démo conflit 1"
 ```
-+ Retournez sur la branche *main* :
+4. Retournez sur la branche *main* :
 ```bash
 git checkout main
 ```
-+ Faites un changement sur la même ligne que sur la branche `demoConflit` :
+5.  Faites un changement sur la même ligne que sur la branche `demoConflit` :
 ```bash
 echo "<p>Conflit: changement sur la branche main</p>" >> fonctionnalite1.html
 ```
-+ Ajoutez et commit les changements :
+6. Ajoutez et commit les changements :
 ```bash
 git add fonctionnalite1.html
 git commit -m "Conflit sur main"
@@ -259,25 +308,46 @@ git commit -m "Conflit sur main"
 
 Maintenant votre branche principale et la branche demoConflit ont des changements dans le même fichier, sur la même ligne. 
 
-+ Lançons la commande `git merge` :
+7. Lançons la commande `git merge` :
 ```bash
 git merge demoConflit
 ```
-+ Sortie : 
+8. Sortie : 
 
-    Auto-merging fonctionnalite1.html
-    CONFLICT (content): Merge conflict in fonctionnalite1.html
-    Automatic merge failed; fix conflicts and then commit the result.
+```
+Auto-merging fonctionnalite1.html
+CONFLICT (content): Merge conflict in fonctionnalite1.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
 
 Dans la sortie, on voit que la fusion échoue car il y a eu des modifications au même fichier sur la même ligne, donc Git n'est pas sûr de savoir quelle est la bonne modification.
 
 Si vous vérifiez le contenu du fichier `fonctionnalite1.html`, vous verrez la sortie suivante :
-```html
-<h1>Ma Première Fonctionnalité</h1>
-<p>Conflit: changement sur la branche main</p>
 ```
+<h1>My First Feature Branch</h1>
+<<<<<<< HEAD
+<p>Conflict: change on main branch</p>
+=======
+<p>Conflict Demo</p>
+>>>>>>> conflictDemo
+```
+
 + `<<<<<<< HEAD` : Indique le début des modifications sur votre branche actuelle. Dans notre cas, la ligne `<p>Conflit: changement sur la branche main</p>` est présente sur la branche main, qui est également la branche sur laquelle nous sommes.
 
 + `=======` : Indique où se terminent les changements de la branche actuelle et d'où proviennent les changements de la nouvelle branche. Dans notre cas, la modification de la nouvelle branche est la ligne `<p>Démo conflit</p>`.
 
 + `>>>>>>> demoConflit` : Indique le nom de la branche d'où proviennent les modifications.
+
+Pour résoudre les conflits, effacez manuellement les lignes non nécessaires et gardez celles que vous voulez garder :
+
+```html
+<h1>Ma Première Fonctionnalité</h1>
+<p>Conflit: changement sur la branche main</p>
+```
+
+Après la résolution, vous devez faire un autre *commit* pour sauvegarder les dernier changements : 
+
+```bash
+git add fonctionnalite1.html
+git commit -m "Résolution de conflit de fusion"
+```
