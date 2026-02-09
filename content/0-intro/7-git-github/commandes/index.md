@@ -1,5 +1,5 @@
 +++
-pre = '<b>7.3 </b>'
+pre = '<b>2. </b>'
 title = 'Commandes git'
 weight = '175'
 draft = false
