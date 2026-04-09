@@ -1,11 +1,10 @@
 +++
-pre = '<b>4. </b>'
-title = "Gestion des “side effects”"
-weight = '540'
+pre = '<b>2. </b>'
+title = "useEffect()"
+weight = '520'
 draft = false 
 +++
 
-Gestion des “side effects” et de leur dépendances
 
 Dans React, lorsqu'on souhaite **récupérer des données externes** (par exemple depuis une API), on ne doit pas le faire directement dans le corps du `component`, car celui-ci peut être réexécuté plusieurs fois.
 
@@ -23,12 +22,12 @@ Le *hook* `useEffect` permet d’exécuter une fonction après le rendu du compo
 Voici comment faire le même appel de manière propre, avec `useEffect` :
 
 ```jsx
-import React from "react"
+import { useState, useEffect } from "react"
 
 export default function App() {
-  const [pokemonData, setPokemonData] = React.useState(null)
+  const [pokemonData, setPokemonData] = useState(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
       .then(res => res.json())
       .then(data => setPokemonData(data))
@@ -42,7 +41,7 @@ export default function App() {
 }
 ```
 
-Link la doc officiel de useeffects pr syntaxe 
+<!-- Link la doc officiel de useeffects pr syntaxe  -->
 
 ### La syntaxe de `useEffect`
 ```jsx
@@ -83,7 +82,7 @@ export default function App() {
   )
 }
 ```
-💡 Ici, comme le tableau de dépendances est absent, l’effet est exécuté à chaque re-render.
+<!-- 💡 Ici, comme le tableau de dépendances est absent, l’effet est exécuté à chaque re-render. -->
 
 ### Comprendre les dépendances
 React compare le tableau de dépendances entre deux rendus.
@@ -121,7 +120,7 @@ export default function App() {
 **Objectif** : comprendre comment `useEffect` se réexécute à chaque changement de `count`, ce qui permet d’afficher un pokémon différent à chaque clic.
 
 Il est possible d'aller plus loin en :
-- affichant le nom (pokemonData.name) et l’image (pokemonData.sprites.front_default),
+- affichant le nom (`pokemonData.name`) et l’image (`pokemonData.sprites.front_default`),
 - ajoutant un champ de saisie pour chercher un pokémon par son nom.
 
 

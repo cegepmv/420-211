@@ -16,6 +16,6 @@ Bienvenue au cours *420-211 - Applications Web* ! {{% icon icon="fa-brands fa-re
 
 + [Module 3 - React dynamique]({{% ref "3-apps-dynamiques" %}} "Module 3 - React dynamique")
 
-+ [Module 4 -  Introduction aux “hooks”]({{% ref "4-hooks" %}} "Module 4 -  Introduction aux “hooks”")
++ [Module 4 -  Introduction aux “hooks”]({{% ref "4-communication-externe" %}} "Module 4 -  Introduction aux “hooks”")
 
 + [Module 5 -  Introduction à React Router]({{% ref "5-react-router" %}} "Module 5 - Introduction à React Router")

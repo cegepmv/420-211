@@ -2,7 +2,7 @@
 pre = '<b>1. </b>'
 title = "Programmation fonctionelle"
 weight = '510'
-draft = false 
+draft = true 
 +++
 
 La **programmation fonctionnelle**, dans React, est un principe fondamental pour écrire des composants clairs, prévisibles et faciles à maintenir. Voici les trois concepts clés à retenir :

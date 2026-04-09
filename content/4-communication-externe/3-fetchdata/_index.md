@@ -2,7 +2,7 @@
 pre = '<b>3. </b>'
 title = "Données externes (fetch)"
 weight = '530'
-draft = false 
+draft = true 
 +++
 
 <!-- ### ⏭️ Prochaine section :  
