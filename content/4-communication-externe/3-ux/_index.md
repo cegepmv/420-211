@@ -106,7 +106,7 @@ useEffect(() => {
     } catch (err) {
       // ÉTAPE 3 : Attraper n'est-ce que ce soit (panne réseau, erreur 404 forcée, JSON corrompu)
       console.error("Détails de l'erreur:", err);
-      setError("Désolé, nous ne parvenons pas à récupérer les données.");
+      setError(err.message || "Désolé, nous ne parvenons pas à récupérer les données.");
       
     } finally {
       // ÉTAPE 4 : Arrêter le chargement, que ce soit un succès ou un échec
